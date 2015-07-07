@@ -287,12 +287,20 @@ blockquote {
 	border-left: 3px solid #eee;
 }
 
-blockquote p {
-    margin: 0.8em 0;
-    font-style: italic;
-    display: inline;
-
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: #CCC;
 }
+
+blockquote small:before { content: "\2014 \00A0"; }
+
+blockquote cite {
+    font-weight: 700;
+}
+
+blockquote cite a { font-weight: normal; }
 
 hr {
 	display: block;
