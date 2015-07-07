@@ -194,7 +194,7 @@ ol li {
 
 b, strong { font-weight: 500;
   color: #1E2025; }
-em, i { font-style: bold; }
+em, i { font-style: italic; }
 
 #title {
 	display: inline-block;
@@ -285,6 +285,11 @@ p.small {
 blockquote {
 	padding-left: 15px;
 	border-left: 3px solid #eee;
+}
+
+blockquote p {
+    margin: 0.8em 0;
+    font-style: italic;
 }
 
 hr {
