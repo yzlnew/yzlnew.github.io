@@ -192,7 +192,7 @@ ol li {
 /* Line Height */
 #post-body, p { line-height:1.7; }
 
-b, strong { font-weight: 500;
+b, strong { font-weight: bold;
   color: #1E2025; }
 em, i { font-style: italic; }
 
