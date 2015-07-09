@@ -31,6 +31,7 @@ public:
         return isValid(root->left, min, root->val-1) && isValid(root->right, root->val+1, max);
     }
 };
+test
 {% endhighlight %}
 
 
