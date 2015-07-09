@@ -32,8 +32,5 @@ public:
     }
 };
 {% endhighlight %}
-{% highlight javascript linenos %}
-class Solution {}
-{% endhighlight %}
 
 
