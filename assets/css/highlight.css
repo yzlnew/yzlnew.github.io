@@ -1,108 +1,135 @@
-/*
 
-Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
 
-*/
-
-.hljs {
+/* -------------------------------------*/
+/* Syntax Coloring */
+/* -------------------------------------*/
+.highlight pre {
+  font-size: 13px;
+  word-wrap: break-word;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  padding: 16px;
+  padding-left: 21px;
+  padding-bottom: 14px;
   display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #002b36;
-  color: #839496;
-  -webkit-text-size-adjust: none;
+  color: #788D9E;
+  background: #fff;
+  border: none;
+  box-shadow: inset 0 0 0 1px #E4EBF2, inset 49px 0 0 #FBFDFE, inset 50px 0 0 #E4EBF2;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: 'Menlo', 'Monaco', Courier, monospace;
+
 }
 
-.hljs-comment,
-.diff .hljs-header,
-.hljs-doctype,
-.hljs-pi,
-.lisp .hljs-string,
-.hljs-javadoc {
-  color: #586e75;
-}
+.post .highlight pre ol li {
+  font-size: 13px;
+  list-style: none;
+  line-height: 1.6; }
 
-/* Solarized Green */
-.hljs-keyword,
-.hljs-winutils,
-.method,
-.hljs-addition,
-.css .hljs-tag,
-.hljs-request,
-.hljs-status,
-.nginx .hljs-title {
-  color: #859900;
-}
+.post .highlight pre ol li + li {
+  margin-top: 0; }
 
-/* Solarized Cyan */
-.hljs-number,
-.hljs-command,
-.hljs-string,
-.hljs-tag .hljs-value,
-.hljs-rules .hljs-value,
-.hljs-phpdoc,
-.hljs-dartdoc,
-.tex .hljs-formula,
-.hljs-regexp,
-.hljs-hexcolor,
-.hljs-link_url {
-  color: #2aa198;
-}
+/* Inline code*/
+.inline {
+  font-size: 14px;
+  color: #333;
+  font-family: 'Menlo', 'Monaco', Courier, monospace;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 2px; }
 
-/* Solarized Blue */
-.hljs-title,
-.hljs-localvars,
-.hljs-chunk,
-.hljs-decorator,
-.hljs-built_in,
-.hljs-identifier,
-.vhdl .hljs-literal,
-.hljs-id,
-.css .hljs-function {
-  color: #268bd2;
-}
+.o,
+.nf,
+.highlight pre ol li {
+  color: #788D9E;
+  /* Default */ }
 
-/* Solarized Yellow */
-.hljs-attribute,
-.hljs-variable,
-.lisp .hljs-body,
-.smalltalk .hljs-number,
-.hljs-constant,
-.hljs-class .hljs-title,
-.hljs-parent,
-.hljs-type,
-.hljs-link_reference {
-  color: #b58900;
-}
+.k,
+.kc,
+.k + .nx {
+  color: #FF9740;
+  /* Orange */
+  /* k + nx = followed by "New" */ }
 
-/* Solarized Orange */
-.hljs-preprocessor,
-.hljs-preprocessor .hljs-keyword,
-.hljs-pragma,
-.hljs-shebang,
-.hljs-symbol,
-.hljs-symbol .hljs-string,
-.diff .hljs-change,
-.hljs-special,
-.hljs-attr_selector,
-.hljs-subst,
-.hljs-cdata,
-.css .hljs-pseudo,
-.hljs-header {
-  color: #cb4b16;
-}
+.c,
+.cm,
+.cp,
+.c1,
+.cs {
+  color: #A4BDD1; }
 
-/* Solarized Red */
-.hljs-deletion,
-.hljs-important {
-  color: #dc322f;
-}
+/* Comment */
+.mi, .mf {
+  color: #5BC1F0; }
 
-/* Solarized Violet */
-.hljs-link_label {
-  color: #6c71c4;
-}
+/* Blue */
+.s {
+  color: #8DDE19;
+  /* Original Green */
+  color: #6ED300;
+  /* Darker Green */ }
 
-.tex .hljs-formula {
-  background: #073642;
-}
+/*# String escaping in Framer
+"myString,..." */
+.s + .si,
+.si + .nx,
+.si + .s,
+.nx + .si {
+  color: #6ED300; }
+
+/* Lighter, following dots like ".states.add etc" */
+.p + .nx {
+  color: #79A3C4; }
+
+/* Custom LineNumbers */
+.highlight pre ol {
+  counter-reset: linenumbers;
+  margin-left: 50px; }
+
+.highlight pre ol li {
+  line-height: 1.6;
+  text-align: left; }
+
+/* Line-height bug in FF */
+.is-firefox .highlight pre ol li {
+  line-height: 1.55; }
+
+.highlight pre ol li:before {
+  content: counter(linenumbers);
+  counter-increment: linenumbers;
+  float: left;
+  margin-left: -50px;
+  font-size: 10px;
+  color: #B7CADA;
+  position: relative;
+  top: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: right;
+  width: 12px;
+  left: -4px;
+  white-space: nowrap; }
+
+  .highlight .lineno {
+    color: #B7CADA;
+    font-size: 10px;
+    display:inline-block;
+    padding: 0 30px 0 0px;
+    /*border-right:1px solid #ccc;*/
+    position: relative;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-align: right;
+
+    white-space: nowrap;
+  }
+
+  .highlight pre code {
+    display: block;
+    white-space: pre;
+    overflow-x: auto;
+    word-wrap: normal;
+  }
