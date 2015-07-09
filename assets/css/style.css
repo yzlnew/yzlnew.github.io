@@ -171,17 +171,6 @@ a,
 
 p a { color: #5694f1; }
 
-/*inline code*/
-code, tt {
-    padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-size: 1em;
-    white-space: pre-wrap;
-    border: #E3EDF3 1px solid;
-    background: #transparent;
-    border-radius: 2px;
-}
-
 /*Transitions*/
 a,
 #post-nav a,
@@ -195,6 +184,10 @@ a,
 
 ul 	{ margin:0; padding:0; }
 li	{ list-style-type:circle; list-style-position:inside; }
+
+ol li {
+  list-style-type: decimal;
+}
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
@@ -308,10 +301,12 @@ pre	{
 	font-family:Menlo, Monaco, Courier;
 	white-space:pre-wrap;
 	/*border: 1px solid #ddd;*/
+	padding:20px;
+	background-color:#fdfdfd;
 	/*font-size:14px;*/
 	overflow:auto;
 	border-radius: 3px;
-	background: #transparent;
+	background: #272b2d;
 	  font-family: 'Source Code Pro',Menlo,monospace;
 	  font-size: 13px;
 	  line-height: 1.5em;
