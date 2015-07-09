@@ -11,7 +11,7 @@ description: 不定期更新
 >- Both the left and right subtrees must also be binary search trees.
 
 判定二叉树是否为二叉搜索树，代码如下：
-{% highlight cpp linenos %}
+{% highlight c linenos %}
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
