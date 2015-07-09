@@ -1,135 +1,95 @@
+/* Base16 Atelier Lakeside Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
 
-
-/* -------------------------------------*/
-/* Syntax Coloring */
-/* -------------------------------------*/
-.highlight pre {
-  font-size: 13px;
-  word-wrap: break-word;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-  padding: 16px;
-  padding-left: 21px;
-  padding-bottom: 14px;
-  display: block;
-  color: #788D9E;
-  background: #fff;
-  border: none;
-  box-shadow: inset 0 0 0 1px #E4EBF2, inset 49px 0 0 #FBFDFE, inset 50px 0 0 #E4EBF2;
-  border-radius: 4px;
-  overflow: hidden;
-  font-family: 'Menlo', 'Monaco', Courier, monospace;
-
+/* Atelier Lakeside Light Comment */
+.hljs-comment,
+.hljs-title {
+  color: #5a7b8c;
 }
 
-.post .highlight pre ol li {
-  font-size: 13px;
-  list-style: none;
-  line-height: 1.6; }
+/* Atelier Lakeside Light Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #d22d72;
+}
 
-.post .highlight pre ol li + li {
-  margin-top: 0; }
+/* Atelier Lakeside Light Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #935c25;
+}
 
-/* Inline code*/
-.inline {
-  font-size: 14px;
-  color: #333;
-  font-family: 'Menlo', 'Monaco', Courier, monospace;
-  border-bottom: 1px dotted #ddd;
-  padding-bottom: 2px; }
+/* Atelier Lakeside Light Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #8a8a0f;
+}
 
-.o,
-.nf,
-.highlight pre ol li {
-  color: #788D9E;
-  /* Default */ }
+/* Atelier Lakeside Light Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #568c3b;
+}
 
-.k,
-.kc,
-.k + .nx {
-  color: #FF9740;
-  /* Orange */
-  /* k + nx = followed by "New" */ }
+/* Atelier Lakeside Light Aqua */
+.css .hljs-hexcolor {
+  color: #2d8f6f;
+}
 
-.c,
-.cm,
-.cp,
-.c1,
-.cs {
-  color: #A4BDD1; }
+/* Atelier Lakeside Light Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #257fad;
+}
 
-/* Comment */
-.mi, .mf {
-  color: #5BC1F0; }
+/* Atelier Lakeside Light Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #5d5db1;
+}
 
-/* Blue */
-.s {
-  color: #8DDE19;
-  /* Original Green */
-  color: #6ED300;
-  /* Darker Green */ }
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #ebf8ff;
+  color: #516d7b;
+  padding: 0.5em;
+  -webkit-text-size-adjust: none;
+}
 
-/*# String escaping in Framer
-"myString,..." */
-.s + .si,
-.si + .nx,
-.si + .s,
-.nx + .si {
-  color: #6ED300; }
-
-/* Lighter, following dots like ".states.add etc" */
-.p + .nx {
-  color: #79A3C4; }
-
-/* Custom LineNumbers */
-.highlight pre ol {
-  counter-reset: linenumbers;
-  margin-left: 50px; }
-
-.highlight pre ol li {
-  line-height: 1.6;
-  text-align: left; }
-
-/* Line-height bug in FF */
-.is-firefox .highlight pre ol li {
-  line-height: 1.55; }
-
-.highlight pre ol li:before {
-  content: counter(linenumbers);
-  counter-increment: linenumbers;
-  float: left;
-  margin-left: -50px;
-  font-size: 10px;
-  color: #B7CADA;
-  position: relative;
-  top: 3px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  text-align: right;
-  width: 12px;
-  left: -4px;
-  white-space: nowrap; }
-
-  .highlight .lineno {
-    color: #B7CADA;
-    font-size: 10px;
-    display:inline-block;
-    padding: 0 30px 0 0px;
-    /*border-right:1px solid #ccc;*/
-    position: relative;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    text-align: right;
-
-    white-space: nowrap;
-  }
-
-  .highlight pre code {
-    display: block;
-    white-space: pre;
-    overflow-x: auto;
-    word-wrap: normal;
-  }
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
