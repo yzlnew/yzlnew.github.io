@@ -300,7 +300,6 @@ code, tt {
     font-size: 0.8em;
     white-space: pre-wrap;
     background: #transparent;
-    border: #E3EDF3 1px solid;
     border-radius: 3px;
 }
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
