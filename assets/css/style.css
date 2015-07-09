@@ -171,6 +171,17 @@ a,
 
 p a { color: #5694f1; }
 
+/*inline code*/
+code, tt {
+    padding: 1px 3px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 1em;
+    white-space: pre-wrap;
+    border: #E3EDF3 1px solid;
+    background: #transparent;
+    border-radius: 2px;
+}
+
 /*Transitions*/
 a,
 #post-nav a,
@@ -184,10 +195,6 @@ a,
 
 ul 	{ margin:0; padding:0; }
 li	{ list-style-type:circle; list-style-position:inside; }
-
-ol li {
-  list-style-type: decimal;
-}
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
@@ -285,16 +292,6 @@ p.small {
 blockquote {
 	padding-left: 15px;
 	border-left: 3px solid #eee;
-}
-/*inline code*/
-code, tt {
-    padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-size: 1em;
-    white-space: pre-wrap;
-    border: #E3EDF3 1px solid;
-    background: #transparent;
-    border-radius: 2px;
 }
 
 hr {
