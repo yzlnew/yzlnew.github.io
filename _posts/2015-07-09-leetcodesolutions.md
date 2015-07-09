@@ -10,7 +10,7 @@ description: 不定期更新
 > - The right subtree of a node contains only nodes with keys greater than the node's key.      
 > - Both the left and right subtrees must also be binary search trees.      
 
-判定二叉树是否为二叉搜索树，代码如下：
+<p>判定二叉树是否为二叉搜索树，代码如下：
 {% highlight cpp linenos %}
 class Solution {
 public:
@@ -31,7 +31,6 @@ public:
         return isValid(root->left, min, root->val-1) && isValid(root->right, root->val+1, max);
     }
 };
-test
 {% endhighlight %}
-
+<p>比较关键的地方在于'root->val'等于'INT_MIN'或者'INT_MAX'的时候，需要回避'root->val'往下赋值的问题。
 
