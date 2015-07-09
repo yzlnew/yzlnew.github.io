@@ -32,5 +32,5 @@ public:
     }
 };
 {% endhighlight %}
-<p>比较关键的地方在于'root->val'等于'INT_MIN'或者'INT_MAX'的时候，需要回避'root->val'往下赋值的问题。
+<p>比较关键的地方在于`root->val`等于`INT_MIN`或者`INT_MAX`的时候，需要回避`root->val`往下赋值的问题。
 
