@@ -287,7 +287,7 @@ blockquote {
 	border-left: 3px solid #eee;
 }
 /*inline code*/
-code, tt {
+/*code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.95em;
@@ -296,7 +296,7 @@ code, tt {
     background: #F7FAFB;
     border-radius: 2px;
 }
-
+*/
 hr {
 	display: block;
 	border: none;
