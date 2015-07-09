@@ -295,6 +295,13 @@ hr {
 	background: #eee;
 }
 
+code, tt {
+    font-family: Menlo, Monaco, Courier;
+    font-size: 1em;
+    white-space: pre-wrap;
+    background: #transparent;
+    border-radius: 3px;
+}
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
 
 pre	{
