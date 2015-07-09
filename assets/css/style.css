@@ -293,7 +293,7 @@ code, tt {
     font-size: 0.95em;
     white-space: pre-wrap;
     border: #E3EDF3 1px solid;
-    background: #F7FAFB;
+    background: #transparent;
     border-radius: 2px;
 }
 
