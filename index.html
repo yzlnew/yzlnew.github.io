@@ -283,6 +283,115 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/22/flowchart/" itemprop="url">
+                  利用 TikZ 宏包在 LaTeX 中绘制流程图
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-22T09:37:35+08:00" content="2016-06-22">
+              2016-06-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/22/flowchart/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/22/flowchart/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p>
+<p>#来源<br><a href="http://www.texample.net/" target="_blank" rel="external">TeXample</a> 上给出了两种流程图的画法：</p>
+<pre><code>* [Easy-maintenance flowchart](http://www.texample.net/tikz/examples/flexible-flow-chart/)
+* [Simple flow chart](http://www.texample.net/tikz/examples/simple-flow-chart/)
+</code></pre><p>第一种比较好看，也比较容易维护，当然是用它了。</p>
+<p>#所需宏包<br>在导言区加入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;tikz&#125;</span><br><span class="line">\usetikzlibrary&#123;shapes,arrows,chains&#125;</span><br><span class="line">\usepackage&#123;xcolor&#125;</span><br></pre></td></tr></table></figure>
+<p>#最终效果和代码<br><img src="http://o9gmysn8m.bkt.clouddn.com/2016-07-06-flowchart.jpg" alt="flowchart"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">% 设置颜色代号</span><br><span class="line">\colorlet&#123;lcfree&#125;&#123;green&#125;</span><br><span class="line">\colorlet&#123;lcnorm&#125;&#123;blue&#125;</span><br><span class="line">\colorlet&#123;lccong&#125;&#123;red&#125;</span><br><span class="line">% -------------------------------------------------</span><br><span class="line">% 设置调试标志层</span><br><span class="line">\pgfdeclarelayer&#123;marx&#125;</span><br><span class="line">\pgfsetlayers&#123;main,marx&#125;</span><br><span class="line">% 标记坐标点的宏定义。交换下面两个定义关闭。</span><br><span class="line">\providecommand&#123;\cmark&#125;[2][]&#123;%</span><br><span class="line">  \begin&#123;pgfonlayer&#125;&#123;marx&#125;</span><br><span class="line">    \node [nmark] at (c#2#1) &#123;#2&#125;;</span><br><span class="line">  \end&#123;pgfonlayer&#125;&#123;marx&#125;</span><br><span class="line">  &#125; </span><br><span class="line">\providecommand&#123;\cmark&#125;[2][]&#123;\relax&#125; </span><br><span class="line">% -------------------------------------------------</span><br><span class="line">% 开始绘图</span><br><span class="line">\begin&#123;figure&#125;[H]</span><br><span class="line">	\centering</span><br><span class="line">	\scalebox&#123;.8&#125;&#123;				%设置缩放	</span><br><span class="line">\begin&#123;tikzpicture&#125;[</span><br><span class="line">    &gt;=triangle 60,              % 箭头的形状</span><br><span class="line">    start chain=going below,    % 从上往下的流程</span><br><span class="line">    node distance=6mm and 60mm, % 全局间距设置</span><br><span class="line">    every join/.style=&#123;norm&#125;,   % 连接线的默认设置</span><br><span class="line">    ]</span><br><span class="line">% ------------------------------------------------- </span><br><span class="line">% 节点的样式定义 </span><br><span class="line">% &lt;on chain&gt; 和 &lt;on grid&gt; 可以减少手动调整节点位置的麻烦</span><br><span class="line">\tikzset&#123;</span><br><span class="line">  base/.style=&#123;draw, on chain, on grid, align=center, minimum height=4ex&#125;,</span><br><span class="line">  proc/.style=&#123;base, rectangle, text width=8em&#125;,</span><br><span class="line">  test/.style=&#123;base, diamond, aspect=2, text width=5em&#125;,</span><br><span class="line">  term/.style=&#123;proc, rounded corners&#125;,</span><br><span class="line">  % coord 用来表示连接线的转折点</span><br><span class="line">  coord/.style=&#123;coordinate, on chain, on grid, node distance=6mm and 25mm&#125;,</span><br><span class="line">  % nmark 用来表示调试标志</span><br><span class="line">  nmark/.style=&#123;draw, cyan, circle, font=&#123;\sffamily\bfseries&#125;&#125;,</span><br><span class="line">  % -------------------------------------------------</span><br><span class="line">  % 不同的连接线样式</span><br><span class="line">  norm/.style=&#123;-&gt;, draw, lcnorm&#125;,</span><br><span class="line">  free/.style=&#123;-&gt;, draw, lcfree&#125;,</span><br><span class="line">  cong/.style=&#123;-&gt;, draw, lccong&#125;,</span><br><span class="line">  it/.style=&#123;font=&#123;\small\itshape&#125;&#125;</span><br><span class="line">&#125;</span><br><span class="line">% -------------------------------------------------</span><br><span class="line">% 先放节点</span><br><span class="line">\node [term, densely dotted,fill=lccong!25, it] (p0) &#123;输入&#125;;</span><br><span class="line">% 用 join 表示和上一个节点相连 </span><br><span class="line">\node [proc, join]	&#123;使用非线性最小二乘法得到 $X_0$&#125;;</span><br><span class="line">\node [proc, join]	&#123;记录 $X=X_0, f=f(X_0)$&#125;;</span><br><span class="line">\node [test, join] (t1)	&#123;$T&gt;T_E$?&#125;;</span><br><span class="line">\node [proc] (p1)		&#123;$step=0$&#125;;</span><br><span class="line">\node [test, join] (t2)	&#123;$step&lt;count$?&#125;;</span><br><span class="line">\node [proc] (p2)		&#123;得到新状态$P_N=P+scale\times rand$,计算目标函数差$\Delta f$&#125;;</span><br><span class="line">\node [test, join] (t3)	&#123;$F_&#123;Accept&#125;&lt;rand$?&#125;;</span><br><span class="line">\node [proc] (p3)		&#123;记录新状态 $X=X_N,f=f(X_N)$&#125;;</span><br><span class="line"></span><br><span class="line">\node [proc, left=of t1] (p4)	&#123;$T=T\times a,scale=scale\times b$&#125;;</span><br><span class="line">\node [term, densely dotted, right=of t1,fill=lcfree!25](p5)	&#123;输出&#125;;</span><br><span class="line">\node [proc, right=of t3](p6)	&#123;$step++$&#125;;</span><br><span class="line"></span><br><span class="line">\node [coord, left=of t2] (c1)  &#123;&#125;; </span><br><span class="line">\node [coord, right=of t2] (c2)  &#123;&#125;; </span><br><span class="line">\node [coord, right=of p3] (c3)  &#123;&#125;; </span><br><span class="line">%先画南北方向的连接线，先画线再画两端的标志和箭头</span><br><span class="line">\path (t1.south) to node [near start, xshift=1em] &#123;$y$&#125; (p1);</span><br><span class="line">  \draw [*-&gt;,lcnorm] (t1.south) -- (p1);</span><br><span class="line">\path (t2.south) to node [near start, xshift=1em] &#123;$y$&#125; (p2);</span><br><span class="line">  \draw [*-&gt;,lcnorm] (t2.south) -- (p2);</span><br><span class="line">\path (t3.south) to node [near start, xshift=1em] &#123;$y$&#125; (p3);</span><br><span class="line">  \draw [*-&gt;,lcnorm] (t3.south) -- (p3);</span><br><span class="line">%接着画东西方向的连接线，方法同上</span><br><span class="line">\path (t1.east) to node [near start, yshift=1em]  &#123;$n$&#125;(p5);</span><br><span class="line">  \draw [o-&gt;,lcnorm] (t1.east) -- (p5);</span><br><span class="line">  \draw [-&gt;,lcnorm] (p4.east) -- (t1);</span><br><span class="line">\path (t3.east) to node [near start, yshift=1em]  &#123;$n$&#125;(p6);</span><br><span class="line">  \draw [o-&gt;,lcnorm] (t3.east) -- (p6);</span><br><span class="line">\path (t2.west) to node [near start, yshift=1em]  &#123;$n$&#125;(c1);</span><br><span class="line">  \draw [o-&gt;,lcnorm] (t2.west) -- (c1) -| (p4);</span><br><span class="line">  \draw [-&gt;,lcnorm] (p3.east) -- (c3) -| (p6.south);</span><br><span class="line">  \draw [&lt;-,lcnorm] (t2.east) -- (c2) -| (p6.north);</span><br><span class="line">  </span><br><span class="line">\end&#123;tikzpicture&#125;</span><br><span class="line">&#125;</span><br><span class="line">	\label&#123;fig:algorithm&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/27/this-semester/" itemprop="url">
                   这学期
                 </a>
@@ -959,7 +1068,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
