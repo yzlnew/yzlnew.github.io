@@ -8,9 +8,11 @@
       <url>http://yzlnew.github.io/2016/06/22/flowchart/</url>
       <content type="html"><![CDATA[<p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p>
 <h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p><a href="http://www.texample.net/" target="_blank" rel="external">TeXample</a> 上给出了两种流程图的画法：</p>
-<pre><code>* [Easy-maintenance flowchart](http://www.texample.net/tikz/examples/flexible-flow-chart/)
-* [Simple flow chart](http://www.texample.net/tikz/examples/simple-flow-chart/)
-</code></pre><p>第一种比较好看，也比较容易维护，当然是用它了。</p>
+<ul>
+<li><a href="http://www.texample.net/tikz/examples/flexible-flow-chart/" target="_blank" rel="external">Easy-maintenance flowchart</a></li>
+<li><a href="http://www.texample.net/tikz/examples/simple-flow-chart/" target="_blank" rel="external">Simple flow chart</a></li>
+</ul>
+<p>第一种比较好看，也比较容易维护，当然是用它了。</p>
 <h1 id="所需宏包"><a href="#所需宏包" class="headerlink" title="所需宏包"></a>所需宏包</h1><p>在导言区加入以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;tikz&#125;</span><br><span class="line">\usetikzlibrary&#123;shapes,arrows,chains&#125;</span><br><span class="line">\usepackage&#123;xcolor&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="最终效果和代码"><a href="#最终效果和代码" class="headerlink" title="最终效果和代码"></a>最终效果和代码</h1><p><img src="http://o9gmysn8m.bkt.clouddn.com/2016-07-06-flowchart.jpg" alt="flowchart"></p>
@@ -48,10 +50,9 @@
       <content type="html"><![CDATA[<blockquote>
 <p>你知道吗？<br>樱花落下的速度<br>是每秒5厘米</p>
 </blockquote>
-<p></p><p>写这个只是为了简单的记录一下。    </p>
-<p></p><p>这部电影很美，美到让人心痛的感觉。    </p>
-<p></p><p>但是我其实并没有经历过。上面的那句台词实在是太有噱头了，导演似乎也是文艺和科技感并重的人。在电影里甚至还有多普勒效应……    </p>
-<p></p><p>没有经历过浪漫之事，希望还是能保持向往那份浪漫的心情。</p>
+<p>写这个只是为了简单的记录一下。    </p>
+<p>这部电影很美，美到让人心痛的感觉。    </p>
+<p>但是我其实并没有经历过。上面的那句台词实在是太有噱头了，导演似乎也是文艺和科技感并重的人。在电影里甚至还有多普勒效应……<br>没有经历过浪漫之事，希望还是能保持向往那份浪漫的心情。</p>
 ]]></content>
     </entry>
     
