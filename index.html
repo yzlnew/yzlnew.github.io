@@ -333,20 +333,18 @@
 
       
         
-          
-            <p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p><a href="http://www.texample.net/" target="_blank" rel="external">TeXample</a> 上给出了两种流程图的画法：</p>
+          <p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p><a href="http://www.texample.net/">TeXample</a> 上给出了两种流程图的画法：</p>
 <ul>
-<li><a href="http://www.texample.net/tikz/examples/flexible-flow-chart/" target="_blank" rel="external">Easy-maintenance flowchart</a></li>
-<li><a href="http://www.texample.net/tikz/examples/simple-flow-chart/" target="_blank" rel="external">Simple flow chart</a></li>
+<li><a href="http://www.texample.net/tikz/examples/flexible-flow-chart/">Easy-maintenance flowchart</a></li>
+<li><a href="http://www.texample.net/tikz/examples/simple-flow-chart/">Simple flow chart</a></li>
 </ul>
 <p>第一种比较好看，也比较容易维护，当然是用它了。</p>
-<h1 id="所需宏包"><a href="#所需宏包" class="headerlink" title="所需宏包"></a>所需宏包</h1><p>在导言区加入以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;tikz&#125;</span><br><span class="line">\usetikzlibrary&#123;shapes,arrows,chains&#125;</span><br><span class="line">\usepackage&#123;xcolor&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="最终效果和代码"><a href="#最终效果和代码" class="headerlink" title="最终效果和代码"></a>最终效果和代码</h1><p><img src="http://o9gmysn8m.bkt.clouddn.com/2016-07-06-flowchart.jpg" alt="flowchart"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">% 设置颜色代号</span><br><span class="line">\colorlet&#123;lcfree&#125;&#123;green&#125;</span><br><span class="line">\colorlet&#123;lcnorm&#125;&#123;blue&#125;</span><br><span class="line">\colorlet&#123;lccong&#125;&#123;red&#125;</span><br><span class="line">% -------------------------------------------------</span><br><span class="line">% 设置调试标志层</span><br><span class="line">\pgfdeclarelayer&#123;marx&#125;</span><br><span class="line">\pgfsetlayers&#123;main,marx&#125;</span><br><span class="line">% 标记坐标点的宏定义。交换下面两个定义关闭。</span><br><span class="line">\providecommand&#123;\cmark&#125;[2][]&#123;%</span><br><span class="line">  \begin&#123;pgfonlayer&#125;&#123;marx&#125;</span><br><span class="line">    \node [nmark] at (c#2#1) &#123;#2&#125;;</span><br><span class="line">  \end&#123;pgfonlayer&#125;&#123;marx&#125;</span><br><span class="line">  &#125; </span><br><span class="line">\providecommand&#123;\cmark&#125;[2][]&#123;\relax&#125; </span><br><span class="line">% -------------------------------------------------</span><br><span class="line">% 开始绘图</span><br><span class="line">\begin&#123;figure&#125;[H]</span><br><span class="line">	\centering</span><br><span class="line">	\scalebox&#123;.8&#125;&#123;				%设置缩放	</span><br><span class="line">\begin&#123;tikzpicture&#125;[</span><br><span class="line">    &gt;=triangle 60,              % 箭头的形状</span><br><span class="line">    start chain=going below,    % 从上往下的流程</span><br><span class="line">    node distance=6mm and 60mm, % 全局间距设置</span><br><span class="line">    every join/.style=&#123;norm&#125;,   % 连接线的默认设置</span><br><span class="line">    ]</span><br><span class="line">% ------------------------------------------------- </span><br><span class="line">% 节点的样式定义 </span><br><span class="line">% &lt;on chain&gt; 和 &lt;on grid&gt; 可以减少手动调整节点位置的麻烦</span><br><span class="line">\tikzset&#123;</span><br><span class="line">  base/.style=&#123;draw, on chain, on grid, align=center, minimum height=4ex&#125;,</span><br><span class="line">  proc/.style=&#123;base, rectangle, text width=8em&#125;,</span><br><span class="line">  test/.style=&#123;base, diamond, aspect=2, text width=5em&#125;,</span><br><span class="line">  term/.style=&#123;proc, rounded corners&#125;,</span><br><span class="line">  % coord 用来表示连接线的转折点</span><br><span class="line">  coord/.style=&#123;coordinate, on chain, on grid, node distance=6mm and 25mm&#125;,</span><br><span class="line">  % nmark 用来表示调试标志</span><br><span class="line">  nmark/.style=&#123;draw, cyan, circle, font=&#123;\sffamily\bfseries&#125;&#125;,</span><br><span class="line">  % -------------------------------------------------</span><br><span class="line">  % 不同的连接线样式</span><br><span class="line">  norm/.style=&#123;-&gt;, draw, lcnorm&#125;,</span><br><span class="line">  free/.style=&#123;-&gt;, draw, lcfree&#125;,</span><br><span class="line">  cong/.style=&#123;-&gt;, draw, lccong&#125;,</span><br><span class="line">  it/.style=&#123;font=&#123;\small\itshape&#125;&#125;</span><br><span class="line">&#125;</span><br><span class="line">% -------------------------------------------------</span><br><span class="line">% 先放节点</span><br><span class="line">\node [term, densely dotted,fill=lccong!25, it] (p0) &#123;输入&#125;;</span><br><span class="line">% 用 join 表示和上一个节点相连 </span><br><span class="line">\node [proc, join]	&#123;使用非线性最小二乘法得到 $X_0$&#125;;</span><br><span class="line">\node [proc, join]	&#123;记录 $X=X_0, f=f(X_0)$&#125;;</span><br><span class="line">\node [test, join] (t1)	&#123;$T&gt;T_E$?&#125;;</span><br><span class="line">\node [proc] (p1)		&#123;$step=0$&#125;;</span><br><span class="line">\node [test, join] (t2)	&#123;$step&lt;count$?&#125;;</span><br><span class="line">\node [proc] (p2)		&#123;得到新状态$P_N=P+scale\times rand$,计算目标函数差$\Delta f$&#125;;</span><br><span class="line">\node [test, join] (t3)	&#123;$F_&#123;Accept&#125;&lt;rand$?&#125;;</span><br><span class="line">\node [proc] (p3)		&#123;记录新状态 $X=X_N,f=f(X_N)$&#125;;</span><br><span class="line"></span><br><span class="line">\node [proc, left=of t1] (p4)	&#123;$T=T\times a,scale=scale\times b$&#125;;</span><br><span class="line">\node [term, densely dotted, right=of t1,fill=lcfree!25](p5)	&#123;输出&#125;;</span><br><span class="line">\node [proc, right=of t3](p6)	&#123;$step++$&#125;;</span><br><span class="line"></span><br><span class="line">\node [coord, left=of t2] (c1)  &#123;&#125;; </span><br><span class="line">\node [coord, right=of t2] (c2)  &#123;&#125;; </span><br><span class="line">\node [coord, right=of p3] (c3)  &#123;&#125;; </span><br><span class="line">%先画南北方向的连接线，先画线再画两端的标志和箭头</span><br><span class="line">\path (t1.south) to node [near start, xshift=1em] &#123;$y$&#125; (p1);</span><br><span class="line">  \draw [*-&gt;,lcnorm] (t1.south) -- (p1);</span><br><span class="line">\path (t2.south) to node [near start, xshift=1em] &#123;$y$&#125; (p2);</span><br><span class="line">  \draw [*-&gt;,lcnorm] (t2.south) -- (p2);</span><br><span class="line">\path (t3.south) to node [near start, xshift=1em] &#123;$y$&#125; (p3);</span><br><span class="line">  \draw [*-&gt;,lcnorm] (t3.south) -- (p3);</span><br><span class="line">%接着画东西方向的连接线，方法同上</span><br><span class="line">\path (t1.east) to node [near start, yshift=1em]  &#123;$n$&#125;(p5);</span><br><span class="line">  \draw [o-&gt;,lcnorm] (t1.east) -- (p5);</span><br><span class="line">  \draw [-&gt;,lcnorm] (p4.east) -- (t1);</span><br><span class="line">\path (t3.east) to node [near start, yshift=1em]  &#123;$n$&#125;(p6);</span><br><span class="line">  \draw [o-&gt;,lcnorm] (t3.east) -- (p6);</span><br><span class="line">\path (t2.west) to node [near start, yshift=1em]  &#123;$n$&#125;(c1);</span><br><span class="line">  \draw [o-&gt;,lcnorm] (t2.west) -- (c1) -| (p4);</span><br><span class="line">  \draw [-&gt;,lcnorm] (p3.east) -- (c3) -| (p6.south);</span><br><span class="line">  \draw [&lt;-,lcnorm] (t2.east) -- (c2) -| (p6.north);</span><br><span class="line">  </span><br><span class="line">\end&#123;tikzpicture&#125;</span><br><span class="line">&#125;</span><br><span class="line">	\label&#123;fig:algorithm&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/22/flowchart/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -549,16 +547,14 @@
 
       
         
-          
-            <p>辗转多时终于来到<strong>这里</strong>，却忘记了来的原因。<br><img src="http://i.imgur.com/t3PIFBL.jpg" alt="Imgur"><br>第一次出这么远的门，坐了10多个小时的飞机。飞机上基本就是睡、吃、睡、吃，就这么一路过来了。</p>
+          <p>辗转多时终于来到<strong>这里</strong>，却忘记了来的原因。<br><img src="http://i.imgur.com/t3PIFBL.jpg" alt="Imgur"><br>第一次出这么远的门，坐了10多个小时的飞机。飞机上基本就是睡、吃、睡、吃，就这么一路过来了。</p>
 <p>很难形容踏上异国的土地之后的感受，准确来说，就是没有感受。</p>
 <p>从旧金山坐<code>BART</code>到伯克利，再坐公交到住处，基本也就是在睡觉，迷糊中醒来，继续睡。</p>
-<p>伯克利的环境很不错。街上的人很少，海风很凉快、太阳很暖和。低矮的房屋，整齐的街区。</p>
-<p>傍晚的时候往海边走了走，整个小镇被湿润的云雾遮住了，在太阳落下的海平面上透出点光。</p>
-<p><img src="http://i.imgur.com/a58G8aj.jpg?1" alt="Imgur">  </p>
-<p>逛了逛附近的地方，有街头弹唱的乐队、坐在<code>Cafe</code>外面闲聊的人们，各种奇奇怪怪的店铺，让人感觉生活原来真的可以如此安静。  </p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/05/come2usa/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -762,23 +758,18 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>How did you say goodbye to someone you can’t imagine living without?<br>I didn’t say goodbye.<br>I didn’t say anything.<br>I just <strong>walked away</strong>.  </p>
 </blockquote>
 <p>以上是《蓝莓之夜》里 Beth 在男友家窗外看到男友与别的女人接吻的时候的内心独白。<br>当然，她“决定以最长的距离穿过马路”，走了。一路离开了纽约。  </p>
 <h1 id="新森林"><a href="#新森林" class="headerlink" title="新森林"></a>新森林</h1><p>不得不说这部电影的手法、结构、主题都和《重庆森林》很像。顺带说一下，《重庆森林》和“重庆”、“森林”都没有什么关系。但是《蓝莓之夜》还是和“蓝莓”有点关联的。 </p>
 <p>刚失恋的 Beth 来到了我现在都不记得叫什么名字的男主开的餐厅，把钥匙留在那儿，期待着前男友能来这里找回钥匙和她重归于好。但是那一天迟迟没有到来。 </p>
-<p>几个元素都和《重亲森林》很吻合，失恋的主角、小餐馆、绚烂的都市、说走就走的旅行、莫名其妙但是就是戳中内心的台词。不过让人遗憾的是这一切变成了美国纽约故事，说着英文却没有异域感。也许是男主（其实他只在前段和后段出现了一下）长得不够忧郁帅气，台词的墨镜味道掌握得不太好吧。  </p>
-<h1 id="流浪夜"><a href="#流浪夜" class="headerlink" title="流浪夜"></a>流浪夜</h1><p>《重庆森林》里的阿菲，在相当长的一段爱情幻想之后，一个人去了加州。而 Beth 则逃离了纽约。</p>
-<p>一个人做着两份工作，想要在繁忙中忘记前男友。一边观察着人间百态，一边写明信片给和自己有着暧昧的男主。  </p>
-<p>这期间主要穿插了两个人的故事：一个是婚姻快要破产但是迟迟不肯放手而酗酒的警官，另一个是和父亲关系疏离的女赌徒。第一个故事主要告诉了女主什么是“let it go”，第二个告诉她“trust”。不过毫无例外，都是悲剧故事。  </p>
-<p>当然如果你细看这流浪故事其实剧情发展理由都很不充分，而且剧情特别拖，不过毕竟这不是王家卫电影的主要部分，你只要无脑地接受华丽掉帧的画面、恰如其分的配乐、精炼而有深意的台词，就可以了。  </p>
-<h1 id="蓝莓派"><a href="#蓝莓派" class="headerlink" title="蓝莓派"></a>蓝莓派</h1><p>这部电影里，我最喜欢的一个镜头，不是那个经典的接吻（也就是海报上那个），而是之后紧接着的，会让你觉得一丝丝奇怪的镜头：鲜牛奶从香酥的蓝莓派里溢开，肆无忌惮地流动。一瞬间我感觉都看到了这蓝莓派的甜美，有种整颗心都化了感觉。  </p>
-<p>第300天，Beth 回到了纽约，再次来到了男友家窗外，不过人去楼空，而她已经完全释然了。</p>
-<p>一开始我会可惜她用了300天忘记一个人，后来我才发现她只是用300天找回了在感情中迷失的自己。</p>
-
-          
+<p>几个元素都和《重亲森林》很吻合，失恋的主角、小餐馆、绚烂的都市、说走就走的旅行、莫名其妙但是就是戳中内心的台词。不过让人遗憾的是这一切变成了美国纽约故事，说着英文却没有异域感。也许是男主（其实他只在前段和后段出现了一下）长得不够忧郁帅气，台词的墨镜味道掌握得不太好吧。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/04/04/myblueberrynight/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -876,17 +867,16 @@
 
       
         
-          
-            <p>这张精选我有，几乎是向人要来的。附送的海报贴在了墙上。</p>
+          <p>这张精选我有，几乎是向人要来的。附送的海报贴在了墙上。</p>
 <p>很喜欢阿菲正传这个名字。同样喜欢阿飞正传这部电影。都已经完全忘了讲了些什么，只留下一点点光影记忆，时时记起的无脚鸟的故事。</p>
 <p>初中的时候写过一篇周记，也是这个名字。写的是一个不怎么熟悉的人。不知道为什么到现在都还记着。</p>
 <blockquote>
-<p>看 当时的月亮<br>曾经代表谁的心<br>结果都一样<br>看 当时的月亮<br>一夜之间化做今天的阳光    </p>
-</blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=298915&auto=0&height=66"></iframe>
-
-
-          
+<p>看 当时的月亮<br>曾经代表谁的心<br>结果都一样<br>看 当时的月亮<br>一夜之间化做今天的阳光<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/03/30/Fayesong/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -984,24 +974,18 @@
 
       
         
-          
-            <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>初中以及到高中的时候一直喜欢写点东西，发在百度空间上。后来由于种种原因中断了。原因有这么几个：  </p>
+          <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>初中以及到高中的时候一直喜欢写点东西，发在百度空间上。后来由于种种原因中断了。原因有这么几个：  </p>
 <ul>
 <li>空间的输入体验实在是太差了；</li>
 <li>大家都转移到社交平台了，没人愿意写长于140字的文章、也没人愿意看了；</li>
 <li>懒。</li>
 </ul>
 <p>但是现在回过头来看看那时候的回复还是很有趣，这也是为什么又要开始写的原因之一。当然，最大的原因还是装<del>逼</del>的需要。</p>
-<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>所以就开始在网上找方法，怎么建一个独立博客，还能支持 Markdown 的。有机会还要安利大家用 Markdown，语法太简单了，还很好看，<br>在不同的时间段尝试了好几次，这次终于没放弃，一口气做完，可以正常发布了。<br>主要特点有:   </p>
-<ul>
-<li>基于<a href="http://jekyllrb.com/" target="_blank" rel="external">jekyll</a>和<a href="https://pages.github.com/" target="_blank" rel="external">Github Pages</a>，主题是<a href="https://github.com/rosario/kasper" target="_blank" rel="external">kasper</a>;</li>
-<li>支持Disqus评论，所以只要在下方注册一个 Disqus 账号就可以评论了。</li>
-<li>一点都没学过网页开发，只会删删改改，将就着看吧。</li>
-</ul>
-<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>内容方面就是啥都会写，不管有没有人看。毕竟<strong>长大</strong>了。</p>
-<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><p><em>2016/5/13 Edited</em><br>果真是一直没有维护，<code>GitHub Pages</code>升级之后很多组件就不能用了。索性花了一天时间配置了<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>，主题就用了一个最流行的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a>。<code>Hexo</code>的好处在于，有完整的中文文档，而且这个主题简单的同时，各种功能都有。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/03/26/welcome/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>

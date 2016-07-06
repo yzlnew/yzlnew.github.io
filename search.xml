@@ -13,6 +13,7 @@
 <li><a href="http://www.texample.net/tikz/examples/simple-flow-chart/" target="_blank" rel="external">Simple flow chart</a></li>
 </ul>
 <p>第一种比较好看，也比较容易维护，当然是用它了。</p>
+<a id="more"></a>
 <h1 id="所需宏包"><a href="#所需宏包" class="headerlink" title="所需宏包"></a>所需宏包</h1><p>在导言区加入以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;tikz&#125;</span><br><span class="line">\usetikzlibrary&#123;shapes,arrows,chains&#125;</span><br><span class="line">\usepackage&#123;xcolor&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="最终效果和代码"><a href="#最终效果和代码" class="headerlink" title="最终效果和代码"></a>最终效果和代码</h1><p><img src="http://o9gmysn8m.bkt.clouddn.com/2016-07-06-flowchart.jpg" alt="flowchart"></p>
@@ -37,6 +38,7 @@
       <content type="html"><![CDATA[<p>辗转多时终于来到<strong>这里</strong>，却忘记了来的原因。<br><img src="http://i.imgur.com/t3PIFBL.jpg" alt="Imgur"><br>第一次出这么远的门，坐了10多个小时的飞机。飞机上基本就是睡、吃、睡、吃，就这么一路过来了。</p>
 <p>很难形容踏上异国的土地之后的感受，准确来说，就是没有感受。</p>
 <p>从旧金山坐<code>BART</code>到伯克利，再坐公交到住处，基本也就是在睡觉，迷糊中醒来，继续睡。</p>
+<a id="more"></a>
 <p>伯克利的环境很不错。街上的人很少，海风很凉快、太阳很暖和。低矮的房屋，整齐的街区。</p>
 <p>傍晚的时候往海边走了走，整个小镇被湿润的云雾遮住了，在太阳落下的海平面上透出点光。</p>
 <p><img src="http://i.imgur.com/a58G8aj.jpg?1" alt="Imgur">  </p>
@@ -65,7 +67,7 @@
 <p>以上是《蓝莓之夜》里 Beth 在男友家窗外看到男友与别的女人接吻的时候的内心独白。<br>当然，她“决定以最长的距离穿过马路”，走了。一路离开了纽约。  </p>
 <h1 id="新森林"><a href="#新森林" class="headerlink" title="新森林"></a>新森林</h1><p>不得不说这部电影的手法、结构、主题都和《重庆森林》很像。顺带说一下，《重庆森林》和“重庆”、“森林”都没有什么关系。但是《蓝莓之夜》还是和“蓝莓”有点关联的。 </p>
 <p>刚失恋的 Beth 来到了我现在都不记得叫什么名字的男主开的餐厅，把钥匙留在那儿，期待着前男友能来这里找回钥匙和她重归于好。但是那一天迟迟没有到来。 </p>
-<p>几个元素都和《重亲森林》很吻合，失恋的主角、小餐馆、绚烂的都市、说走就走的旅行、莫名其妙但是就是戳中内心的台词。不过让人遗憾的是这一切变成了美国纽约故事，说着英文却没有异域感。也许是男主（其实他只在前段和后段出现了一下）长得不够忧郁帅气，台词的墨镜味道掌握得不太好吧。  </p>
+<p>几个元素都和《重亲森林》很吻合，失恋的主角、小餐馆、绚烂的都市、说走就走的旅行、莫名其妙但是就是戳中内心的台词。不过让人遗憾的是这一切变成了美国纽约故事，说着英文却没有异域感。也许是男主（其实他只在前段和后段出现了一下）长得不够忧郁帅气，台词的墨镜味道掌握得不太好吧。<br><a id="more"></a>  </p>
 <h1 id="流浪夜"><a href="#流浪夜" class="headerlink" title="流浪夜"></a>流浪夜</h1><p>《重庆森林》里的阿菲，在相当长的一段爱情幻想之后，一个人去了加州。而 Beth 则逃离了纽约。</p>
 <p>一个人做着两份工作，想要在繁忙中忘记前男友。一边观察着人间百态，一边写明信片给和自己有着暧昧的男主。  </p>
 <p>这期间主要穿插了两个人的故事：一个是婚姻快要破产但是迟迟不肯放手而酗酒的警官，另一个是和父亲关系疏离的女赌徒。第一个故事主要告诉了女主什么是“let it go”，第二个告诉她“trust”。不过毫无例外，都是悲剧故事。  </p>
@@ -83,10 +85,12 @@
 <p>很喜欢阿菲正传这个名字。同样喜欢阿飞正传这部电影。都已经完全忘了讲了些什么，只留下一点点光影记忆，时时记起的无脚鸟的故事。</p>
 <p>初中的时候写过一篇周记，也是这个名字。写的是一个不怎么熟悉的人。不知道为什么到现在都还记着。</p>
 <blockquote>
-<p>看 当时的月亮<br>曾经代表谁的心<br>结果都一样<br>看 当时的月亮<br>一夜之间化做今天的阳光    </p>
-</blockquote>
+<p>看 当时的月亮<br>曾经代表谁的心<br>结果都一样<br>看 当时的月亮<br>一夜之间化做今天的阳光<br><a id="more"></a></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=298915&auto=0&height=66"></iframe>
 
+
+
+</blockquote>
 ]]></content>
     </entry>
     
@@ -100,6 +104,7 @@
 <li>懒。</li>
 </ul>
 <p>但是现在回过头来看看那时候的回复还是很有趣，这也是为什么又要开始写的原因之一。当然，最大的原因还是装<del>逼</del>的需要。</p>
+<a id="more"></a>
 <h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>所以就开始在网上找方法，怎么建一个独立博客，还能支持 Markdown 的。有机会还要安利大家用 Markdown，语法太简单了，还很好看，<br>在不同的时间段尝试了好几次，这次终于没放弃，一口气做完，可以正常发布了。<br>主要特点有:   </p>
 <ul>
 <li>基于<a href="http://jekyllrb.com/" target="_blank" rel="external">jekyll</a>和<a href="https://pages.github.com/" target="_blank" rel="external">Github Pages</a>，主题是<a href="https://github.com/rosario/kasper" target="_blank" rel="external">kasper</a>;</li>
