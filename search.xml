@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[本科毕业]]></title>
+      <url>http://yzlnew.github.io/2016/07/07/graduation/</url>
+      <content type="html"><![CDATA[<p><strong>2016年7月3号</strong>，本科毕业啦。<strong>7月5号</strong>，毕业生离校，送同学离开。</p>
+<p>距离自己离开清华还有3年。虽然觉得当初做了一个错误的决定，但是也只能硬着头皮继续走下去了。</p>
+<a id="more"></a>
+<p><img src="http://o9gmysn8m.bkt.clouddn.com/2016-07-08-IMG_20160701_133919.jpg" alt="IMG_20160701_133919"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[利用 TikZ 宏包在 LaTeX 中绘制流程图]]></title>
       <url>http://yzlnew.github.io/2016/06/22/flowchart/</url>
       <content type="html"><![CDATA[<p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p>
