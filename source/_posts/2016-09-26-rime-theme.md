@@ -1,5 +1,5 @@
 ---
-title: Material Design配色的鼠须管RIME主题
+title: Material Design 配色的鼠须管 RIME 主题
 date: 2016-09-26 18:35:59
 tags:
 ---
