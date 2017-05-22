@@ -4,13 +4,15 @@ date: 2016-09-26 18:35:59
 tags:
 ---
 因为搜狗输入法在更新了macOS之后切换有点卡，再加上之前的皮肤不知道怎么的就被搜狗更新覆盖了。所以就找出鼠须管用吧。偶然发现皮肤还是挺好配的。
+
+<!-- more -->
+
 # 最终效果
 ![Rime](http://o9gmysn8m.bkt.clouddn.com/2016-09-26-Rime.jpg)
 
 # 说明
 * 配置文件里还有两个我觉得比较好看的主题。一个是`Liang Hai`的[`Apathy`](https://zhuanlan.zhihu.com/p/19599206)，另一个是`hotoo`的[`Pithy`](https://github.com/hotoo/rime)。不难发现我就是照着后者改的，😄。
 * 想要自定义颜色，直接上[MD官网](https://material.google.com/style/color.html)上找吧。值得注意的是，这里的颜色都是BGR排列的（不知道为什么）。
-<!-- more -->
 
 # 更改`suqirrel.custom.yaml`如下
 
