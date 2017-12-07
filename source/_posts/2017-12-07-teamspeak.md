@@ -8,12 +8,12 @@ tags:
 
 <!-- more -->
 
-# 运行要求
+### 运行要求
 
 - Ubuntu14+ 64bit
 - sudo
 
-# 使用方法
+### 使用方法
 
 ```bash
 wget https://raw.githubusercontent.com/yzlnew/TeamSpeak3Setup/master/ts3setup.sh
