@@ -8,7 +8,8 @@ tags:
 
 <!-- more -->
 
-#	来源
+### 来源
+
 [TeXample](http://www.texample.net/) 上给出了两种流程图的画法：
 
 - [Easy-maintenance flowchart](http://www.texample.net/tikz/examples/flexible-flow-chart/)
@@ -16,7 +17,8 @@ tags:
 
 第一种比较好看，也比较容易维护，当然是用它了。
 
-#	所需宏包
+### 所需宏包
+
 在导言区加入以下代码：
 
 ```LaTeX
@@ -25,7 +27,8 @@ tags:
 \usepackage{xcolor}
 ```
 
-#	最终效果和代码
+### 最终效果和代码
+
 ![flowchart](http://o9gmysn8m.bkt.clouddn.com/2016-07-06-flowchart.jpg)
 
 ```LaTeX
@@ -117,4 +120,3 @@ tags:
 	\label{fig:algorithm}
 \end{figure}
 ```
-

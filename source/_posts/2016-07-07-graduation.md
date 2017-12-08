@@ -10,8 +10,3 @@ tags:
 <!-- more -->
 
 ![IMG_20160701_133919](http://o9gmysn8m.bkt.clouddn.com/2016-07-08-IMG_20160701_133919.jpg)
-
-
-
-
-
