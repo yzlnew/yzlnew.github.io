@@ -15,7 +15,7 @@ tags:
 
 ### 使用方法
 
-```bash
+```shell
 wget https://raw.githubusercontent.com/yzlnew/TeamSpeak3Setup/master/ts3setup.sh
 chmod +x ./ts3setup.sh
 ./ts3setup.sh

@@ -63,12 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: apollo
-archive_generator:
-    per_page: 0
-    yearly: false
-    monthly: false
-    daily: false
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -76,6 +71,12 @@ deploy:
   type: git
   repo: https://github.com/yzlnew/yzlnew.github.io.git
   branch: master
+
+#archive_generator:
+    #per_page: 0
+    #yearly: false
+    #monthly: false
+    #daily: false
 
 # Avatar
 avatar: /images/avatar.jpg
@@ -87,6 +88,6 @@ disqus_shortname: yzlnew
 google_analytics: UA-61197619-1
 
 # Search
-search:
-  path: search.xml
-  field: post
+#search:
+  #path: search.xml
+  #field: post

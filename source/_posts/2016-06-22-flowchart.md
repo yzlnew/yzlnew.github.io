@@ -21,7 +21,7 @@ tags:
 
 在导言区加入以下代码：
 
-```LaTeX
+```tex
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,chains}
 \usepackage{xcolor}
@@ -31,7 +31,7 @@ tags:
 
 ![flowchart](http://o9gmysn8m.bkt.clouddn.com/2016-07-06-flowchart.jpg)
 
-```LaTeX
+```tex
 % 设置颜色代号
 \colorlet{lcfree}{green}
 \colorlet{lcnorm}{blue}
@@ -114,9 +114,8 @@ tags:
   \draw [o->,lcnorm] (t2.west) -- (c1) -| (p4);
   \draw [->,lcnorm] (p3.east) -- (c3) -| (p6.south);
   \draw [<-,lcnorm] (t2.east) -- (c2) -| (p6.north);
-  
-\end{tikzpicture}
+  \end{tikzpicture}
 }
-	\label{fig:algorithm}
+\label{fig:algorithm}
 \end{figure}
 ```
