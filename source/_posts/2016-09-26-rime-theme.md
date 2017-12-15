@@ -3,13 +3,12 @@ title: Material Design 配色的鼠须管 RIME 主题
 date: 2016-09-26 18:35:59
 tags:
 ---
+
+![Rime](http://o9gmysn8m.bkt.clouddn.com/2016-09-26-Rime.jpg)
+
 因为搜狗输入法在更新了 macOS 之后切换有点卡，再加上之前的皮肤不知道怎么的就被搜狗更新覆盖了。所以就找出鼠须管用吧。偶然发现皮肤还是挺好配的。
 
 <!-- more -->
-
-### 最终效果
-
-![Rime](http://o9gmysn8m.bkt.clouddn.com/2016-09-26-Rime.jpg)
 
 ### 说明
 
@@ -87,7 +86,7 @@ patch:
       candidate_format: "\u2005%c\u2005%@\u2005"        # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
       corner_radius: 2                                  # 候选条圆角
       border_height: 3                                  # 窗口边界高度，大于圆角半径才生效
-      border_width: 3                                  # 窗口边界宽度，大于圆角半径才生效
+      border_width: 3                                   # 窗口边界宽度，大于圆角半径才生效
       back_color: 0xFFFFFF                              # 候选条背景色
       border_color: 0x212121                            # 边框色
       font_face: "PingFangSC-Regular, H-SiuNiu"         # 候选词字体
@@ -102,7 +101,7 @@ patch:
       hilited_text_color: 0x9e9e9e                      # 高亮拼音 (需要开启内嵌编码)
       hilited_candidate_text_color: 0x212121            # 第一候选项文字颜色
       hilited_candidate_back_color: 0xDCD8CF            # 第一候选项背景背景色
-      hilited_candidate_label_color: 0x212121          # 第一候选项编号颜色
+      hilited_candidate_label_color: 0x212121           # 第一候选项编号颜色
       hilited_comment_text_color: 0x9A9AEF              # 注解文字高亮
 ```
 

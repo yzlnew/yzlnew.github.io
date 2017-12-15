@@ -72,7 +72,16 @@ deploy:
   repo: https://github.com/yzlnew/yzlnew.github.io.git
   branch: master
 
-# ---------------------------------------------------------------
+markdown_it_plus:
+    highlight: true
+    html: true
+    xhtmlOut: true
+    breaks: false
+    langPrefix:
+    linkify: true
+    typographer:
+    quotes: “”‘’
+    pre_class: highlight
 # Theme Core Configuration Settings
 # ---------------------------------------------------------------
 
@@ -195,6 +204,7 @@ scheme: Gemini
 social:
   GitHub: https://github.com/yzlnew || github
   E-Mail: mailto:yzlnew@gmail.com || envelope
+  Telegram: https://telegram.me/r0brew || telegram
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -597,7 +607,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: ture
+  enable: false
   app_id: Ll38COhtCvfdbtq3Mb2UWWll-gzGzoHsz
   app_key: BCiwpow9oPz44kyODzMblSCG
 
@@ -615,7 +625,7 @@ firestore:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -638,7 +648,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -695,7 +705,7 @@ note:
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
   style: simple
-  icons: false
+  icons: true
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.

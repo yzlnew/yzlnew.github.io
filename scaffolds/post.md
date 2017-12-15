@@ -1,9 +1,12 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+categories:
+tags: []
 ---
+
+<!-- more -->
 
 ###
 
-<!-- more -->
+<div class="note default"><p>default</p></div>
