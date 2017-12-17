@@ -29,3 +29,5 @@ categories:
 
 <div class="note danger"><p>Vim 的学习曲线极其陡峭，比 LaTeX 还陡，在攀登高峰的过程中可能因为一个个小小配置问题而发疯、抓狂，所以请谨慎前进。</p></div> 
 
+### 获取 Vim
+
