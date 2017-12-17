@@ -19,7 +19,7 @@ after_script:
   - git config user.name "yzlnew"
   - git config user.email "yzlnew@gmail.com"
   - git add .
-  - git commit -m "Site updated:"$(date +%y-%m-%d\ %H:%M:%S)
+  - git commit -m "Site updated:"$(date +\ %y-%m-%d\ %H:%M:%S)
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 # E: Build LifeCycle
 
@@ -29,4 +29,4 @@ branches:
 
 env:
  global:
-   - GH_REF: github.com/lifengsofts/lifengsofts.github.io.git
+   - GH_REF: github.com/yzlnew/yzlnew.github.io.git
