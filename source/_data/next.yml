@@ -82,6 +82,7 @@ deploy:
     #typographer:
     #quotes: “”‘’
     #pre_class: highlight
+    
 # Markdown-it config
 markdown:
   render:

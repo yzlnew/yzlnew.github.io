@@ -6,7 +6,6 @@
     "version": "3.7.1"
   },
   "dependencies": {
-    "@iktakahiro/markdown-it-katex": "^3.0.3",
     "hexo": "^3.7.1",
     "hexo-browsersync": "^0.2.0",
     "hexo-deployer-git": "^0.1.0",
@@ -17,6 +16,7 @@
     "hexo-generator-search": "^1.0.2",
     "hexo-generator-sitemap": "^1.1.2",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-inject": "^1.0.0",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-jade": "^0.4.1",
     "hexo-renderer-markdown-it": "^3.4.1",
