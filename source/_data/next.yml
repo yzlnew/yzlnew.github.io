@@ -72,16 +72,37 @@ deploy:
   repo: https://github.com/yzlnew/yzlnew.github.io.git
   branch: master
 
-markdown_it_plus:
-    highlight: true
+#markdown_it_plus:
+    #highlight: true
+    #html: true
+    #xhtmlOut: true
+    #breaks: false
+    #langPrefix:
+    #linkify: true
+    #typographer:
+    #quotes: “”‘’
+    #pre_class: highlight
+# Markdown-it config
+markdown:
+  render:
     html: true
-    xhtmlOut: true
-    breaks: false
-    langPrefix:
+    xhtmlOut: false
+    breaks: true
     linkify: true
-    typographer:
-    quotes: “”‘’
-    pre_class: highlight
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶
 # Theme Core Configuration Settings
 # ---------------------------------------------------------------
 
