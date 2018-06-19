@@ -2,7 +2,7 @@
 title: Vim 学习之路
 date: 2017-12-14 15:50:11
 tags: [Vim]
-categories: Code
+categories: Tools
 ---
 
 学习使用 vim 可真的是一件痛苦又快乐的事。
