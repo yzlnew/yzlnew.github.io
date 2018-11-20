@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Pacifico:300,300italic,400,400italic,700,700italic|Fira Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/logo.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v=5.1.3">
+
+
+
+
+
+
+  <meta name="keywords" content="yzlnew">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="天池美年的初赛逐渐告一段落，作为一个之前几乎没有任何实际机器实践经验的选手，也勉强进了复赛（b 榜的分 0.0391 ）。在其中也学到了很多东西，有些部分留到后面有时间再总结，这里主要大致梳理一下初赛的心路历程。">
+<meta name="keywords" content="yzlnew">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美年健康 AI 大赛初赛小结">
+<meta property="og:url" content="https://yzlnew.github.io/2018/05/07/meinian/index.html">
+<meta property="og:site_name" content="Robin&#39;s Restaurant">
+<meta property="og:description" content="天池美年的初赛逐渐告一段落，作为一个之前几乎没有任何实际机器实践经验的选手，也勉强进了复赛（b 榜的分 0.0391 ）。在其中也学到了很多东西，有些部分留到后面有时间再总结，这里主要大致梳理一下初赛的心路历程。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://1e8f2fa189da333464c9-e7cfef2b81d170385252e69507fe4f83.ssl.cf1.rackcdn.com/assets/images/pills.jpg">
+<meta property="og:updated_time" content="2018-11-20T03:20:46.818Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="美年健康 AI 大赛初赛小结">
+<meta name="twitter:description" content="天池美年的初赛逐渐告一段落，作为一个之前几乎没有任何实际机器实践经验的选手，也勉强进了复赛（b 榜的分 0.0391 ）。在其中也学到了很多东西，有些部分留到后面有时间再总结，这里主要大致梳理一下初赛的心路历程。">
+<meta name="twitter:image" content="https://1e8f2fa189da333464c9-e7cfef2b81d170385252e69507fe4f83.ssl.cf1.rackcdn.com/assets/images/pills.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yzlnew.github.io/2018/05/07/meinian/">
+
+
+
+
+
+  <title>美年健康 AI 大赛初赛小结 | Robin's Restaurant</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61197619-1', 'auto');
+  ga('send', 'pageview');
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Robin's Restaurant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yzlnew.github.io/2018/05/07/meinian/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="r0b1n4saLe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Robin's Restaurant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">美年健康 AI 大赛初赛小结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-07T22:01:51+00:00">
+                2018-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/07/meinian/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/07/meinian/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>天池美年的初赛逐渐告一段落，作为一个之前几乎没有任何实际机器实践经验的选手，也勉强进了复赛（b 榜的分 0.0391 ）。在其中也学到了很多东西，有些部分留到后面有时间再总结，这里主要大致梳理一下初赛的心路历程。</p>
+<p><img src="https://1e8f2fa189da333464c9-e7cfef2b81d170385252e69507fe4f83.ssl.cf1.rackcdn.com/assets/images/pills.jpg" alt="药丸"></p>
+<a id="more"></a>
+<h3 id="参赛之前的背景"><a class="header-anchor" href="#参赛之前的背景">¶</a>参赛之前的背景</h3>
+<h4 id="为什么要参加这次比赛"><a class="header-anchor" href="#为什么要参加这次比赛">¶</a>为什么要参加这次比赛</h4>
+<p>非常直接的原因是找实习的时候发现必须得有项目经历，然而专业根本和机器学习没关系。在 kaggle 上看了几个入门赛，但是不如实际比赛来得有驱动力，再加上刚好美年的比赛时间很合适。</p>
+<h4 id="比赛之前的技能点"><a class="header-anchor" href="#比赛之前的技能点">¶</a>比赛之前的技能点</h4>
+<ul>
+<li>自认为不太好的编程能力，会点 python，写过 C++ 算法，甚至还捣鼓过几个 Android 应用，<s>学而不精的典范</s>。</li>
+<li>学过 Coursera 的 ML 课，看过《统计学习方法》，<s>一问细节就懵逼</s>。</li>
+<li>良好的英文检索能力（我觉得这点还是挺重要的，知道点术语和自己想要实现的效果，剩下的谷歌能教会我就完全 OJBK）。</li>
+<li>只听说过 XGBoost，完全没听说过 LightGBM，不过还是知道这样的比赛大多数都用的 GBDT 类的模型。Pandas？没听说过，numpy 都不 6。sklearn 还是用过一丢丢的（后来发现把它的文档整个通读一遍就知道基本的套路了，简直 excited）</li>
+</ul>
+<p>然后就开始愉快地写代码了！不试试怎么知道自己不行呢！</p>
+<h3 id="比赛历程和一些坑"><a class="header-anchor" href="#比赛历程和一些坑">¶</a>比赛历程和一些坑</h3>
+<h4 id="开始上手"><a class="header-anchor" href="#开始上手">¶</a>开始上手</h4>
+<p>对于一个像我一样的初学者来说，面对一个题目一定是一脸茫然不知所措的。面对这种情况，两种方法是不推荐的：</p>
+<ol>
+<li>来吧，把机器学习 MOOC 从头来一遍。</li>
+<li>以小白的虚心姿态问群里的大佬。</li>
+</ol>
+<p>第一种是因为做比赛其实一开始并不需要很全面的知识，像这个比赛，随便找个 kaggle 上类似比赛第一的解决方案看就行了。第二种，虽然比赛有很好的交流的机会，但是自己没有产出的话还是不要麻烦别人比较好，毕竟不是一个层次内的交流……</p>
+<p>具体到这个比赛，我先看了几个 kaggle Titanic 的 <a href="https://www.kaggle.com/c/titanic#tutorials" target="_blank" rel="noopener">kernels</a>。有耐心的可以读一读<a href="https://www.kaggle.com/startupsci/titanic-data-science-solutions" target="_blank" rel="noopener">这个</a>，一整个 workflow 给你整得明明白白的。</p>
+<p>另外调研了一下 LightGBM，感觉大家用得挺多的，那么我用它也肯定不这么会错咯。恰好 LightGBM 给了几个不错的 <a href="https://github.com/Microsoft/LightGBM/tree/master/examples" target="_blank" rel="noopener">Examples</a>，上手写代码的难度也大大降低了。</p>
+<h4 id="先写一个简单的模型"><a class="header-anchor" href="#先写一个简单的模型">¶</a>先写一个简单的模型</h4>
+<p>第二步其实直接可以写了，根本没想什么特征提取啊、模型选择、参数优化（因为我都不会），所以就先拿 sklearn 写了一个随机森林的方法。这里要再赞美一下 sklearn 的文档和 API 写得真的好（主要还是因为它简单）。</p>
+<p>用了 100 多个缺失值少于 50000 的数值特征（文字特征不会处理，到现在还是人工分类，没用 NLP，以及这里是个大坑），大概最后结果在 0.037 左右。虽然成绩完全不行，但是还是给了我很大的信心，起码我是可以做出结果来的。</p>
+<h4 id="漫漫上分路"><a class="header-anchor" href="#漫漫上分路">¶</a>漫漫上分路</h4>
+<p>由于数据集的数据类型很复杂，数值列也基本不知道含义，取值范围也很多样，所以一开始就决定用树模型来做。特征决定了得分的上限，所以大部分时间基本都花在了处理数据、得到新的特征上去。后来证明这样是可行的。</p>
+<ol>
+<li>0.0320+ 阶段：只用 100 多个数值特征，LightGBM 用文档推荐的参数，大概得分在这里。</li>
+<li>0.0315 左右阶段：用 log1p 调整了训练集输出的分布。这个是第一个卡住的地方。算法也是比较不稳定（特征太少），产生测试集和验证集的 random_state 不同，结果变化挺大，但是线上的成绩是不会提高的。</li>
+<li>0.0310 阶段：手头还有好多的文字特征没用，取了几个数据量大的列，正则匹配分类，加了 5、6 个分类特征。虽然还是不稳定，但是线上成绩还是明显提高了（这又是卡住的地方）。</li>
+<li>0.0300+ 阶段：看了技术圈大佬的分享，发现自己的数值特征用少了，就放宽了缺失值的范围，可以说是大步飞跃，线上线下的成绩稳定、也很同步。之前估计进复赛起码得 0.0300 吧，所以信心还是增强了不少。</li>
+<li>0.0290+ 阶段：这时候离换数据只剩几天了，所以基本上就和队友在加文字特征，还是正则匹配分类。期间咨询了学医的同学的意见，选了一些重要的文字特征先处理了，效果还是很明显的。</li>
+</ol>
+<p>其中还是遇到一些其他的坎坷，比如：</p>
+<ol>
+<li>队友用 LDA 处理了长的问题特征，线下成绩突飞猛进，线上成绩反而差了。最后得出的结论还是特征加的有问题，对于 NLP 的理解和参数选择都还有要学习的地方。</li>
+<li>研究了好久数据集要不要 shuffle 的问题，其实是毫无影响的。</li>
+</ol>
+<h3 id="一些感受和复赛的准备"><a class="header-anchor" href="#一些感受和复赛的准备">¶</a>一些感受和复赛的准备</h3>
+<p>总体来说地话，学了很多东西，还需要学的东西更多。在过程中能够体会几点：</p>
+<ol>
+<li>多参考别人的经验。自己犯的一些错误或者存在的误区，其实很多人都经历过。学习别人的经验成长是最快的。</li>
+<li>越往上，提升就越困难了，保持学习的心态，继续努力。</li>
+</ol>
+<p>对于复赛，自己的理解，主要要发力还是处理文字特征。不过我始终认为 NLP 在这个问题上称作一个工具更合适，能帮助非专业的我们处理复杂的病情描述，实际效果怎么样，还是咨询一下专业人士比较好。另外一部分需要准备的就是模型调参和模型融合了，这个倒比前面的特征处理要稍微简单、有方向一点。</p>
+<p>总之，继续加油吧！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    r0b1n4saLe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://yzlnew.github.io/2018/05/07/meinian/" title="美年健康 AI 大赛初赛小结">https://yzlnew.github.io/2018/05/07/meinian/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/07/teamspeak/" rel="next" title="在 VPS 部署 TeamSpeak 语音服务器一键脚本">
+                <i class="fa fa-chevron-left"></i> 在 VPS 部署 TeamSpeak 语音服务器一键脚本
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/14/ml-evaluation/" rel="prev" title="分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&AUC">
+                分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&AUC <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="r0b1n4saLe">
+            
+              <p class="site-author-name" itemprop="name">r0b1n4saLe</p>
+              <p class="site-description motion-element" itemprop="description">Cooking Moments.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yzlnew" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yzlnew@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://telegram.me/r0brew" target="_blank" title="Telegram">
+                      
+                        <i class="fa fa-fw fa-telegram"></i>Telegram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参赛之前的背景"><span class="nav-number">1.</span> <span class="nav-text">¶参赛之前的背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要参加这次比赛"><span class="nav-number">1.1.</span> <span class="nav-text">¶为什么要参加这次比赛</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比赛之前的技能点"><span class="nav-number">1.2.</span> <span class="nav-text">¶比赛之前的技能点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比赛历程和一些坑"><span class="nav-number">2.</span> <span class="nav-text">¶比赛历程和一些坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开始上手"><span class="nav-number">2.1.</span> <span class="nav-text">¶开始上手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#先写一个简单的模型"><span class="nav-number">2.2.</span> <span class="nav-text">¶先写一个简单的模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#漫漫上分路"><span class="nav-number">2.3.</span> <span class="nav-text">¶漫漫上分路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些感受和复赛的准备"><span class="nav-number">3.</span> <span class="nav-text">¶一些感受和复赛的准备</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-bolt"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">r0b1n4saLe</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://yzlnew.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://yzlnew.github.io/2018/05/07/meinian/';
+          this.page.identifier = '2018/05/07/meinian/';
+          this.page.title = '美年健康 AI 大赛初赛小结';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://yzlnew.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
