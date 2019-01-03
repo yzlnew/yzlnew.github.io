@@ -7,7 +7,6 @@ sections:
 - type: document
   path: content
   label: Posts
-  match: "**/*"
 - type: heading
   label: Hyde hyde hyde
 upload_dir: static/uploads
