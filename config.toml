@@ -1,7 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://yzlnew.github.io/swam-blog/"
 languageCode = "en-us"
 theme = "hyde"
-title = "My New Hugo Site"
+title = "Swam"
 [params]
 disqusShortname = ""
 googleAnalytics = ""
