@@ -10,11 +10,10 @@
 
     </div>
   </div>
-
+  {{ partial "add-mathjax-to-page.html" . }}
+  {{ partial "mathjax-markdown-solution.html" . }}
   {{- partial "footer/scripts" . -}}
 
 </body>
 
 </html>
-{{ partial "add-mathjax-to-page.html" . }}
-{{ partial "mathjax-markdown-solution.html" . }}
