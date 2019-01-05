@@ -18,7 +18,7 @@ weight = -120
 [[menu.main]]
 identifier = "about"
 name = "About"
-url = "/blog/about/"
+url = "/blog"
 weight = -110
 [params]
 author = "Yellow Stone"
