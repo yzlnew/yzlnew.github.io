@@ -2,6 +2,7 @@
 title: 分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&AUC
 tags: []
 date: 2018-05-14 17:18:11
+mathjax : true
 categories:
     - Machine Learning
 ---
@@ -25,7 +26,7 @@ categories:
 - 精确率 Precision 和召回 Recall，对应上表来说，分子都是 TP
   - Precision 是检索出相关文档数与检索出的文档总数的比率，衡量的是检索系统的**查准率**。对于二分类公式如下，即**第一列**中 TP 的占比，预测为正的样本中预测正确的占比。
 
-  <div>$$P = \frac{TP}{TP+FP}$$</div>
+  $$P = \frac{TP}{TP+FP}$$
 
   - Recall 是指检索出的相关文档数和文档库中所有的相关文档数的比率，衡量的是检索系统的**查全率**。对于二分类公式如下，即**第一行**中 TP 的占比，实际正类中预测正确的占比。
 
