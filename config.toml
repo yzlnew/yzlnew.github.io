@@ -1,4 +1,4 @@
-baseurl             = "https://yzlnew.github.io/blog/"
+baseurl             = "https://yzlnew.github.io/"
 builddrafts         = false
 canonifyurls        = true
 contentdir          = "content"
