@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yellow Stone</title>
+    <link>https://yzlnew.github.io/</link>
+    <description>Recent content on Yellow Stone</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 19 Jun 2018 15:35:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://yzlnew.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python 垃圾回收及 gc 模块</title>
+      <link>https://yzlnew.github.io/blog/2018-06-19-python-gc/</link>
+      <pubDate>Tue, 19 Jun 2018 15:35:17 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2018-06-19-python-gc/</guid>
+      <description>&lt;p&gt;本文简单描述了 Python 3.6 的垃圾回收机制。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&amp;AUC</title>
+      <link>https://yzlnew.github.io/blog/2018-05-14-ml-evaluation/</link>
+      <pubDate>Mon, 14 May 2018 17:18:11 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2018-05-14-ml-evaluation/</guid>
+      <description>&lt;p&gt;在机器学习的模型评估中，选择合适的评价指标很重要。对于回归问题，常常使用一些损失函数，这在各个线上比赛、sklearn 的文档里都能看到。而对于分类或者标注问题，几种常见的指标比较容易混淆，这里简单总结一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>美年健康 AI 大赛初赛小结</title>
+      <link>https://yzlnew.github.io/blog/2018-05-07-meinian/</link>
+      <pubDate>Mon, 07 May 2018 22:01:51 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2018-05-07-meinian/</guid>
+      <description>&lt;p&gt;天池美年的初赛逐渐告一段落，作为一个之前几乎没有任何实际机器实践经验的选手，也勉强进了复赛（b 榜的分 0.0391 ）。在其中也学到了很多东西，有些部分留到后面有时间再总结，这里主要大致梳理一下初赛的心路历程。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://1e8f2fa189da333464c9-e7cfef2b81d170385252e69507fe4f83.ssl.cf1.rackcdn.com/assets/images/pills.jpg&#34; alt=&#34;药丸&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在 VPS 部署 TeamSpeak 语音服务器一键脚本</title>
+      <link>https://yzlnew.github.io/blog/2017-12-07-teamspeak/</link>
+      <pubDate>Thu, 07 Dec 2017 19:55:55 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2017-12-07-teamspeak/</guid>
+      <description>&lt;p&gt;在VPS上搭建TeamSpeak语音服务器的一键脚本。仓库点&lt;a href=&#34;https://github.com/yzlnew/TeamSpeak3Setup&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.teamspeak.com/assets/images/logos/teamspeak.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用 pandoc 让 Markdown 从 LaTeX 输出 pdf 文档</title>
+      <link>https://yzlnew.github.io/blog/2017-10-12-pandoc-chinese/</link>
+      <pubDate>Thu, 12 Oct 2017 17:42:44 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2017-10-12-pandoc-chinese/</guid>
+      <description>&lt;p&gt;听着名字就很绕，主要需求来源是用 Markdown 写一些简单的作业、提交的文档比较快，可是一些编辑器输出 pdf 比较难看（主要是字体无法自定义）或者是收费的，但是 pandoc 可以通过调用 XeLaTeX 解决这个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用 duti 管理 macOS 下的默认打开程序</title>
+      <link>https://yzlnew.github.io/blog/2017-09-25-duti/</link>
+      <pubDate>Mon, 25 Sep 2017 18:52:54 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2017-09-25-duti/</guid>
+      <description>&lt;p&gt;&lt;code&gt;macOS&lt;/code&gt;下管理文件的默认打开程序不是很方便，不过有了&lt;code&gt;duti&lt;/code&gt; 就可以通过配置文件来更改默认打开程序了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Material Design 配色的鼠须管 RIME 主题</title>
+      <link>https://yzlnew.github.io/blog/2016-09-26-rime-theme/</link>
+      <pubDate>Mon, 26 Sep 2016 18:35:59 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2016-09-26-rime-theme/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://ws4.sinaimg.cn/large/006tNc79gy1fytovh23q0j30g504b74r.jpg&#34; alt=&#34;Rime&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;因为搜狗输入法在更新了 macOS 之后切换有点卡，再加上之前的皮肤不知道怎么的就被搜狗更新覆盖了。所以就找出鼠须管用吧。偶然发现皮肤还是挺好配的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>利用 TikZ 宏包在 LaTeX 中绘制流程图</title>
+      <link>https://yzlnew.github.io/blog/2016-06-22-flowchart/</link>
+      <pubDate>Wed, 22 Jun 2016 09:37:35 +0000</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2016-06-22-flowchart/</guid>
+      <description>&lt;p&gt;本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

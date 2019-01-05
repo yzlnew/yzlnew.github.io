@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 
 <head>
-	<meta name="generator" content="Hugo 0.53" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="HandheldFriendly" content="True">
@@ -10,22 +9,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Yellow Stone">
-<meta name="description" content="">
+<meta name="description" content="在VPS上搭建TeamSpeak语音服务器的一键脚本。仓库点这里。
 
-<meta property="og:title" content="Yellow Stone" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://yzlnew.github.io/" />
-<meta property="og:updated_time" content="2018-06-19T15:35:17&#43;00:00"/>
+">
+
+<meta property="og:title" content="在 VPS 部署 TeamSpeak 语音服务器一键脚本" />
+<meta property="og:description" content="在VPS上搭建TeamSpeak语音服务器的一键脚本。仓库点这里。
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yzlnew.github.io/blog/2017-12-07-teamspeak/" /><meta property="article:published_time" content="2017-12-07T19:55:55&#43;00:00"/>
+<meta property="article:modified_time" content="2017-12-07T19:55:55&#43;00:00"/>
 
 
 <title>
 
 
-     Yellow Stone 
+     在 VPS 部署 TeamSpeak 语音服务器一键脚本 
 
 </title>
-<link rel="canonical" href="https://yzlnew.github.io/">
+<link rel="canonical" href="https://yzlnew.github.io/blog/2017-12-07-teamspeak/">
 
 
 
@@ -43,11 +46,11 @@
 
 
     
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-05%2013%3a30%3a21.08057095%20%2b0000%20UTC%20m%3d%2b0.044618394">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-05%2013%3a30%3a21.08057095%20%2b0000%20UTC%20m%3d%2b0.044618394">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-05%2013%3a30%3a21.08057095%20%2b0000%20UTC%20m%3d%2b0.044618394">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-05%2013%3a30%3a21.072850686%20%2b0000%20UTC%20m%3d%2b0.036898128">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-05%2013%3a30%3a21.072850686%20%2b0000%20UTC%20m%3d%2b0.036898128">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-05%2013%3a30%3a21.072850686%20%2b0000%20UTC%20m%3d%2b0.036898128">
     
-        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-05%2013%3a30%3a21.08057095%20%2b0000%20UTC%20m%3d%2b0.044618394">
+        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-05%2013%3a30%3a21.072850686%20%2b0000%20UTC%20m%3d%2b0.036898128">
     
 
 
@@ -60,8 +63,6 @@
 >
 
 
-
-  <link href="https://yzlnew.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Yellow Stone" />
 
 
 
@@ -142,76 +143,66 @@
         
 
         
-            <a href="https://yzlnew.github.io/index.xml"><img class="icon" src="https://yzlnew.github.io/img/rss.svg" alt="rss" /></a>
-        
 
         
         </div>
     </div>
 </section>
 
-<section class="main">
+
+<section class="main post non-narrow zero-top-spacing">
     <div class="container">
         <div class="content">
-            
-            
-            
-            
-                <div class="page-heading">Latest Posts</div>
-                <ul>
-                    
-                        <li class="post-item">
-    
-    <span class="meta"><time datetime='2018-06-19T15:35:17Z'>Jun 19, 2018</time></span>
-    
-    <a href="https://yzlnew.github.io/blog/2018-06-19-python-gc/"><span>Python 垃圾回收及 gc 模块</span></a>
-</li>
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
 
-                    
-                        <li class="post-item">
-    
-    <span class="meta"><time datetime='2018-05-14T17:18:11Z'>May 14, 2018</time></span>
-    
-    <a href="https://yzlnew.github.io/blog/2018-05-14-ml-evaluation/"><span>分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&amp;AUC</span></a>
-</li>
+    在 VPS 部署 TeamSpeak 语音服务器一键脚本
 
-                    
-                        <li class="post-item">
-    
-    <span class="meta"><time datetime='2018-05-07T22:01:51Z'>May 7, 2018</time></span>
-    
-    <a href="https://yzlnew.github.io/blog/2018-05-07-meinian/"><span>美年健康 AI 大赛初赛小结</span></a>
-</li>
+</div>
 
+                    <div class="initials"><a href="https://yzlnew.github.io/"></a></div>
+                </div>
+                <div class="meta">
                     
-                        <li class="post-item">
-    
-    <span class="meta"><time datetime='2017-12-07T19:55:55Z'>Dec 7, 2017</time></span>
-    
-    <a href="https://yzlnew.github.io/blog/2017-12-07-teamspeak/"><span>在 VPS 部署 TeamSpeak 语音服务器一键脚本</span></a>
-</li>
+                    <div class="date" title='Thu Dec 7 2017 19:55:55 UTC'>Dec 7, 2017</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <p>在VPS上搭建TeamSpeak语音服务器的一键脚本。仓库点<a href="https://github.com/yzlnew/TeamSpeak3Setup">这里</a>。</p>
 
-                    
-                        <li class="post-item">
-    
-    <span class="meta"><time datetime='2017-10-12T17:42:44Z'>Oct 12, 2017</time></span>
-    
-    <a href="https://yzlnew.github.io/blog/2017-10-12-pandoc-chinese/"><span>用 pandoc 让 Markdown 从 LaTeX 输出 pdf 文档</span></a>
-</li>
+<p><img src="https://www.teamspeak.com/assets/images/logos/teamspeak.png" alt="" /></p>
 
-                    
-                    
-                        
-                            <li class="post-item no-bullet">
-                                <a id="see-more" href="https://yzlnew.github.io/blog" ><span>See more&hellip;</span></a>
-                            </li>
-                        
-                    
-                </ul>
+<h3 id="运行要求">运行要求</h3>
+
+<ul>
+<li>Ubuntu14+ 64bit</li>
+<li>sudo</li>
+</ul>
+
+<h3 id="使用方法">使用方法</h3>
+
+<pre><code class="language-shell">wget https://raw.githubusercontent.com/yzlnew/TeamSpeak3Setup/master/ts3setup.sh
+chmod +x ./ts3setup.sh
+./ts3setup.sh
+</code></pre>
+                <br>
+                
+                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
             
         </div>
     </div>
 </section>
+
 
 
 
@@ -264,5 +255,4 @@ code.has-jax {
 
 </body>
 </html>
-
 
