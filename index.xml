@@ -6,10 +6,29 @@
     <description>Recent content on Yellow Stone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 06 Jan 2019 14:55:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 19:31:49 +0800</lastBuildDate>
     
 	<atom:link href="https://yzlnew.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>记一次 rm -rf 之后</title>
+      <link>https://yzlnew.github.io/blog/2019-01-06-rm/</link>
+      <pubDate>Sun, 06 Jan 2019 19:31:49 +0800</pubDate>
+      
+      <guid>https://yzlnew.github.io/blog/2019-01-06-rm/</guid>
+      <description>昨天想要清空一个文件夹结果犯了所有「小白」都会犯的错误。rm -rf
+rm -rf /  然后还手贱按了回车。
+当我看到一大堆 Permission denied 反应了 3 秒终于意识到有点不太对，赶紧 ctrl+c 。表情如下
+执行之后的情况分析 我的应用们应该还没有或者并不能察觉发生了什么，一切正常。但是 zsh 已经告诉我它找不到指令了，好的我来 vim 一下 zshrc。嗯，它理所当然地去世了。
+冷静下来，我想我没用 sudo 那主体上还是没啥大碍的，估计这几秒钟把软链接全删掉了。果然 brew 也已经失效了。
+装回 homebrew 并重装软件 幸好自己有一个备份的习惯，一直都用 brew bundle 备份了几乎所有软件，形成一个 Brewfile
+ brew 安装的包、库之类的 cask 几乎所有的软件应用，只要有的我都会用 homebrew cask 安装，另外包括一些字体 mas 在 Mac App Store 安装的软件  这次的问题首先是用 brew link 把软链接重新建立，然后虽然没有影响到软件的使用，但是要重装 cask list 没有的软件（因为它不支持链接已经存在的应用）。
+以上大概花了我一天，因为要避免走流量，都是通过 IPv6 的代理下载的。
+不能重启 有点想得太简单了，安装之后风扇狂转并且不能重启，强制关键之后会进入重设密码的界面，所以意识到还是得重装系统。
+但是让我整个抹盘重装我是肯定不接受的……所以打算同版本覆盖升级。🍎并不提供完整的 10.14.2 版本系统的下载链接，通过 App Store 下载担心下到一半前功尽弃也不能保存。
+找到一个叫 macOS Mojave Patcher Tool 可以提供完整镜像的下载。</description>
+    </item>
     
     <item>
       <title>迁移到 Hugo 上！</title>
