@@ -1,5 +1,8 @@
 {{ partial "footer_scripts" . }}
+
+{{ if .GetParam "mathjax"}}
 {{ partial "mathjax.html" . }}
+{{ end }}
 
 </body>
 </html>
