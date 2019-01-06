@@ -1,9 +1,8 @@
 ---
 title: 分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&AUC
-tags: []
 date: 2018-05-14 17:18:11
 mathjax : true
-categories:
+tags:
     - Machine Learning
 ---
 
