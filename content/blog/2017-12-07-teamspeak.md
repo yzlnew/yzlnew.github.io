@@ -6,7 +6,7 @@ tags:
 
 在VPS上搭建TeamSpeak语音服务器的一键脚本。仓库点[这里](https://github.com/yzlnew/TeamSpeak3Setup)。
 
-![](https://www.teamspeak.com/assets/images/logos/teamspeak.png)
+![teamspeak](https://www.teamspeak.com/assets/images/logos/teamspeak.png)
 
 <!--more-->
 
@@ -17,7 +17,7 @@ tags:
 
 ### 使用方法
 
-```shell
+```bash
 wget https://raw.githubusercontent.com/yzlnew/TeamSpeak3Setup/master/ts3setup.sh
 chmod +x ./ts3setup.sh
 ./ts3setup.sh
