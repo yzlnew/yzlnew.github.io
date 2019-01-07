@@ -32,8 +32,6 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-
 
 
 
@@ -42,11 +40,11 @@
 
 
     
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2001%3a07%3a45.392090891%20%2b0000%20UTC%20m%3d%2b0.043648916">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2001%3a07%3a45.392090891%20%2b0000%20UTC%20m%3d%2b0.043648916">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2001%3a07%3a45.392090891%20%2b0000%20UTC%20m%3d%2b0.043648916">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2007%3a48%3a35.982012231%20%2b0000%20UTC%20m%3d%2b0.056283314">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2007%3a48%3a35.982012231%20%2b0000%20UTC%20m%3d%2b0.056283314">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2007%3a48%3a35.982012231%20%2b0000%20UTC%20m%3d%2b0.056283314">
     
-        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2001%3a07%3a45.392090891%20%2b0000%20UTC%20m%3d%2b0.043648916">
+        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2007%3a48%3a35.982012231%20%2b0000%20UTC%20m%3d%2b0.056283314">
     
 
 
@@ -164,7 +162,7 @@
                     <div class="date" title='Mon Sep 25 2017 18:52:54 UTC'>Sep 25, 2017</div>
                     
                     
-		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+		    <div class="reading-time"><div class="middot"></div>一分钟读完</div>
                     
                 </div>
             </div>
@@ -174,40 +172,28 @@
 <h3 id="安装-duti">安装<code>duti</code></h3>
 
 <p>通过<code>homebrew</code>安装</p>
-
-<pre><code class="language-bash">brew update
-brew install duti
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">brew update
+brew install duti</code></pre></div>
 <h3 id="生成配置文件">生成配置文件</h3>
 
 <p><code>duti</code>支持通过<code>.duti</code>或<code>plist</code>或命令的方式设置，用<code>.duti</code>配置文件比较直接，也便于保存。具体用法可以参照<code>man duti</code>。</p>
-
-<pre><code class="language-bash">touch .duti
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">touch .duti</code></pre></div>
 <h3 id="填写配置文件">填写配置文件</h3>
 
 <p>在<code>.duti</code>中输入以下内容。分别表示设置<code>IINA</code>打开所有影片，使用<code>Sublime Text 3</code>打开所有纯文本文件（如<code>.txt</code>结尾的文件），使用<code>Sublime Text 3</code>打开所有扩展名为<code>yml</code>的文件。</p>
 
 <p>值得注意的是，<code>duti</code>支持扩展名也支持所谓的<code>UTI</code>（Uniform Type Identifiers），是开发者用来分类数据的。<code>macOS</code>支持的<code>UTL</code>类型可以参照<a href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html">这儿</a>。</p>
-
-<pre><code>com.colliderli.iina    public.movie       all
+<div class="highlight"><pre class="chroma">com.colliderli.iina    public.movie       all
 com.sublimetext.3      public.plain-text  all
-com.sublimetext.3      yml                all
-</code></pre>
-
+com.sublimetext.3      yml                all</pre></div>
 <p>{% note info %} 如果不清楚某个文件的类型，可以通过<code>mdls &lt;file&gt;</code>查看。 如果不清楚某个应用的包名，可以通过<code>osascript -e 'id of app &quot;AppName&quot;</code>查看。 {% endnote %}</p>
 
 <h3 id="载入配置文件">载入配置文件</h3>
-
-<pre><code class="language-bash">duti .duti
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">duti .duti</code></pre></div>
 <p>All set！试试看效果吧～</p>
                 <br>
                 
-                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">Back to posts</a></p>
+                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">回退</a></p>
             </div>
             <br>
             <div class="disqus">
@@ -221,13 +207,6 @@ com.sublimetext.3      yml                all
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 

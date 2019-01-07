@@ -32,8 +32,6 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-
 
 
 
@@ -42,11 +40,11 @@
 
 
     
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2001%3a07%3a45.394659143%20%2b0000%20UTC%20m%3d%2b0.046217177">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2001%3a07%3a45.394659143%20%2b0000%20UTC%20m%3d%2b0.046217177">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2001%3a07%3a45.394659143%20%2b0000%20UTC%20m%3d%2b0.046217177">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2007%3a48%3a35.983800052%20%2b0000%20UTC%20m%3d%2b0.058071155">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2007%3a48%3a35.983800052%20%2b0000%20UTC%20m%3d%2b0.058071155">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2007%3a48%3a35.983800052%20%2b0000%20UTC%20m%3d%2b0.058071155">
     
-        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2001%3a07%3a45.394659143%20%2b0000%20UTC%20m%3d%2b0.046217177">
+        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2007%3a48%3a35.983800052%20%2b0000%20UTC%20m%3d%2b0.058071155">
     
 
 
@@ -164,7 +162,7 @@
                     <div class="date" title='Wed Jun 22 2016 09:37:35 UTC'>Jun 22, 2016</div>
                     
                     
-		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+		    <div class="reading-time"><div class="middot"></div>2 分钟阅读时间</div>
                     
                 </div>
             </div>
@@ -185,106 +183,101 @@
 <h3 id="所需宏包">所需宏包</h3>
 
 <p>在导言区加入以下代码：</p>
-
-<pre><code class="language-tex">\usepackage{tikz}
-\usetikzlibrary{shapes,arrows,chains}
-\usepackage{xcolor}
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="nb">{</span>tikz<span class="nb">}</span>
+<span class="k">\usetikzlibrary</span><span class="nb">{</span>shapes,arrows,chains<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xcolor<span class="nb">}</span></code></pre></div>
 <h3 id="最终效果和代码">最终效果和代码</h3>
 
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fytoxi0567j30ha0kt0u0.jpg" alt="flowchart" /></p>
+<div class="highlight"><pre class="chroma"><code class="language-tex" data-lang="tex"><span class="c">% 设置颜色代号
+</span><span class="c"></span><span class="k">\colorlet</span><span class="nb">{</span>lcfree<span class="nb">}{</span>green<span class="nb">}</span>
+<span class="k">\colorlet</span><span class="nb">{</span>lcnorm<span class="nb">}{</span>blue<span class="nb">}</span>
+<span class="k">\colorlet</span><span class="nb">{</span>lccong<span class="nb">}{</span>red<span class="nb">}</span>
+<span class="c">% -------------------------------------------------
+</span><span class="c">% 设置调试标志层
+</span><span class="c"></span><span class="k">\pgfdeclarelayer</span><span class="nb">{</span>marx<span class="nb">}</span>
+<span class="k">\pgfsetlayers</span><span class="nb">{</span>main,marx<span class="nb">}</span>
+<span class="c">% 标记坐标点的宏定义。交换下面两个定义关闭。
+</span><span class="c"></span><span class="k">\providecommand</span><span class="nb">{</span><span class="k">\cmark</span><span class="nb">}</span>[2][]<span class="nb">{</span><span class="c">%
+</span><span class="c"></span>  <span class="k">\begin</span><span class="nb">{</span>pgfonlayer<span class="nb">}{</span>marx<span class="nb">}</span>
+    <span class="k">\node</span> [nmark] at (c#2#1) <span class="nb">{</span>#2<span class="nb">}</span>;
+  <span class="k">\end</span><span class="nb">{</span>pgfonlayer<span class="nb">}{</span>marx<span class="nb">}</span>
+  <span class="nb">}</span>
+<span class="k">\providecommand</span><span class="nb">{</span><span class="k">\cmark</span><span class="nb">}</span>[2][]<span class="nb">{</span><span class="k">\relax</span><span class="nb">}</span>
+<span class="c">% -------------------------------------------------
+</span><span class="c">% 开始绘图
+</span><span class="c"></span><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[H]
+  <span class="k">\centering</span>
+  <span class="k">\scalebox</span><span class="nb">{</span>.8<span class="nb">}{</span>  <span class="c">%设置缩放
+</span><span class="c"></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>[
+    &gt;=triangle 60,              <span class="c">% 箭头的形状
+</span><span class="c"></span>    start chain=going below,    <span class="c">% 从上往下的流程
+</span><span class="c"></span>    node distance=6mm and 60mm, <span class="c">% 全局间距设置
+</span><span class="c"></span>    every join/.style=<span class="nb">{</span>norm<span class="nb">}</span>,   <span class="c">% 连接线的默认设置
+</span><span class="c"></span>    ]
+<span class="c">% -------------------------------------------------
+</span><span class="c">% 节点的样式定义
+</span><span class="c">% &lt;on chain&gt; 和 &lt;on grid&gt; 可以减少手动调整节点位置的麻烦
+</span><span class="c"></span><span class="k">\tikzset</span><span class="nb">{</span>
+  base/.style=<span class="nb">{</span>draw, on chain, on grid, align=center, minimum height=4ex<span class="nb">}</span>,
+  proc/.style=<span class="nb">{</span>base, rectangle, text width=8em<span class="nb">}</span>,
+  test/.style=<span class="nb">{</span>base, diamond, aspect=2, text width=5em<span class="nb">}</span>,
+  term/.style=<span class="nb">{</span>proc, rounded corners<span class="nb">}</span>,
+  <span class="c">% coord 用来表示连接线的转折点
+</span><span class="c"></span>  coord/.style=<span class="nb">{</span>coordinate, on chain, on grid, node distance=6mm and 25mm<span class="nb">}</span>,
+  <span class="c">% nmark 用来表示调试标志
+</span><span class="c"></span>  nmark/.style=<span class="nb">{</span>draw, cyan, circle, font=<span class="nb">{</span><span class="k">\sffamily\bfseries</span><span class="nb">}}</span>,
+  <span class="c">% -------------------------------------------------
+</span><span class="c"></span>  <span class="c">% 不同的连接线样式
+</span><span class="c"></span>  norm/.style=<span class="nb">{</span>-&gt;, draw, lcnorm<span class="nb">}</span>,
+  free/.style=<span class="nb">{</span>-&gt;, draw, lcfree<span class="nb">}</span>,
+  cong/.style=<span class="nb">{</span>-&gt;, draw, lccong<span class="nb">}</span>,
+  it/.style=<span class="nb">{</span>font=<span class="nb">{</span><span class="k">\small\itshape</span><span class="nb">}}</span>
+<span class="nb">}</span>
+<span class="c">% -------------------------------------------------
+</span><span class="c">% 先放节点
+</span><span class="c"></span><span class="k">\node</span> [term, densely dotted,fill=lccong!25, it] (p0) <span class="nb">{</span>输入<span class="nb">}</span>;
+<span class="c">% 用 join 表示和上一个节点相连
+</span><span class="c"></span><span class="k">\node</span> [proc, join]  <span class="nb">{</span>使用非线性最小二乘法得到 <span class="s">$</span><span class="nb">X_</span><span class="m">0</span><span class="s">$</span><span class="nb">}</span>;
+<span class="k">\node</span> [proc, join]  <span class="nb">{</span>记录 <span class="s">$</span><span class="nb">X</span><span class="o">=</span><span class="nb">X_</span><span class="m">0</span><span class="nb">, f</span><span class="o">=</span><span class="nb">f</span><span class="o">(</span><span class="nb">X_</span><span class="m">0</span><span class="o">)</span><span class="s">$</span><span class="nb">}</span>;
+<span class="k">\node</span> [test, join] (t1) <span class="nb">{</span><span class="s">$</span><span class="nb">T&gt;T_E</span><span class="s">$</span>?<span class="nb">}</span>;
+<span class="k">\node</span> [proc] (p1)   <span class="nb">{</span><span class="s">$</span><span class="nb">step</span><span class="o">=</span><span class="m">0</span><span class="s">$</span><span class="nb">}</span>;
+<span class="k">\node</span> [test, join] (t2) <span class="nb">{</span><span class="s">$</span><span class="nb">step&lt;count</span><span class="s">$</span>?<span class="nb">}</span>;
+<span class="k">\node</span> [proc] (p2)   <span class="nb">{</span>得到新状态<span class="s">$</span><span class="nb">P_N</span><span class="o">=</span><span class="nb">P</span><span class="o">+</span><span class="nb">scale</span><span class="nv">\times</span><span class="nb"> rand</span><span class="s">$</span>,计算目标函数差<span class="s">$</span><span class="nv">\Delta</span><span class="nb"> f</span><span class="s">$</span><span class="nb">}</span>;
+<span class="k">\node</span> [test, join] (t3) <span class="nb">{</span><span class="s">$</span><span class="nb">F_{Accept}&lt;rand</span><span class="s">$</span>?<span class="nb">}</span>;
+<span class="k">\node</span> [proc] (p3)   <span class="nb">{</span>记录新状态 <span class="s">$</span><span class="nb">X</span><span class="o">=</span><span class="nb">X_N,f</span><span class="o">=</span><span class="nb">f</span><span class="o">(</span><span class="nb">X_N</span><span class="o">)</span><span class="s">$</span><span class="nb">}</span>;
 
-<pre><code class="language-tex">% 设置颜色代号
-\colorlet{lcfree}{green}
-\colorlet{lcnorm}{blue}
-\colorlet{lccong}{red}
-% -------------------------------------------------
-% 设置调试标志层
-\pgfdeclarelayer{marx}
-\pgfsetlayers{main,marx}
-% 标记坐标点的宏定义。交换下面两个定义关闭。
-\providecommand{\cmark}[2][]{%
-  \begin{pgfonlayer}{marx}
-    \node [nmark] at (c#2#1) {#2};
-  \end{pgfonlayer}{marx}
-  } 
-\providecommand{\cmark}[2][]{\relax} 
-% -------------------------------------------------
-% 开始绘图
-\begin{figure}[H]
-	\centering
-	\scalebox{.8}{				%设置缩放	
-\begin{tikzpicture}[
-    &gt;=triangle 60,              % 箭头的形状
-    start chain=going below,    % 从上往下的流程
-    node distance=6mm and 60mm, % 全局间距设置
-    every join/.style={norm},   % 连接线的默认设置
-    ]
-% ------------------------------------------------- 
-% 节点的样式定义 
-% &lt;on chain&gt; 和 &lt;on grid&gt; 可以减少手动调整节点位置的麻烦
-\tikzset{
-  base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
-  proc/.style={base, rectangle, text width=8em},
-  test/.style={base, diamond, aspect=2, text width=5em},
-  term/.style={proc, rounded corners},
-  % coord 用来表示连接线的转折点
-  coord/.style={coordinate, on chain, on grid, node distance=6mm and 25mm},
-  % nmark 用来表示调试标志
-  nmark/.style={draw, cyan, circle, font={\sffamily\bfseries}},
-  % -------------------------------------------------
-  % 不同的连接线样式
-  norm/.style={-&gt;, draw, lcnorm},
-  free/.style={-&gt;, draw, lcfree},
-  cong/.style={-&gt;, draw, lccong},
-  it/.style={font={\small\itshape}}
-}
-% -------------------------------------------------
-% 先放节点
-\node [term, densely dotted,fill=lccong!25, it] (p0) {输入};
-% 用 join 表示和上一个节点相连 
-\node [proc, join]	{使用非线性最小二乘法得到 $X_0$};
-\node [proc, join]	{记录 $X=X_0, f=f(X_0)$};
-\node [test, join] (t1)	{$T&gt;T_E$?};
-\node [proc] (p1)		{$step=0$};
-\node [test, join] (t2)	{$step&lt;count$?};
-\node [proc] (p2)		{得到新状态$P_N=P+scale\times rand$,计算目标函数差$\Delta f$};
-\node [test, join] (t3)	{$F_{Accept}&lt;rand$?};
-\node [proc] (p3)		{记录新状态 $X=X_N,f=f(X_N)$};
+<span class="k">\node</span> [proc, left=of t1] (p4) <span class="nb">{</span><span class="s">$</span><span class="nb">T</span><span class="o">=</span><span class="nb">T</span><span class="nv">\times</span><span class="nb"> a,scale</span><span class="o">=</span><span class="nb">scale</span><span class="nv">\times</span><span class="nb"> b</span><span class="s">$</span><span class="nb">}</span>;
+<span class="k">\node</span> [term, densely dotted, right=of t1,fill=lcfree!25](p5)  <span class="nb">{</span>输出<span class="nb">}</span>;
+<span class="k">\node</span> [proc, right=of t3](p6) <span class="nb">{</span><span class="s">$</span><span class="nb">step</span><span class="o">++</span><span class="s">$</span><span class="nb">}</span>;
 
-\node [proc, left=of t1] (p4)	{$T=T\times a,scale=scale\times b$};
-\node [term, densely dotted, right=of t1,fill=lcfree!25](p5)	{输出};
-\node [proc, right=of t3](p6)	{$step++$};
-
-\node [coord, left=of t2] (c1)  {}; 
-\node [coord, right=of t2] (c2)  {}; 
-\node [coord, right=of p3] (c3)  {}; 
-%先画南北方向的连接线，先画线再画两端的标志和箭头
-\path (t1.south) to node [near start, xshift=1em] {$y$} (p1);
-  \draw [*-&gt;,lcnorm] (t1.south) -- (p1);
-\path (t2.south) to node [near start, xshift=1em] {$y$} (p2);
-  \draw [*-&gt;,lcnorm] (t2.south) -- (p2);
-\path (t3.south) to node [near start, xshift=1em] {$y$} (p3);
-  \draw [*-&gt;,lcnorm] (t3.south) -- (p3);
-%接着画东西方向的连接线，方法同上
-\path (t1.east) to node [near start, yshift=1em]  {$n$}(p5);
-  \draw [o-&gt;,lcnorm] (t1.east) -- (p5);
-  \draw [-&gt;,lcnorm] (p4.east) -- (t1);
-\path (t3.east) to node [near start, yshift=1em]  {$n$}(p6);
-  \draw [o-&gt;,lcnorm] (t3.east) -- (p6);
-\path (t2.west) to node [near start, yshift=1em]  {$n$}(c1);
-  \draw [o-&gt;,lcnorm] (t2.west) -- (c1) -| (p4);
-  \draw [-&gt;,lcnorm] (p3.east) -- (c3) -| (p6.south);
-  \draw [&lt;-,lcnorm] (t2.east) -- (c2) -| (p6.north);
-  \end{tikzpicture}
-}
-\label{fig:algorithm}
-\end{figure}
-</code></pre>
+<span class="k">\node</span> [coord, left=of t2] (c1)  <span class="nb">{}</span>;
+<span class="k">\node</span> [coord, right=of t2] (c2)  <span class="nb">{}</span>;
+<span class="k">\node</span> [coord, right=of p3] (c3)  <span class="nb">{}</span>;
+<span class="c">%先画南北方向的连接线，先画线再画两端的标志和箭头
+</span><span class="c"></span><span class="k">\path</span> (t1.south) to node [near start, xshift=1em] <span class="nb">{</span><span class="s">$</span><span class="nb">y</span><span class="s">$</span><span class="nb">}</span> (p1);
+  <span class="k">\draw</span> [*-&gt;,lcnorm] (t1.south) -- (p1);
+<span class="k">\path</span> (t2.south) to node [near start, xshift=1em] <span class="nb">{</span><span class="s">$</span><span class="nb">y</span><span class="s">$</span><span class="nb">}</span> (p2);
+  <span class="k">\draw</span> [*-&gt;,lcnorm] (t2.south) -- (p2);
+<span class="k">\path</span> (t3.south) to node [near start, xshift=1em] <span class="nb">{</span><span class="s">$</span><span class="nb">y</span><span class="s">$</span><span class="nb">}</span> (p3);
+  <span class="k">\draw</span> [*-&gt;,lcnorm] (t3.south) -- (p3);
+<span class="c">%接着画东西方向的连接线，方法同上
+</span><span class="c"></span><span class="k">\path</span> (t1.east) to node [near start, yshift=1em]  <span class="nb">{</span><span class="s">$</span><span class="nb">n</span><span class="s">$</span><span class="nb">}</span>(p5);
+  <span class="k">\draw</span> [o-&gt;,lcnorm] (t1.east) -- (p5);
+  <span class="k">\draw</span> [-&gt;,lcnorm] (p4.east) -- (t1);
+<span class="k">\path</span> (t3.east) to node [near start, yshift=1em]  <span class="nb">{</span><span class="s">$</span><span class="nb">n</span><span class="s">$</span><span class="nb">}</span>(p6);
+  <span class="k">\draw</span> [o-&gt;,lcnorm] (t3.east) -- (p6);
+<span class="k">\path</span> (t2.west) to node [near start, yshift=1em]  <span class="nb">{</span><span class="s">$</span><span class="nb">n</span><span class="s">$</span><span class="nb">}</span>(c1);
+  <span class="k">\draw</span> [o-&gt;,lcnorm] (t2.west) -- (c1) -| (p4);
+  <span class="k">\draw</span> [-&gt;,lcnorm] (p3.east) -- (c3) -| (p6.south);
+  <span class="k">\draw</span> [&lt;-,lcnorm] (t2.east) -- (c2) -| (p6.north);
+  <span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>fig:algorithm<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span></code></pre></div>
                 <br>
                 
-                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">Back to posts</a></p>
+                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">回退</a></p>
             </div>
             <br>
             <div class="disqus">
@@ -298,13 +291,6 @@
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 

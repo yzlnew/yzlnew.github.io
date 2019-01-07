@@ -10,7 +10,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Yellow Stone">
 <meta name="description" content="昨天想要清空一个文件夹结果犯了所有「小白」都会犯的错误。rm -rf
-rm -rf /  然后还手贱按了回车。
+rm -rf / 然后还手贱按了回车。
 当我看到一大堆 Permission denied 反应了 3 秒终于意识到有点不太对，赶紧 ctrl&#43;c 。表情如下
 执行之后的情况分析 我的应用们应该还没有或者并不能察觉发生了什么，一切正常。但是 zsh 已经告诉我它找不到指令了，好的我来 vim 一下 zshrc。嗯，它理所当然地去世了。
 冷静下来，我想我没用 sudo 那主体上还是没啥大碍的，估计这几秒钟把软链接全删掉了。果然 brew 也已经失效了。
@@ -23,7 +23,7 @@ rm -rf /  然后还手贱按了回车。
 
 <meta property="og:title" content="记一次 rm -rf 之后" />
 <meta property="og:description" content="昨天想要清空一个文件夹结果犯了所有「小白」都会犯的错误。rm -rf
-rm -rf /  然后还手贱按了回车。
+rm -rf / 然后还手贱按了回车。
 当我看到一大堆 Permission denied 反应了 3 秒终于意识到有点不太对，赶紧 ctrl&#43;c 。表情如下
 执行之后的情况分析 我的应用们应该还没有或者并不能察觉发生了什么，一切正常。但是 zsh 已经告诉我它找不到指令了，好的我来 vim 一下 zshrc。嗯，它理所当然地去世了。
 冷静下来，我想我没用 sudo 那主体上还是没啥大碍的，估计这几秒钟把软链接全删掉了。果然 brew 也已经失效了。
@@ -52,8 +52,6 @@ rm -rf /  然后还手贱按了回车。
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-
 
 
 
@@ -62,11 +60,11 @@ rm -rf /  然后还手贱按了回车。
 
 
     
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2001%3a07%3a45.385644147%20%2b0000%20UTC%20m%3d%2b0.037202188">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2001%3a07%3a45.385644147%20%2b0000%20UTC%20m%3d%2b0.037202188">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2001%3a07%3a45.385644147%20%2b0000%20UTC%20m%3d%2b0.037202188">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2007%3a48%3a35.976411951%20%2b0000%20UTC%20m%3d%2b0.050683034">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2007%3a48%3a35.976411951%20%2b0000%20UTC%20m%3d%2b0.050683034">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2007%3a48%3a35.976411951%20%2b0000%20UTC%20m%3d%2b0.050683034">
     
-        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2001%3a07%3a45.385644147%20%2b0000%20UTC%20m%3d%2b0.037202188">
+        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2007%3a48%3a35.976411951%20%2b0000%20UTC%20m%3d%2b0.050683034">
     
 
 
@@ -184,7 +182,7 @@ rm -rf /  然后还手贱按了回车。
                     <div class="date" title='Sun Jan 6 2019 19:31:49 &#43;0800'>Jan 6, 2019</div>
                     
                     
-		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+		    <div class="reading-time"><div class="middot"></div>一分钟读完</div>
                     
                 </div>
             </div>
@@ -192,10 +190,7 @@ rm -rf /  然后还手贱按了回车。
                 
 
 <p>昨天想要清空一个文件夹结果犯了所有「小白」都会犯的错误。<code>rm -rf</code></p>
-
-<pre><code class="language-bash">rm -rf /
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf /</code></pre></div>
 <p>然后还手贱按了回车。</p>
 
 <p>当我看到一大堆 <code>Permission denied</code> 反应了 3 秒终于意识到有点不太对，赶紧 <code>ctrl+c</code> 。表情如下</p>
@@ -243,7 +238,7 @@ rm -rf /  然后还手贱按了回车。
 
                 <br>
                 
-                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">Back to posts</a></p>
+                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">回退</a></p>
             </div>
             <br>
             <div class="disqus">
@@ -257,13 +252,6 @@ rm -rf /  然后还手贱按了回车。
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 

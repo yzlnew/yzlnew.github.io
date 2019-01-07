@@ -18,7 +18,7 @@
       
       <guid>https://yzlnew.github.io/blog/2019-01-06-rm/</guid>
       <description>昨天想要清空一个文件夹结果犯了所有「小白」都会犯的错误。rm -rf
-rm -rf /  然后还手贱按了回车。
+rm -rf / 然后还手贱按了回车。
 当我看到一大堆 Permission denied 反应了 3 秒终于意识到有点不太对，赶紧 ctrl+c 。表情如下
 执行之后的情况分析 我的应用们应该还没有或者并不能察觉发生了什么，一切正常。但是 zsh 已经告诉我它找不到指令了，好的我来 vim 一下 zshrc。嗯，它理所当然地去世了。
 冷静下来，我想我没用 sudo 那主体上还是没啥大碍的，估计这几秒钟把软链接全删掉了。果然 brew 也已经失效了。
@@ -85,7 +85,7 @@ Hugo Hugo 的特点我感觉是这样
       <guid>https://yzlnew.github.io/blog/2017-12-07-teamspeak/</guid>
       <description>&lt;p&gt;在VPS上搭建TeamSpeak语音服务器的一键脚本。仓库点&lt;a href=&#34;https://github.com/yzlnew/TeamSpeak3Setup&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.teamspeak.com/assets/images/logos/teamspeak.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://www.teamspeak.com/assets/images/logos/teamspeak.png&#34; alt=&#34;teamspeak&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -36,8 +36,6 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-
 
 
 
@@ -46,11 +44,11 @@
 
 
     
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2001%3a07%3a45.392562036%20%2b0000%20UTC%20m%3d%2b0.044120035">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2001%3a07%3a45.392562036%20%2b0000%20UTC%20m%3d%2b0.044120035">
-    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2001%3a07%3a45.392562036%20%2b0000%20UTC%20m%3d%2b0.044120035">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/reset.css?t=2019-01-07%2007%3a48%3a35.984771175%20%2b0000%20UTC%20m%3d%2b0.059042232">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/pygments.css?t=2019-01-07%2007%3a48%3a35.984771175%20%2b0000%20UTC%20m%3d%2b0.059042232">
+    <link rel="stylesheet" href="https://yzlnew.github.io/css/main.css?t=2019-01-07%2007%3a48%3a35.984771175%20%2b0000%20UTC%20m%3d%2b0.059042232">
     
-        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2001%3a07%3a45.392562036%20%2b0000%20UTC%20m%3d%2b0.044120035">
+        <link rel="stylesheet" href="https://yzlnew.github.io/css/override.css?t=2019-01-07%2007%3a48%3a35.984771175%20%2b0000%20UTC%20m%3d%2b0.059042232">
     
 
 
@@ -168,7 +166,7 @@
                     <div class="date" title='Mon Sep 26 2016 18:35:59 UTC'>Sep 26, 2016</div>
                     
                     
-		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+		    <div class="reading-time"><div class="middot"></div>一分钟读完</div>
                     
                 </div>
             </div>
@@ -185,100 +183,96 @@
 </ul>
 
 <h3 id="更改-suqirrel-custom-yaml-如下">更改<code>suqirrel.custom.yaml</code>如下</h3>
-
-<pre><code class="language-yaml">patch:
-  show_notifications_when: never
-  
-  style:
-    color_scheme: material
-
-  preset_color_schemes:
-
-    apathy:
-   
-      name: &quot;冷漠 / Apathy&quot;
-      author: &quot;LIANG Hai&quot;
-
-      horizontal: true  # 水平排列
-      inline_preedit: true #单行显示，false双行显示
-      candidate_format: &quot;%c\u2005%@\u2005&quot;  # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
-
-      corner_radius: 2  #候选条圆角
-      border_height: 0 
-      border_width: 0
-      back_color: 0xFFFFFF  #候选条背景色
-      font_face: &quot;PingFang SC,H-SiuNiu&quot;  #候选词字体
-      font_point: 16  #候选字词大小
-      text_color: 0x424242  #高亮选中词颜色
-      label_font_face: &quot;PingFang SC Light&quot;   #候选词编号字体
-      label_font_point: 12   #候选编号大小
-      hilited_candidate_text_color: 0xEE6E00  #候选文字颜色
-      hilited_candidate_back_color: 0xFFFFFF  #候选文字背景色
-      hilited_candidate_back_color: 0xFFF0E4  #候选文字背景色
-      comment_text_color: 0x999999  #拼音等提示文字颜色
-
-    pithy:
-      name: &quot;简洁 / Pithy&quot;
-      author: &quot;@hotoo&quot;
-
-      horizontal: false                                 # 水平排列
-      inline_preedit: true                              # true: 单行显示，false: 双行显示
-      candidate_format: &quot;\u2005%c\u2005%@\u2005&quot;        # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
-
-      corner_radius: 0                                  # 候选条圆角
-      border_height: 2                                  # 窗口边界高度，大于圆角半径才生效
-      border_width: 2                                   # 窗口边界宽度，大于圆角半径才生效
-      back_color: 0xFFFFFF                              # 候选条背景色
-      border_color: 0xE0B693                            # 边框色
-      font_face: &quot;PingFangSC-Regular, H-SiuNiu&quot;         # 候选词字体
-      font_point: 19                                    # 候选字词大小
-      text_color: 0x424242                              # 高亮选中词颜色
-      label_font_face: &quot;SimHei&quot;                         # 候选词编号字体
-      label_font_point: 18                              # 候选编号大小
-      label_color: 0x9e9e9e                             # 预选栏编号颜色
-      candidate_text_color: 0x000000                    # 预选项文字颜色
-      text_color: 0x9e9e9e                              # 拼音行文字颜色，24位色值，16进制，BGR顺序
-      comment_text_color: 0x999999                      # 拼音等提示文字颜色
-      hilited_text_color: 0x9e9e9e                      # 高亮拼音 (需要开启内嵌编码)
-      hilited_candidate_text_color: 0x000000            # 第一候选项文字颜色
-      hilited_candidate_back_color: 0xfff0e4            # 第一候选项背景背景色
-      hilited_candidate_label_color: 0x9e9e9e           # 第一候选项编号颜色
-      hilited_comment_text_color: 0x9e9e9e              # 注解文字高亮
-
-    material:
-      name: &quot;材料 / Material&quot;
-      author: &quot;@yzlnew&quot;
-
-      horizontal: true                                  # 水平排列
-      inline_preedit: true                              # true: 单行显示，false: 双行显示
-      candidate_format: &quot;\u2005%c\u2005%@\u2005&quot;        # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
-      corner_radius: 2                                  # 候选条圆角
-      border_height: 3                                  # 窗口边界高度，大于圆角半径才生效
-      border_width: 3                                   # 窗口边界宽度，大于圆角半径才生效
-      back_color: 0xFFFFFF                              # 候选条背景色
-      border_color: 0x212121                            # 边框色
-      font_face: &quot;PingFangSC-Regular, H-SiuNiu&quot;         # 候选词字体
-      font_point: 16                                    # 候选字词大小
-      text_color: 0x3643F4                              # 高亮选中词颜色
-      label_font_face: &quot;mononoki&quot;                       # 候选词编号字体
-      label_font_point: 16                              # 候选编号大小
-      label_color: 0xDCD8CF                             # 预选栏编号颜色
-      candidate_text_color: 0x9e9e9e                    # 预选项文字颜色
-      text_color: 0x9e9e9e                              # 拼音行文字颜色，24位色值，16进制，BGR顺序
-      comment_text_color: 0x9A9AEF                      # 拼音等提示文字颜色
-      hilited_text_color: 0x9e9e9e                      # 高亮拼音 (需要开启内嵌编码)
-      hilited_candidate_text_color: 0x212121            # 第一候选项文字颜色
-      hilited_candidate_back_color: 0xDCD8CF            # 第一候选项背景背景色
-      hilited_candidate_label_color: 0x212121           # 第一候选项编号颜色
-      hilited_comment_text_color: 0x9A9AEF              # 注解文字高亮
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">patch<span class="p">:</span><span class="w">
+</span><span class="w">  </span>show_notifications_when<span class="p">:</span><span class="w"> </span>never<span class="w">
+</span><span class="w">  
+</span><span class="w">  </span>style<span class="p">:</span><span class="w">
+</span><span class="w">    </span>color_scheme<span class="p">:</span><span class="w"> </span>material<span class="w">
+</span><span class="w">
+</span><span class="w">  </span>preset_color_schemes<span class="p">:</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span>apathy<span class="p">:</span><span class="w">
+</span><span class="w">      </span>name<span class="p">:</span><span class="w"> </span><span class="s2">&#34;冷漠 / Apathy&#34;</span><span class="w">
+</span><span class="w">      </span>author<span class="p">:</span><span class="w"> </span><span class="s2">&#34;LIANG Hai&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w">      </span>horizontal<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">  </span><span class="c"># 水平排列</span><span class="w">
+</span><span class="w">      </span>inline_preedit<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c">#单行显示，false双行显示</span><span class="w">
+</span><span class="w">      </span>candidate_format<span class="p">:</span><span class="w"> </span><span class="s2">&#34;%c\u2005%@\u2005&#34;</span><span class="w">  </span><span class="c"># 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。</span><span class="w">
+</span><span class="w">
+</span><span class="w">      </span>corner_radius<span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="c">#候选条圆角</span><span class="w">
+</span><span class="w">      </span>border_height<span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w"> 
+</span><span class="w">      </span>border_width<span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span><span class="w">      </span>back_color<span class="p">:</span><span class="w"> </span>0xFFFFFF<span class="w">  </span><span class="c">#候选条背景色</span><span class="w">
+</span><span class="w">      </span>font_face<span class="p">:</span><span class="w"> </span><span class="s2">&#34;PingFang SC,H-SiuNiu&#34;</span><span class="w">  </span><span class="c">#候选词字体</span><span class="w">
+</span><span class="w">      </span>font_point<span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">  </span><span class="c">#候选字词大小</span><span class="w">
+</span><span class="w">      </span>text_color<span class="p">:</span><span class="w"> </span><span class="m">0x424242</span><span class="w">  </span><span class="c">#高亮选中词颜色</span><span class="w">
+</span><span class="w">      </span>label_font_face<span class="p">:</span><span class="w"> </span><span class="s2">&#34;PingFang SC Light&#34;</span><span class="w">   </span><span class="c">#候选词编号字体</span><span class="w">
+</span><span class="w">      </span>label_font_point<span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">   </span><span class="c">#候选编号大小</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_text_color<span class="p">:</span><span class="w"> </span>0xEE6E00<span class="w">  </span><span class="c">#候选文字颜色</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_back_color<span class="p">:</span><span class="w"> </span>0xFFFFFF<span class="w">  </span><span class="c">#候选文字背景色</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_back_color<span class="p">:</span><span class="w"> </span>0xFFF0E4<span class="w">  </span><span class="c">#候选文字背景色</span><span class="w">
+</span><span class="w">      </span>comment_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x999999</span><span class="w">  </span><span class="c">#拼音等提示文字颜色</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span>pithy<span class="p">:</span><span class="w">
+</span><span class="w">      </span>name<span class="p">:</span><span class="w"> </span><span class="s2">&#34;简洁 / Pithy&#34;</span><span class="w">
+</span><span class="w">      </span>author<span class="p">:</span><span class="w"> </span><span class="s2">&#34;@hotoo&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w">      </span>horizontal<span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">                                 </span><span class="c"># 水平排列</span><span class="w">
+</span><span class="w">      </span>inline_preedit<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">                              </span><span class="c"># true: 单行显示，false: 双行显示</span><span class="w">
+</span><span class="w">      </span>candidate_format<span class="p">:</span><span class="w"> </span><span class="s2">&#34;\u2005%c\u2005%@\u2005&#34;</span><span class="w">        </span><span class="c"># 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。</span><span class="w">
+</span><span class="w">
+</span><span class="w">      </span>corner_radius<span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">                                  </span><span class="c"># 候选条圆角</span><span class="w">
+</span><span class="w">      </span>border_height<span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">                                  </span><span class="c"># 窗口边界高度，大于圆角半径才生效</span><span class="w">
+</span><span class="w">      </span>border_width<span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">                                   </span><span class="c"># 窗口边界宽度，大于圆角半径才生效</span><span class="w">
+</span><span class="w">      </span>back_color<span class="p">:</span><span class="w"> </span>0xFFFFFF<span class="w">                              </span><span class="c"># 候选条背景色</span><span class="w">
+</span><span class="w">      </span>border_color<span class="p">:</span><span class="w"> </span>0xE0B693<span class="w">                            </span><span class="c"># 边框色</span><span class="w">
+</span><span class="w">      </span>font_face<span class="p">:</span><span class="w"> </span><span class="s2">&#34;PingFangSC-Regular, H-SiuNiu&#34;</span><span class="w">         </span><span class="c"># 候选词字体</span><span class="w">
+</span><span class="w">      </span>font_point<span class="p">:</span><span class="w"> </span><span class="m">19</span><span class="w">                                    </span><span class="c"># 候选字词大小</span><span class="w">
+</span><span class="w">      </span>text_color<span class="p">:</span><span class="w"> </span><span class="m">0x424242</span><span class="w">                              </span><span class="c"># 高亮选中词颜色</span><span class="w">
+</span><span class="w">      </span>label_font_face<span class="p">:</span><span class="w"> </span><span class="s2">&#34;SimHei&#34;</span><span class="w">                         </span><span class="c"># 候选词编号字体</span><span class="w">
+</span><span class="w">      </span>label_font_point<span class="p">:</span><span class="w"> </span><span class="m">18</span><span class="w">                              </span><span class="c"># 候选编号大小</span><span class="w">
+</span><span class="w">      </span>label_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">                             </span><span class="c"># 预选栏编号颜色</span><span class="w">
+</span><span class="w">      </span>candidate_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">                    </span><span class="c"># 预选项文字颜色</span><span class="w">
+</span><span class="w">      </span>text_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">                              </span><span class="c"># 拼音行文字颜色，24位色值，16进制，BGR顺序</span><span class="w">
+</span><span class="w">      </span>comment_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x999999</span><span class="w">                      </span><span class="c"># 拼音等提示文字颜色</span><span class="w">
+</span><span class="w">      </span>hilited_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">                      </span><span class="c"># 高亮拼音 (需要开启内嵌编码)</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">            </span><span class="c"># 第一候选项文字颜色</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_back_color<span class="p">:</span><span class="w"> </span><span class="m">0xfff0e4</span><span class="w">            </span><span class="c"># 第一候选项背景背景色</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_label_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">           </span><span class="c"># 第一候选项编号颜色</span><span class="w">
+</span><span class="w">      </span>hilited_comment_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">              </span><span class="c"># 注解文字高亮</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span>material<span class="p">:</span><span class="w">
+</span><span class="w">      </span>name<span class="p">:</span><span class="w"> </span><span class="s2">&#34;材料 / Material&#34;</span><span class="w">
+</span><span class="w">      </span>author<span class="p">:</span><span class="w"> </span><span class="s2">&#34;@yzlnew&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w">      </span>horizontal<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">                                  </span><span class="c"># 水平排列</span><span class="w">
+</span><span class="w">      </span>inline_preedit<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">                              </span><span class="c"># true: 单行显示，false: 双行显示</span><span class="w">
+</span><span class="w">      </span>candidate_format<span class="p">:</span><span class="w"> </span><span class="s2">&#34;\u2005%c\u2005%@\u2005&#34;</span><span class="w">        </span><span class="c"># 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。</span><span class="w">
+</span><span class="w">      </span>corner_radius<span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">                                  </span><span class="c"># 候选条圆角</span><span class="w">
+</span><span class="w">      </span>border_height<span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">                                  </span><span class="c"># 窗口边界高度，大于圆角半径才生效</span><span class="w">
+</span><span class="w">      </span>border_width<span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">                                   </span><span class="c"># 窗口边界宽度，大于圆角半径才生效</span><span class="w">
+</span><span class="w">      </span>back_color<span class="p">:</span><span class="w"> </span>0xFFFFFF<span class="w">                              </span><span class="c"># 候选条背景色</span><span class="w">
+</span><span class="w">      </span>border_color<span class="p">:</span><span class="w"> </span><span class="m">0x212121</span><span class="w">                            </span><span class="c"># 边框色</span><span class="w">
+</span><span class="w">      </span>font_face<span class="p">:</span><span class="w"> </span><span class="s2">&#34;PingFangSC-Regular, H-SiuNiu&#34;</span><span class="w">         </span><span class="c"># 候选词字体</span><span class="w">
+</span><span class="w">      </span>font_point<span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">                                    </span><span class="c"># 候选字词大小</span><span class="w">
+</span><span class="w">      </span>text_color<span class="p">:</span><span class="w"> </span>0x3643F4<span class="w">                              </span><span class="c"># 高亮选中词颜色</span><span class="w">
+</span><span class="w">      </span>label_font_face<span class="p">:</span><span class="w"> </span><span class="s2">&#34;mononoki&#34;</span><span class="w">                       </span><span class="c"># 候选词编号字体</span><span class="w">
+</span><span class="w">      </span>label_font_point<span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">                              </span><span class="c"># 候选编号大小</span><span class="w">
+</span><span class="w">      </span>label_color<span class="p">:</span><span class="w"> </span>0xDCD8CF<span class="w">                             </span><span class="c"># 预选栏编号颜色</span><span class="w">
+</span><span class="w">      </span>candidate_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">                    </span><span class="c"># 预选项文字颜色</span><span class="w">
+</span><span class="w">      </span>text_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">                              </span><span class="c"># 拼音行文字颜色，24位色值，16进制，BGR顺序</span><span class="w">
+</span><span class="w">      </span>comment_text_color<span class="p">:</span><span class="w"> </span>0x9A9AEF<span class="w">                      </span><span class="c"># 拼音等提示文字颜色</span><span class="w">
+</span><span class="w">      </span>hilited_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x9e9e9e</span><span class="w">                      </span><span class="c"># 高亮拼音 (需要开启内嵌编码)</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_text_color<span class="p">:</span><span class="w"> </span><span class="m">0x212121</span><span class="w">            </span><span class="c"># 第一候选项文字颜色</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_back_color<span class="p">:</span><span class="w"> </span>0xDCD8CF<span class="w">            </span><span class="c"># 第一候选项背景背景色</span><span class="w">
+</span><span class="w">      </span>hilited_candidate_label_color<span class="p">:</span><span class="w"> </span><span class="m">0x212121</span><span class="w">           </span><span class="c"># 第一候选项编号颜色</span><span class="w">
+</span><span class="w">      </span>hilited_comment_text_color<span class="p">:</span><span class="w"> </span>0x9A9AEF<span class="w">              </span><span class="c"># 注解文字高亮</span></code></pre></div>
 <h3 id="更新">更新</h3>
 
 <p><del>一点都不好用</del>，还是自带好用。</p>
                 <br>
                 
-                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">Back to posts</a></p>
+                <p class="back-to-posts"><a href="https://yzlnew.github.io/blog">回退</a></p>
             </div>
             <br>
             <div class="disqus">
@@ -292,13 +286,6 @@
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 
