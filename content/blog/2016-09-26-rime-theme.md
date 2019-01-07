@@ -27,7 +27,6 @@ patch:
   preset_color_schemes:
 
     apathy:
-   
       name: "冷漠 / Apathy"
       author: "LIANG Hai"
 
