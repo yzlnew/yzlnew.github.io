@@ -45,21 +45,21 @@ tags:
   \begin{pgfonlayer}{marx}
     \node [nmark] at (c#2#1) {#2};
   \end{pgfonlayer}{marx}
-  } 
-\providecommand{\cmark}[2][]{\relax} 
+  }
+\providecommand{\cmark}[2][]{\relax}
 % -------------------------------------------------
 % 开始绘图
 \begin{figure}[H]
-	\centering
-	\scalebox{.8}{				%设置缩放	
+  \centering
+  \scalebox{.8}{  %设置缩放
 \begin{tikzpicture}[
     >=triangle 60,              % 箭头的形状
     start chain=going below,    % 从上往下的流程
     node distance=6mm and 60mm, % 全局间距设置
     every join/.style={norm},   % 连接线的默认设置
     ]
-% ------------------------------------------------- 
-% 节点的样式定义 
+% -------------------------------------------------
+% 节点的样式定义
 % <on chain> 和 <on grid> 可以减少手动调整节点位置的麻烦
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
@@ -80,23 +80,23 @@ tags:
 % -------------------------------------------------
 % 先放节点
 \node [term, densely dotted,fill=lccong!25, it] (p0) {输入};
-% 用 join 表示和上一个节点相连 
-\node [proc, join]	{使用非线性最小二乘法得到 $X_0$};
-\node [proc, join]	{记录 $X=X_0, f=f(X_0)$};
-\node [test, join] (t1)	{$T>T_E$?};
-\node [proc] (p1)		{$step=0$};
-\node [test, join] (t2)	{$step<count$?};
-\node [proc] (p2)		{得到新状态$P_N=P+scale\times rand$,计算目标函数差$\Delta f$};
-\node [test, join] (t3)	{$F_{Accept}<rand$?};
-\node [proc] (p3)		{记录新状态 $X=X_N,f=f(X_N)$};
+% 用 join 表示和上一个节点相连
+\node [proc, join]  {使用非线性最小二乘法得到 $X_0$};
+\node [proc, join]  {记录 $X=X_0, f=f(X_0)$};
+\node [test, join] (t1) {$T>T_E$?};
+\node [proc] (p1)   {$step=0$};
+\node [test, join] (t2) {$step<count$?};
+\node [proc] (p2)   {得到新状态$P_N=P+scale\times rand$,计算目标函数差$\Delta f$};
+\node [test, join] (t3) {$F_{Accept}<rand$?};
+\node [proc] (p3)   {记录新状态 $X=X_N,f=f(X_N)$};
 
-\node [proc, left=of t1] (p4)	{$T=T\times a,scale=scale\times b$};
-\node [term, densely dotted, right=of t1,fill=lcfree!25](p5)	{输出};
-\node [proc, right=of t3](p6)	{$step++$};
+\node [proc, left=of t1] (p4) {$T=T\times a,scale=scale\times b$};
+\node [term, densely dotted, right=of t1,fill=lcfree!25](p5)  {输出};
+\node [proc, right=of t3](p6) {$step++$};
 
-\node [coord, left=of t2] (c1)  {}; 
-\node [coord, right=of t2] (c2)  {}; 
-\node [coord, right=of p3] (c3)  {}; 
+\node [coord, left=of t2] (c1)  {};
+\node [coord, right=of t2] (c2)  {};
+\node [coord, right=of p3] (c3)  {};
 %先画南北方向的连接线，先画线再画两端的标志和箭头
 \path (t1.south) to node [near start, xshift=1em] {$y$} (p1);
   \draw [*->,lcnorm] (t1.south) -- (p1);
