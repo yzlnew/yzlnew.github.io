@@ -72,7 +72,7 @@ div.notices.tip p:first-child:after {
 }
 section.main .content .markdown code,
 section.main .content .markdown pre {
-  font-family: 'Ubuntu Mono', 'Menlo', 'Consolas',monospace;
+  font-family: 'Ubuntu Mono', 'Menlo', 'Consolas', monospace;
 }
 body {
     font-family: "HanziPen SC", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
