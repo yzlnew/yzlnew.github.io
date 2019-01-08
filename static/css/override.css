@@ -1,11 +1,6 @@
 .content .front-matter .page-heading {
-    font-size: 20px;
     font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
-    letter-spacing: -0.005rem;
-    font-weight: 700;
-    color: #333;
     text-transform: none !important;
-    margin-bottom: 16px;
 }
 
 a {
@@ -74,4 +69,11 @@ div.notices.tip p {
 div.notices.tip p:first-child:after {
     font-family: "Ubuntu Mono";
     content: 'Tip';
+}
+section.main .content .markdown code,
+section.main .content .markdown pre {
+  font-family: 'Ubuntu Mono', 'Menlo', 'Consolas',monospace;
+}
+body {
+    font-family: "HanziPen SC", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
