@@ -5,6 +5,8 @@ authors: []
 draft: false
 ---
 
+### 我的目标
+
 想要成为一个纯粹的人。
 
 ### 我热爱的
@@ -13,7 +15,7 @@ draft: false
 - 📖 自从上了大学，书就没好好看基本，喜欢写作
 - 💻 数码产品/开源软件
 - ⌨️ 喜欢和键盘有关的东西，我的收藏有
-  - Rama M60-A
+  - Rama M60-A with Holy Panda 🐼
   - HHKB BT modded with o-ring, ePBT Topre 9009
   - Filco Majestouch-2
   - GMK Laser / Taihao Jukebox
