@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yzlnew.github.io/blog/2019-01-21-vimim/</loc>
+    <lastmod>2019-01-21T21:53:58+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yzlnew.github.io/blog/2019-01-06-rm/</loc>
     <lastmod>2019-01-06T19:31:49+08:00</lastmod>
   </url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>https://yzlnew.github.io/blog/</loc>
-    <lastmod>2019-01-06T19:31:49+08:00</lastmod>
+    <lastmod>2019-01-21T21:53:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,8 +92,14 @@
   </url>
   
   <url>
+    <loc>https://yzlnew.github.io/tags/vim/</loc>
+    <lastmod>2019-01-21T21:53:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yzlnew.github.io/</loc>
-    <lastmod>2019-01-06T19:31:49+08:00</lastmod>
+    <lastmod>2019-01-21T21:53:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
