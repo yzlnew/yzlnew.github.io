@@ -10,6 +10,7 @@ publishdir = "public"
 pygmentsuseclasses = true
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
+googleAnalytics     = "UA-61197619-1"
 theme = "cocoa"
 title = "Yellow Stone"
 # pygmentsOptions = "linenos=inline" # 显示行号
