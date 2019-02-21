@@ -13,7 +13,6 @@ pygmentsCodefencesGuessSyntax = true
 googleAnalytics     = "UA-61197619-1"
 theme = "cocoa"
 title = "Yellow Stone"
-# pygmentsOptions = "linenos=inline" # 显示行号
 defaultContentLanguage = "cn" # 页面中文
 [[menu.main]]
     identifier = "blog"
@@ -21,10 +20,15 @@ defaultContentLanguage = "cn" # 页面中文
     url = "/blog"
     weight = -120
 [[menu.main]]
+    identifier = "life"
+    name = "Life"
+    url = "/life"
+    weight = -110
+[[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about"
-    weight = -110
+    weight = -100
 [params]
     author = "Yellow Stone"
     avatar = "img/penrose.webp"
@@ -35,12 +39,6 @@ defaultContentLanguage = "cn" # 页面中文
     email = "yzlnew@gmail.com"
     extracssfiles = ["/css/override.css"]
     faviconfile = "img/favicon.ico"
-    gitalk = false
-    gitalk_admin = ["a", "list", "of", "administrator"]
-    gitalk_clientID = "your client id"
-    gitalk_clientSecret = "your client secret"
-    gitalk_owner = "the owner of this repo"
-    gitalk_repo = "your repo url"
     github = "//github.com/yzlnew"
     i18n_flags = true
     include_rss = true
