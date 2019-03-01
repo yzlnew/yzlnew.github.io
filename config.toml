@@ -31,20 +31,24 @@ defaultContentLanguage = "cn" # 页面中文
     weight = -100
 [params]
     author = "Yellow Stone"
+    selfintro = "A Place of My Own"
     avatar = "img/penrose.webp"
+
     cachebuster = true
     dateform = "Jan 2, 2006"
     dateformfull = "Mon Jan 2 2006 15:04:05 MST"
     description = ""
-    email = "yzlnew@gmail.com"
     extracssfiles = ["/css/override.css"]
     faviconfile = "img/favicon.ico"
-    github = "//github.com/yzlnew"
     i18n_flags = true
     include_rss = true
     lang = "cn"
     latestpostscount = 5
     noshowreadtime = false
     piwik = false
-    selfintro = "A Place of My Own"
+
+    email = "yzlnew@gmail.com"
+    github = "//github.com/yzlnew"
     telegram = "//t.me/r0brew"
+    instagram = "//instagram.com/yzlnew"
+
