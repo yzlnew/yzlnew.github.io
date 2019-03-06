@@ -22,9 +22,11 @@
  整个配置极其庞大，有很多我不需要的东西； 因为庞大，所以我对里面的内容和 Vim 的理解有限。  因此我打算从头根据 spf13 来配置一份自己的 .vimrc 。
 注意不要加入任何一行自己不清楚功能的代码。
  最终成果 先上成果图，在 macOS 下显示良好。
+在 gVim 下显示正常。
+同样在WSL下正常（终端是 Terminus）。
 安装说明 这是一份主要在 macOS 以 iTerm2 作为终端（或者 MacVim）的 Vim 配置。
 在 这里 下载。
- 主题是 Solarizd ，有不同实现，为了支持 True Color 选择了 NeoSolarizd 。（注意：终端、Vim、Airline 的主题最好要统一） 字体选择任意的 Nerd Fonts 即可。因为用到了很多 Unicode 字符。 使用 vim-plug 进行插件管理。  复制 .vimrc 至根目录即可。如果有使用 MacVim 的，需要添加 .</description>
+ 主题是 Solarizd ，有不同实现，为了支持 True Color 选择了 NeoSolarizd 。（注意：终端、Vim、Airline 的主题最好要统一） 字体选择任意的 Nerd Fonts 即可。因为用到了很多 Unicode 字符。 使用 vim-plug 进行插件管理。  复制 .</description>
     </item>
     
     <item>
