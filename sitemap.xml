@@ -3,13 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yzlnew.github.io/tags/</loc>
+    <lastmod>2019-02-28T15:59:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yzlnew.github.io/tags/</loc>
+    <lastmod>2019-02-28T15:59:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yzlnew.github.io/</loc>
+    <lastmod>2019-02-28T15:59:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yzlnew.github.io/life/my-stories-1/</loc>
     <lastmod>2019-02-28T15:59:51+08:00</lastmod>
   </url>
   
   <url>
+    <loc>https://yzlnew.github.io/tags/%E6%9D%82%E6%96%87/</loc>
+    <lastmod>2019-02-28T15:59:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yzlnew.github.io/life/</loc>
     <lastmod>2019-02-21T14:08:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yzlnew.github.io/blog/</loc>
+    <lastmod>2019-01-28T16:59:47+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yzlnew.github.io/tags/vim/</loc>
+    <lastmod>2019-01-28T16:59:47+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yzlnew.github.io/tags/vimrc/</loc>
+    <lastmod>2019-01-28T16:59:47+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -38,8 +80,20 @@
   </url>
   
   <url>
+    <loc>https://yzlnew.github.io/tags/python/</loc>
+    <lastmod>2018-06-19T15:35:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yzlnew.github.io/blog/2018-06-19-python-gc/</loc>
     <lastmod>2018-06-19T15:35:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yzlnew.github.io/tags/machine-learning/</loc>
+    <lastmod>2018-05-14T17:18:11+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -78,61 +132,7 @@
   </url>
   
   <url>
-    <loc>https://yzlnew.github.io/tags/</loc>
-    <lastmod>2019-02-21T14:08:20+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/blog/</loc>
-    <lastmod>2019-01-28T16:59:47+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://yzlnew.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/tags/machine-learning/</loc>
-    <lastmod>2018-05-14T17:18:11+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/tags/python/</loc>
-    <lastmod>2018-06-19T15:35:17+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/tags/</loc>
-    <lastmod>2019-02-21T14:08:20+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/tags/vim/</loc>
-    <lastmod>2019-01-28T16:59:47+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/tags/vimrc/</loc>
-    <lastmod>2019-01-28T16:59:47+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/</loc>
-    <lastmod>2019-02-28T15:59:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yzlnew.github.io/tags/%E6%9D%82%E6%96%87/</loc>
-    <lastmod>2019-02-28T15:59:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   

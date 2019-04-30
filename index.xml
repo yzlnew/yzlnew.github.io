@@ -17,7 +17,7 @@
       <pubDate>Thu, 28 Feb 2019 15:59:51 +0800</pubDate>
       
       <guid>https://yzlnew.github.io/life/my-stories-1/</guid>
-      <description> 情绪与故事 之前看到一篇公众号文章里，说到作者学生时代大雪「落在身上」，感受到那种「情绪」， 发现自己可以做这一行。我想想我好像也有。不过我们这里就不是东北的雪，是下雨。
+      <description>情绪与故事 之前看到一篇公众号文章里，说到作者学生时代大雪「落在身上」，感受到那种「情绪」， 发现自己可以做这一行。我想想我好像也有。不过我们这里就不是东北的雪，是下雨。
 江南操场上飘渺的春雨，和无由来的悲茫情绪，我也有过。
 但是凡事做艺术家，或者从这个视角来看，做一个情绪放大器、共振箱、同步服务器，光 有那些雨和雪，不太行。一个人总得经历点什么，才能说出足以传播的故事来。创作者总 会把自己的故事投射到作品里去。一方面是相对来说不太容出差错，省了调研和钻到另一 种人生的麻烦。另一方面是每个人都有抑制不住表达自己的欲望，像个海里的灯塔，闪个 不停，渴望被看到。
 我看比如毕赣的电影，就能体会到凯里对他的烙印，然后就成了创作天然的容器。一般的 人讲述自己的故事，好的创作者往上添加佐料而有艺术感，但我觉得更高级的人类艺术家 是「摆脱」了自己的过去而变得真正自由。
@@ -35,7 +35,7 @@
 同学一样，只能希望阳光最终能够眷顾每一个孤独的城堡。
 还有剩下的，一个一个名字，一个一个消失。就像宇宙飞船的轰鸣声，在天际中渐渐耗散。
 再也听不到。
-我想成为？ </description>
+我想成为？ 我一直对自己的认知是一个具有表演性人格的生物，如果有这种表述和分类的话。</description>
     </item>
     
     <item>
@@ -47,8 +47,7 @@
       <description>使用 VSCode 需要记住另一套快捷键。尝试过在 VSCode 里面使用 Vim 模式但是还是不太好用。 尤其是其自带的 EasyMotion 显示效果实在捉 🐔。
 之前一直使用 spf13 的 Vim 配置。现在回过头来看有这几个问题不适合我：
  整个配置极其庞大，有很多我不需要的东西； 因为庞大，所以我对里面的内容和 Vim 的理解有限。  因此我打算从头根据 spf13 来配置一份自己的 .vimrc 。
-注意不要加入任何一行自己不清楚功能的代码。
- 最终成果 先上成果图，在 macOS 下显示良好。
+注意不要加入任何一行自己不清楚功能的代码。  最终成果 先上成果图，在 macOS 下显示良好。
 在 gVim 下显示正常。
 同样在WSL下正常（终端是 Terminus）。
 安装说明 这是一份主要在 macOS 以 iTerm2 作为终端（或者 MacVim）的 Vim 配置。
@@ -63,10 +62,8 @@
       
       <guid>https://yzlnew.github.io/blog/2019-01-21-vimim/</guid>
       <description> 在使用 Vim 的过程中有一点一直很头疼，就是总是要在正常和插入模式下切换输入法，因 为大多时候是不会注意自己现在是中文还是英文的输入法。
-需求：在正常模式下，切换到英文；在插入模式下，切换到上一次的输入法。
- 直接上到目前为止（2019-01）的最佳实践，不写调研的过程了。
-Terminal Vim on Mac  安装 fcitx-remote-for-osx 。提供一个 fcitx-remote 可以通过命令行切换输入法的指令。 安装 fcitx-vim-osx 这个 Vim 插件。  注意由于插件中用到 InsertLeave 动作，不支持 CTRL-C 退出插入模式。
- VScode with Vim mode VScode 的 Vim 模式虽然实际效果一般，但是给了比较好的输入法切换的解决方法。
+需求：在正常模式下，切换到英文；在插入模式下，切换到上一次的输入法。  直接上到目前为止（2019-01）的最佳实践，不写调研的过程了。
+Terminal Vim on Mac  安装 fcitx-remote-for-osx 。提供一个 fcitx-remote 可以通过命令行切换输入法的指令。 安装 fcitx-vim-osx 这个 Vim 插件。  注意由于插件中用到 `InsertLeave` 动作，不支持 `CTRL-C` 退出插入模式。  VScode with Vim mode VScode 的 Vim 模式虽然实际效果一般，但是给了比较好的输入法切换的解决方法。
  同样安装 im-select 这个命令行工具。 再在配置文件中加上如下设定：  { &amp;#34;vim.autoSwitchInputMethod.obtainIMCmd&amp;#34;: &amp;#34;/usr/local/bin/im-select&amp;#34;, &amp;#34;vim.autoSwitchInputMethod.switchIMCmd&amp;#34;: &amp;#34;/usr/local/bin/im-select {im}&amp;#34;, &amp;#34;vim.autoSwitchInputMethod.defaultIM&amp;#34;: &amp;#34;com.apple.keylayout.US&amp;#34;, &amp;#34;vim.autoSwitchInputMethod.enable&amp;#34;: true, }</description>
     </item>
     
