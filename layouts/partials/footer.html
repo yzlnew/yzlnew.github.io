@@ -1,6 +1,6 @@
 {{ partial "footer_scripts" . }}
 
-{{ if .GetParam "mathjax"}}
+{{ if .Param "mathjax"}}
 {{ partial "mathjax.html" . }}
 {{ end }}
 
