@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yellow Stone</title>
+    <title>Tags on Yellow Stone</title>
     <link>https://yzlnew.github.io/tags/</link>
-    <description>Recent content on Yellow Stone</description>
+    <description>Recent content in Tags on Yellow Stone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 28 Feb 2019 15:59:51 +0800</lastBuildDate>
@@ -12,16 +12,15 @@
     
     
     <item>
-      <title>生活</title>
-      <link>https://yzlnew.github.io/life/</link>
-      <pubDate>Thu, 21 Feb 2019 14:08:20 +0800</pubDate>
+      <title></title>
+      <link>https://yzlnew.github.io/tags/</link>
+      <pubDate>Thu, 28 Feb 2019 15:59:51 +0800</pubDate>
       
-      <guid>https://yzlnew.github.io/life/</guid>
+      <guid>https://yzlnew.github.io/tags/</guid>
       <description></description>
     </item>
     
-  </channel>
-</rss>>
+    <item>
       <title>杂文</title>
       <link>https://yzlnew.github.io/tags/%E6%9D%82%E6%96%87/</link>
       <pubDate>Thu, 28 Feb 2019 15:59:51 +0800</pubDate>
