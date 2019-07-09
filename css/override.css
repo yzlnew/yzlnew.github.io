@@ -72,8 +72,8 @@ div.notices.tip p:first-child:after {
 }
 section.main .content .markdown code,
 section.main .content .markdown pre {
-  font-family: 'Ubuntu Mono', 'Menlo', 'Consolas', monospace;
+  font-family: 'Iosevka', 'Ubuntu Mono', 'Menlo', 'Consolas', monospace;
 }
 body {
-    font-family: "Sarasa UI SC", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family:  "Noto Sans CJK SC", "Source Han Sans", "Sarasa UI SC", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
