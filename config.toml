@@ -14,6 +14,8 @@ googleAnalytics     = "UA-61197619-1"
 theme = "cocoa"
 title = "Yellow Stone"
 defaultContentLanguage = "cn" # 页面中文
+[permalinks]
+blog = "blog/:slug/"
 [[menu.main]]
     identifier = "blog"
     name = "Blog"
