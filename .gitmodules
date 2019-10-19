@@ -5,3 +5,6 @@
 	path = public
 	url = git@github.com:yzlnew/yzlnew.github.io.git
 	branch = master
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
