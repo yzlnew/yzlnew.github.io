@@ -1,0 +1,8 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - hugo-source
+
+PUBLISH_BRANCH: master
