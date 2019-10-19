@@ -1,10 +1,6 @@
 [submodule "themes/cocoa"]
 	path = themes/cocoa
 	url = https://github.com/yzlnew/cocoa-hugo-theme.git
-[submodule "public"]
-	path = public
-	url = git@github.com:yzlnew/yzlnew.github.io.git
-	branch = master
 [submodule "themes/terminal"]
 	path = themes/terminal
 	url = https://github.com/panr/hugo-theme-terminal.git
