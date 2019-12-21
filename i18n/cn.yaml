@@ -5,6 +5,9 @@
 - id: blogHeading
   translation: "博客"
 
+- id: lifeHeading
+  translation: "随笔"
+
 - id: pageNotFound
   translation: "这里是一片荒野"
 

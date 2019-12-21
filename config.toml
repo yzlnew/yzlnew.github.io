@@ -19,17 +19,17 @@ blog = "blog/:slug/"
 [[menu.main]]
     identifier = "blog"
     name = "Blog"
-    url = "/blog"
+    url = "/blog/"
     weight = -120
 [[menu.main]]
     identifier = "life"
     name = "Life"
-    url = "/life"
+    url = "/life/"
     weight = -110
 [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about"
+    url = "/about/"
     weight = -100
 [params]
     author = "Yellow Stone"
