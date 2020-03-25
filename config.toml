@@ -1,5 +1,6 @@
-author = "Yellow Stone"
-baseurl = "https://yzlnew.github.io/"
+author = "@yzlnew"
+title = "Yellow Stone"
+baseurl = "https://yzlnew.com/"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
@@ -12,10 +13,9 @@ pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 googleAnalytics     = "UA-61197619-1"
 theme = "cocoa"
-title = "Yellow Stone"
 defaultContentLanguage = "cn" # 页面中文
 [permalinks]
-blog = "/:year/:month/:title/"
+blog = ":filename"
 [[menu.main]]
     identifier = "blog"
     name = "Blog"
@@ -32,8 +32,8 @@ blog = "/:year/:month/:title/"
     url = "/about/"
     weight = -100
 [params]
-    author = "Yellow Stone"
-    selfintro = "A Place of My Own"
+    author = "yzlnew"
+    selfintro = "Valar Morghulis."
     avatar = "img/penrose.webp"
 
     cachebuster = true
