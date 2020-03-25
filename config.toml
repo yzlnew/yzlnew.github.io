@@ -15,7 +15,7 @@ theme = "cocoa"
 title = "Yellow Stone"
 defaultContentLanguage = "cn" # 页面中文
 [permalinks]
-blog = "blog/:slug/"
+blog = "/:year/:month/:title/"
 [[menu.main]]
     identifier = "blog"
     name = "Blog"
