@@ -15,7 +15,7 @@ googleAnalytics     = "UA-61197619-1"
 theme = "cocoa"
 defaultContentLanguage = "cn" # 页面中文
 [permalinks]
-blog = ":filename"
+blog = ":year/:month/:filename"
 [[menu.main]]
     identifier = "blog"
     name = "Blog"
