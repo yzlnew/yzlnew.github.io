@@ -68,9 +68,9 @@ AUC 即 Area Under Curve，即 ROC 曲线和 x 轴围成的面积，AUC 越大�
 - AUC = 0.5，跟随机猜测一样（例：丢铜板），模型没有预测价值。
 - AUC < 0.5，比随机猜测还差；但只要总是反预测而行，就优于随机猜测。
 
-{{% notice info %}}
+{{< notice info >}}
 AUC 的物理意义：假设分类器的输出是样本属于正类的 socre（置信度），则 AUC 的物理意义为，任取一对（正、负）样本，正样本的 score 大于负样本的 score 的概率。
-{{% /notice %}}
+{{< /notice >}}
 
   参考资料：
 

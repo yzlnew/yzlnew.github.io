@@ -22,9 +22,9 @@ draft: false
    。提供一个 `fcitx-remote` 可以通过命令行切换输入法的指令。
 2. 安装 [fcitx-vim-osx](https://github.com/CodeFalling/fcitx-vim-osx) 这个 Vim 插件。
 
-{{% notice info %}}
+{{< notice info >}}
 注意由于插件中用到 `InsertLeave` 动作，不支持 `CTRL-C` 退出插入模式。
-{{% /notice %}}
+{{< /notice >}}
 
 ### VScode with Vim mode
 

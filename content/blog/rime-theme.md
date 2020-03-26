@@ -15,7 +15,7 @@ tags:
 
 ### 更改`suqirrel.custom.yaml`如下
 
-```yaml
+```
 patch:
   show_notifications_when: never
 
@@ -31,7 +31,6 @@ patch:
       horizontal: true                       # 水平排列
       inline_preedit: true                   # 单行显示，false双行显示
       candidate_format: "%c\u2005%@\u2005"   # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
-
       corner_radius: 2                       # 候选条圆角
       border_height: 0
       border_width: 0
@@ -50,56 +49,55 @@ patch:
       name: "简洁 / Pithy"
       author: "@hotoo"
 
-      horizontal: false                                 # 水平排列
-      inline_preedit: true                              # true: 单行显示，false: 双行显示
-      candidate_format: "\u2005%c\u2005%@\u2005"        # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
-
-      corner_radius: 0                                  # 候选条圆角
-      border_height: 2                                  # 窗口边界高度，大于圆角半径才生效
-      border_width: 2                                   # 窗口边界宽度，大于圆角半径才生效
-      back_color: 0xFFFFFF                              # 候选条背景色
-      border_color: 0xE0B693                            # 边框色
-      font_face: "PingFangSC-Regular, H-SiuNiu"         # 候选词字体
-      font_point: 19                                    # 候选字词大小
-      text_color: 0x424242                              # 高亮选中词颜色
-      label_font_face: "SimHei"                         # 候选词编号字体
-      label_font_point: 18                              # 候选编号大小
-      label_color: 0x9e9e9e                             # 预选栏编号颜色
-      candidate_text_color: 0x000000                    # 预选项文字颜色
-      text_color: 0x9e9e9e                              # 拼音行文字颜色，24位色值，16进制，BGR顺序
-      comment_text_color: 0x999999                      # 拼音等提示文字颜色
-      hilited_text_color: 0x9e9e9e                      # 高亮拼音 (需要开启内嵌编码)
-      hilited_candidate_text_color: 0x000000            # 第一候选项文字颜色
-      hilited_candidate_back_color: 0xfff0e4            # 第一候选项背景背景色
-      hilited_candidate_label_color: 0x9e9e9e           # 第一候选项编号颜色
-      hilited_comment_text_color: 0x9e9e9e              # 注解文字高亮
+      horizontal: false                          # 水平排列
+      inline_preedit: true                       # true: 单行显示，false: 双行显示
+      candidate_format: "\u2005%c\u2005%@\u2005" # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+      corner_radius: 0                           # 候选条圆角
+      border_height: 2                           # 窗口边界高度，大于圆角半径才生效
+      border_width: 2                            # 窗口边界宽度，大于圆角半径才生效
+      back_color: 0xFFFFFF                       # 候选条背景色
+      border_color: 0xE0B693                     # 边框色
+      font_face: "PingFangSC-Regular, H-SiuNiu"  # 候选词字体
+      font_point: 19                             # 候选字词大小
+      text_color: 0x424242                       # 高亮选中词颜色
+      label_font_face: "SimHei"                  # 候选词编号字体
+      label_font_point: 18                       # 候选编号大小
+      label_color: 0x9e9e9e                      # 预选栏编号颜色
+      candidate_text_color: 0x000000             # 预选项文字颜色
+      text_color: 0x9e9e9e                       # 拼音行文字颜色，24位色值，16进制，BGR顺序
+      comment_text_color: 0x999999               # 拼音等提示文字颜色
+      hilited_text_color: 0x9e9e9e               # 高亮拼音 (需要开启内嵌编码)
+      hilited_candidate_text_color: 0x000000     # 第一候选项文字颜色
+      hilited_candidate_back_color: 0xfff0e4     # 第一候选项背景背景色
+      hilited_candidate_label_color: 0x9e9e9e    # 第一候选项编号颜色
+      hilited_comment_text_color: 0x9e9e9e       # 注解文字高亮
 
     material:
       name: "材料 / Material"
       author: "@yzlnew"
 
-      horizontal: true                                  # 水平排列
-      inline_preedit: true                              # true: 单行显示，false: 双行显示
-      candidate_format: "\u2005%c\u2005%@\u2005"        # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
-      corner_radius: 2                                  # 候选条圆角
-      border_height: 3                                  # 窗口边界高度，大于圆角半径才生效
-      border_width: 3                                   # 窗口边界宽度，大于圆角半径才生效
-      back_color: 0xFFFFFF                              # 候选条背景色
-      border_color: 0x212121                            # 边框色
-      font_face: "PingFangSC-Regular, H-SiuNiu"         # 候选词字体
-      font_point: 16                                    # 候选字词大小
-      text_color: 0x3643F4                              # 高亮选中词颜色
-      label_font_face: "mononoki"                       # 候选词编号字体
-      label_font_point: 16                              # 候选编号大小
-      label_color: 0xDCD8CF                             # 预选栏编号颜色
-      candidate_text_color: 0x9e9e9e                    # 预选项文字颜色
-      text_color: 0x9e9e9e                              # 拼音行文字颜色，24位色值，16进制，BGR顺序
-      comment_text_color: 0x9A9AEF                      # 拼音等提示文字颜色
-      hilited_text_color: 0x9e9e9e                      # 高亮拼音 (需要开启内嵌编码)
-      hilited_candidate_text_color: 0x212121            # 第一候选项文字颜色
-      hilited_candidate_back_color: 0xDCD8CF            # 第一候选项背景背景色
-      hilited_candidate_label_color: 0x212121           # 第一候选项编号颜色
-      hilited_comment_text_color: 0x9A9AEF              # 注解文字高亮
+      horizontal: true                           # 水平排列
+      inline_preedit: true                       # true: 单行显示，false: 双行显示
+      candidate_format: "\u2005%c\u2005%@\u2005" # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+      corner_radius: 2                           # 候选条圆角
+      border_height: 3                           # 窗口边界高度，大于圆角半径才生效
+      border_width: 3                            # 窗口边界宽度，大于圆角半径才生效
+      back_color: 0xFFFFFF                       # 候选条背景色
+      border_color: 0x212121                     # 边框色
+      font_face: "PingFangSC-Regular, H-SiuNiu"  # 候选词字体
+      font_point: 16                             # 候选字词大小
+      text_color: 0x3643F4                       # 高亮选中词颜色
+      label_font_face: "mononoki"                # 候选词编号字体
+      label_font_point: 16                       # 候选编号大小
+      label_color: 0xDCD8CF                      # 预选栏编号颜色
+      candidate_text_color: 0x9e9e9e             # 预选项文字颜色
+      text_color: 0x9e9e9e                       # 拼音行文字颜色，24位色值，16进制，BGR顺序
+      comment_text_color: 0x9A9AEF               # 拼音等提示文字颜色
+      hilited_text_color: 0x9e9e9e               # 高亮拼音 (需要开启内嵌编码)
+      hilited_candidate_text_color: 0x212121     # 第一候选项文字颜色
+      hilited_candidate_back_color: 0xDCD8CF     # 第一候选项背景背景色
+      hilited_candidate_label_color: 0x212121    # 第一候选项编号颜色
+      hilited_comment_text_color: 0x9A9AEF       # 注解文字高亮
 ```
 
 ### 更新

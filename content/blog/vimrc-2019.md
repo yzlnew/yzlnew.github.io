@@ -17,9 +17,9 @@ draft: false
 
 因此我打算从头根据 spf13 来配置一份自己的 `.vimrc` 。
 
-{{% notice warning %}}
+{{< notice warning >}}
 注意不要加入任何一行自己不清楚功能的代码。
-{{% /notice %}}
+{{< /notice >}}
 
 ### 最终成果
 
