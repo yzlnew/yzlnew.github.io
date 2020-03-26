@@ -23,17 +23,16 @@ draft: false
 
 ### 最终成果
 
-先上成果图，在 macOS 下显示良好。
+年久失修，图全挂了。
 
-![mac](https://ws3.sinaimg.cn/large/006tNc79ly1fznmpnkl4dj30s20wak1a.jpg)
+~~先上成果图，在 macOS 下显示良好。~~
 
-在 gVim 下显示正常。
 
-![gVim](https://ws1.sinaimg.cn/large/006tKfTcly1g0t8w1qyu1j30p30lx0tu.jpg)
+~~在 gVim 下显示正常。~~
 
-同样在WSL下正常（终端是 Terminus）。
 
-![WSL](https://ws1.sinaimg.cn/large/006tKfTcly1g0t8w20j34j30u80o1gvx.jpg)
+~~同样在WSL下正常（终端是 Terminus）。~~
+
 
 ### 安装说明
 

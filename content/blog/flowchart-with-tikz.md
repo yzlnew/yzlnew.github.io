@@ -29,8 +29,6 @@ tags:
 
 ### 最终效果和代码
 
-![flowchart](https://ws4.sinaimg.cn/large/006tNc79ly1fytoxi0567j30ha0kt0u0.jpg)
-
 ```tex
 % 设置颜色代号
 \colorlet{lcfree}{green}
