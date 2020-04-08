@@ -54,3 +54,10 @@ blog = ":year/:month/:filename"
     telegram = "//t.me/r0brew"
     instagram = "//instagram.com/yzlnew"
 
+    gitalk                 = true
+# if gitalk is true, the following params should be set. These parameters could be retrieved from github OAuth
+    gitalk_clientID        = "4ccff83836edce535e3c"
+    gitalk_clientSecret    = "daeca7033b9770d0f062e007477bc4d116499434"
+    gitalk_repo            = "yzlnew.github.io"
+    gitalk_owner           = "yzlnew"
+    gitalk_admin           = ['yzlnew']
