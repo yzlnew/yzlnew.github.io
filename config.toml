@@ -46,7 +46,7 @@ blog = ":year/:month/:filename"
     # include_rss = true
     lang = "cn"
     latestpostscount = 5
-    noshowreadtime = false
+    noshowreadtime = true
     piwik = false
 
     email = "yzlnew@gmail.com"

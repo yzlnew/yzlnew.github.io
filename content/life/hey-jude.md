@@ -1,8 +1,6 @@
 ---
 date: "2019-10-21T19:44:38+08:00"
 title: "Hey Jude"
-tags:
-  -
 draft: false
 ---
 

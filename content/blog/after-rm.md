@@ -1,7 +1,6 @@
 ---
 date: "2019-01-06T19:31:49+08:00"
 title: "记一次 rm -rf 之后"
-tags:
 draft: false
 ---
 

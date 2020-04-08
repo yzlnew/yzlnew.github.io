@@ -1,8 +1,6 @@
 ---
 date: "2019-12-15T01:16:50+08:00"
 title: "Cheer 20"
-tags:
-  -
 draft: false
 ---
 

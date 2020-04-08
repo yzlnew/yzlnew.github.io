@@ -1,7 +1,6 @@
 ---
 title: 用 pandoc 让 Markdown 从 LaTeX 输出 pdf 文档
 date: 2017-10-12 17:42:44
-tags:
 ---
 
 听着名字就很绕，主要需求来源是用 Markdown 写一些简单的作业、提交的文档比较快，可是一些编辑器输出 pdf 比较难看（主要是字体无法自定义）或者是收费的，但是 pandoc 可以通过调用 XeLaTeX 解决这个问题。
