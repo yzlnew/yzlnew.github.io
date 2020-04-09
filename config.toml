@@ -1,37 +1,28 @@
-author = "@yzlnew"
-title = "Yellow Stone"
 baseurl = "https://yzlnew.com/"
-builddrafts = false
-canonifyurls = true
-contentdir = "content"
 languageCode = "zh-CN"
-layoutdir = "layouts"
-pluralizelisttitles = false
-publishdir = "public"
+title = "Yellow Stone"
+theme = "ink"
+paginate = 5
+
+copyright = "© Copyright notice"
+
+pygmentsstyle = "solarized-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
 pygmentsuseclasses = true
-pygmentsCodefences = true
-pygmentsCodefencesGuessSyntax = true
-googleAnalytics     = "UA-61197619-1"
-theme = "cocoa"
-defaultContentLanguage = "cn" # 页面中文
-[permalinks]
-blog = ":year/:month/:filename"
-[[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/blog/"
-    weight = -120
-[[menu.main]]
-    identifier = "life"
-    name = "Life"
-    url = "/life/"
-    weight = -110
-[[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = -100
+
+googleAnalytics = "UA-61197619-1"
+
+summaryLength = 20
+
 [params]
+    subtitle = "Clean and minimal personal [blog theme for Hugo](https://github.com/vividvilla/ezhil)"
+    disableDisqusTypes = ["page"]
+    featherIconsCDN = true
+    mode = "auto" # "dark", "auto", "light"
+# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
+# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
+# customJS = ["https://code.jquery.com/jquery-3.4.1.js", "js/custom1.js"]  # Custom JS scripts.
     author = "yzlnew"
     selfintro = "Valar Morghulis."
     avatar = "img/penrose.webp"
@@ -43,11 +34,7 @@ blog = ":year/:month/:filename"
     extracssfiles = ["/css/webfont.css","/css/override.css"]
     faviconfile = "img/favicon.ico"
     i18n_flags = true
-    # include_rss = true
     lang = "cn"
-    latestpostscount = 5
-    noshowreadtime = true
-    piwik = false
 
     email = "yzlnew@gmail.com"
     github = "//github.com/yzlnew"
@@ -61,3 +48,48 @@ blog = ":year/:month/:filename"
     gitalk_repo            = "yzlnew.github.io"
     gitalk_owner           = "yzlnew"
     gitalk_admin           = ['yzlnew']
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/blog"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/yzlnew"
+
+[[params.social]]
+name = "RSS"
+icon = "rss"
+url = "/index.xml"
+
+[taxonomies]
+   tag = "tags"
+
+
+defaultContentLanguage = "cn" # 页面中文
+author = "@yzlnew"
+builddrafts = false
+canonifyurls = true
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+[permalinks]
+blog = ":year/:month/:filename"
