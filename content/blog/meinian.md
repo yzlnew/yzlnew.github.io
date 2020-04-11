@@ -1,6 +1,7 @@
 ---
 title: 美年健康 AI 大赛初赛小结
 date: 2018-05-07 22:01:51
+description: 第一次，也是最后一次？
 tags:
  - Machine Learning
 ---

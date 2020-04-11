@@ -4,7 +4,7 @@ title = "Yellow Stone"
 theme = "ink"
 paginate = 5
 
-copyright = "© Copyright notice"
+copyright = "© Copyright @yzlnew"
 
 pygmentsstyle = "solarized-dark"
 pygmentscodefences = true
@@ -16,30 +16,22 @@ googleAnalytics = "UA-61197619-1"
 summaryLength = 20
 
 [params]
-    subtitle = "Clean and minimal personal [blog theme for Hugo](https://github.com/vividvilla/ezhil)"
-    disableDisqusTypes = ["page"]
+    subtitle = ""
     featherIconsCDN = true
-    mode = "auto" # "dark", "auto", "light"
+    mode = "light" # "dark", "auto", "light"
 # customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 # customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
 # customJS = ["https://code.jquery.com/jquery-3.4.1.js", "js/custom1.js"]  # Custom JS scripts.
-    author = "yzlnew"
-    selfintro = "Valar Morghulis."
     avatar = "img/penrose.webp"
+    favicon = "img/favicon.ico"
 
     cachebuster = true
     dateform = "Jan 2, 2006"
     dateformfull = "Mon Jan 2 2006 15:04:05 MST"
     description = ""
     extracssfiles = ["/css/webfont.css","/css/override.css"]
-    faviconfile = "img/favicon.ico"
     i18n_flags = true
     lang = "cn"
-
-    email = "yzlnew@gmail.com"
-    github = "//github.com/yzlnew"
-    telegram = "//t.me/r0brew"
-    instagram = "//instagram.com/yzlnew"
 
     gitalk                 = true
 # if gitalk is true, the following params should be set. These parameters could be retrieved from github OAuth
@@ -55,19 +47,29 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
+name = "blog"
 url = "/blog"
 weight = 2
 
 [[menu.main]]
+name = "life"
+url = "/life"
+weight = 3
+
+[[menu.main]]
 name = "About"
 url = "/about"
-weight = 3
+weight = 4
 
 [[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 4
+weight = 5
+
+[[params.social]]
+name = "Mail"
+icon = "mail"
+url = "yzlnew@gmail.com"
 
 [[params.social]]
 name = "Github"
@@ -75,9 +77,15 @@ icon = "github"
 url = "https://github.com/yzlnew"
 
 [[params.social]]
+name = "Telegram"
+icon = "message-square"
+url = "https://t.me/r0brew"
+
+[[params.social]]
 name = "RSS"
 icon = "rss"
 url = "/index.xml"
+
 
 [taxonomies]
    tag = "tags"

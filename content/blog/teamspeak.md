@@ -5,9 +5,10 @@ date: 2017-12-07 19:55:55
 
 在VPS上搭建TeamSpeak语音服务器的一键脚本。仓库点[这里](https://github.com/yzlnew/TeamSpeak3Setup)。
 
+<!--more-->
+
 ![teamspeak](https://www.teamspeak.com/assets/images/logos/teamspeak.png)
 
-<!--more-->
 
 ### 运行要求
 
