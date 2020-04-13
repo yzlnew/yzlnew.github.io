@@ -47,12 +47,12 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "blog"
+name = "Blog"
 url = "/blog"
 weight = 2
 
 [[menu.main]]
-name = "life"
+name = "Life"
 url = "/life"
 weight = 3
 

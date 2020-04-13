@@ -1,7 +1,7 @@
 ---
 date: "2019-01-06T19:31:49+08:00"
 title: "记一次 rm -rf 之后"
-description: 一次愚蠢的操作
+description: 一次愚蠢的操作。
 draft: false
 ---
 
