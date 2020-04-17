@@ -16,9 +16,9 @@ googleAnalytics = "UA-61197619-1"
 summaryLength = 20
 
 [params]
-    subtitle = "👨‍💻💃"
+    subtitle = "👨‍💻"
     featherIconsCDN = true
-    mode = "light" # "dark", "auto", "light"
+    mode = "auto" # "dark", "auto", "light"
 # customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 # customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
 # customJS = ["https://code.jquery.com/jquery-3.4.1.js", "js/custom1.js"]  # Custom JS scripts.
@@ -66,7 +66,7 @@ weight = 5
 [[params.social]]
 name = "Mail"
 icon = "mail"
-url = "yzlnew@gmail.com"
+url = "mailto:yzlnew@gmail.com"
 
 [[params.social]]
 name = "Github"
