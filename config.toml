@@ -43,7 +43,7 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Blog"
+name = "Tech"
 url = "/blog"
 weight = 2
 
