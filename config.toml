@@ -1,5 +1,6 @@
 baseurl = "https://yzlnew.com/"
 languageCode = "zh-CN"
+hasCJKLanguage = true
 title = "yzlnew"
 theme = "ink"
 paginate = 8
@@ -25,8 +26,6 @@ summaryLength = 20
     avatar = "img/penrose.webp"
     favicon = "img/favicon.ico"
 
-    description = ""
-    extracssfiles = ["/css/webfont.css","/css/override.css"]
     i18n_flags = true
     lang = "cn"
 
@@ -98,3 +97,9 @@ publishdir = "public"
 
 [permalinks]
 blog = ":year/:month/:filename"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 3
