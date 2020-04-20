@@ -6,12 +6,6 @@ theme = "ink"
 paginate = 8
 
 copyright = "© Copyright Ye Zhiling"
-
-pygmentsstyle = "solarized-dark"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-pygmentsuseclasses = true
-
 googleAnalytics = "UA-61197619-1"
 
 summaryLength = 20
@@ -103,3 +97,12 @@ blog = ":year/:month/:filename"
     endLevel = 4
     ordered = false
     startLevel = 3
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    tabWidth = 4
