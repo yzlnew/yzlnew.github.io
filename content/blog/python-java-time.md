@@ -50,15 +50,15 @@ dt = datetime(d1.year,d1.month,d1.day) # 今天 0 点的日期时间，因为其
 
 #### Java java.time
 
-首先都不应该继续使用 `[java.util.Date](http://java.util.Date)` 或者 `java.util.Calendar`，两个的设计都有问题。而 `java.time` 可以得到和 Python 时间处理一样的体验。在低版本（<1.8）的 Java 上，可以使用 `Joda-Time` ，接口是一样的。而 Android 在 API level 26 也已经加入了这个包，所以在面向 Android 8.0 的以上版本系统的应用，都是可以使用的。
+首先都不应该继续使用 `java.util.Date` 或者 `java.util.Calendar`，两个的设计都有问题。而 `java.time` 可以得到和 Python 时间处理一样的体验。在低版本（<1.8）的 Java 上，可以使用 `Joda-Time` ，接口是一样的。而 Android 在 API level 26 也已经加入了这个包，所以在面向 Android 8.0 的以上版本系统的应用，都是可以使用的。
 
 其中提供的类型包括：
 
-• `Instant` - 时间戳
-• `LocalDate` - 当前日期，类似 2010-12-03
-• `LocalTime` - 当前时间，类似 11:30
-• `LocalDateTime` - 当前日期时间，类似 2010-12-03T11:30
-• `ZonedDateTime` - 日期时间加上时区信息，尽量使用上面没有时区的当前时间
+- `Instant` - 时间戳
+- `LocalDate` - 当前日期，类似 2010-12-03
+- `LocalTime` - 当前时间，类似 11:30
+- `LocalDateTime` - 当前日期时间，类似 2010-12-03T11:30
+- `ZonedDateTime` - 日期时间加上时区信息，尽量使用上面没有时区的当前时间
 
 是不是和上面的很类似，只不过加了一个 `Local/Zoned` 来区别是否带有时区信息。
 
