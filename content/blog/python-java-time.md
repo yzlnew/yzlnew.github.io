@@ -105,3 +105,7 @@ HH:mm:ss");
     return zonedDateTime.toInstant().toEpochMilli();
 }
 ```
+
+{{< notice info >}}
+Android Studio 4.0 现在可以支持任意 API level 的 Java 8 Desugaring
+{{< /notice >}}

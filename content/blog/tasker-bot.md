@@ -4,6 +4,7 @@ title: "用 tasker 把自己的微信变成 🤖"
 tags:
   - tasker
 draft: false
+description: 我是一个没有感情的机器人。
 ---
 
 前排提醒，要实现本文所述的效果，需要使用到的工具是：
@@ -120,6 +121,6 @@ xhr.send(data);
 
 🆗，现在就可以找个小伙伴测试一下你的 🤖 啦，在工作时段打开静音模式，让 🤖 来回复那些消息吧。
 
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/bot_talk_marked.png" caption="JavaScriptlet" width=250px caption-position="bottom" caption-effect="appear" >}}
+{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/bot_talk_marked.png" caption="机器人对话" width=250px caption-position="bottom" caption-effect="appear" >}}
 
 当然最后一个提醒，如果有群聊通知没有开免打扰、或者在群里被@，还是会回复的，以免再工作群里回复一些莫名其妙的话，可以考虑像热身这一节所讲的，做在通知标题 `%nltitle` 上做一些过滤，制定一个白名单。
