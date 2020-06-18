@@ -25,3 +25,15 @@
   font-weight: 700;
   font-style: italic;
 }
+
+.gt-container a {
+    color: #ffce05;
+}
+.gt-container .gt-btn {
+    background-color: #ffce05;
+    border: 1px solid #f8f8f8;
+}
+
+.gt-container .gt-btn-preview {
+    color: #ffce05;
+}
