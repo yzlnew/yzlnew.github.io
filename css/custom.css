@@ -1,0 +1,39 @@
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Regular.woff2') format('woff2'), url('../woff/JetBrainsMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Italic.woff2') format('woff2'), url('../woff/JetBrainsMono-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Bold.woff2') format('woff2'), url('../woff/JetBrainsMono-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Bold-Italic.woff2') format('woff2'), url('../woff/JetBrainsMono-Bold-Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* .gt-container a { */
+/*     color: #ffce05 !important; */
+/* } */
+/* .gt-container .gt-btn { */
+/*     background-color: #ffce05 !important; */
+/*     border: 1px solid #f8f8f8 !important; */
+/* } */
+
+/* .gt-container .gt-btn-preview { */
+/*     color: #ffce05 !important; */
+/* } */

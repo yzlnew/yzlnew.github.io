@@ -1,0 +1,181 @@
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>利用 TikZ 宏包在 LaTeX 中绘制流程图 - yzlnew</title><link rel=icon type=image/png href=/img/favicon.ico><meta name=viewport content="width=device-width,initial-scale=1"><meta itemprop=name content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta itemprop=description content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><meta itemprop=datePublished content="2016-06-22T09:37:35+00:00"><meta itemprop=dateModified content="2016-06-22T09:37:35+00:00"><meta itemprop=wordCount content="793"><meta itemprop=keywords content><meta property="og:title" content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta property="og:description" content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><meta property="og:type" content="article"><meta property="og:url" content="https://yzlnew.com/2016/06/flowchart-with-tikz/"><meta property="article:published_time" content="2016-06-22T09:37:35+00:00"><meta property="article:modified_time" content="2016-06-22T09:37:35+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta name=twitter:description content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel=stylesheet type=text/css><link rel=stylesheet type=text/css media=screen href=https://yzlnew.com/css/main.css><link rel=stylesheet type=text/css href=https://yzlnew.com/css/custom.css><link id=dark-scheme rel=stylesheet type=text/css href=https://yzlnew.com/css/dark.css media="(prefers-color-scheme: dark)"><link id=dark-scheme rel=stylesheet type=text/css href=https://yzlnew.com/css/custom_dark.css media="(prefers-color-scheme: dark)"><script src=https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js></script><script src=https://yzlnew.com/js/main.js></script><script charset=utf-8>var tabName=document.title;window.onblur=function(){document.title='舞舞舞 - 💃';}
+window.onfocus=function(){document.title=tabName;}</script></head><body><div class="container wrapper"><div class=header><div class=avatar><a href=https://yzlnew.com/><img src=/img/penrose.webp alt=yzlnew></a></div><h1 class=site-title><a href=https://yzlnew.com/>yzlnew</a></h1><div class=site-description><p>👨‍💻</p><span class=scheme-toggle><a href=# id=scheme-toggle></a></div><nav class=nav><ul class=flat><li><a href=/>Home</a></li><li><a href=/blog>Tech</a></li><li><a href=/life>Life</a></li><li><a href=/about>About</a></li><li><a href=/tags>Tags</a></li></ul></nav></div><div class=sidebar><nav id=TableOfContents><ul><li><a href=#来源>来源</a></li><li><a href=#所需宏包>所需宏包</a></li><li><a href=#最终效果和代码>最终效果和代码</a></li></ul></nav></div><div class=post><article><div class=post-header><div class=matter><h1 class=title>利用 TikZ 宏包在 LaTeX 中绘制流程图</h1><div class=meta><span class=date>2016-06-22</span></div></div></div></article><div class=markdown><p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p><h3 id=来源>来源</h3><p><a href=http://www.texample.net/>TeXample</a> 上给出了两种流程图的画法：</p><ul><li><a href=http://www.texample.net/tikz/examples/flexible-flow-chart/>Easy-maintenance flowchart</a></li><li><a href=http://www.texample.net/tikz/examples/simple-flow-chart/>Simple flow chart</a></li></ul><p>第一种比较好看，也比较容易维护，当然是用它了。</p><h3 id=所需宏包>所需宏包</h3><p>在导言区加入以下代码：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-tex data-lang=tex><span class=k>\usepackage</span><span class=nb>{</span>tikz<span class=nb>}</span>
+<span class=k>\usetikzlibrary</span><span class=nb>{</span>shapes,arrows,chains<span class=nb>}</span>
+<span class=k>\usepackage</span><span class=nb>{</span>xcolor<span class=nb>}</span>
+</code></pre></td></tr></table></div></div><h3 id=最终效果和代码>最终效果和代码</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span><span class=lnt>82
+</span><span class=lnt>83
+</span><span class=lnt>84
+</span><span class=lnt>85
+</span><span class=lnt>86
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-tex data-lang=tex><span class=c>% 设置颜色代号
+</span><span class=c></span><span class=k>\colorlet</span><span class=nb>{</span>lcfree<span class=nb>}{</span>green<span class=nb>}</span>
+<span class=k>\colorlet</span><span class=nb>{</span>lcnorm<span class=nb>}{</span>blue<span class=nb>}</span>
+<span class=k>\colorlet</span><span class=nb>{</span>lccong<span class=nb>}{</span>red<span class=nb>}</span>
+<span class=c>% -------------------------------------------------
+</span><span class=c>% 设置调试标志层
+</span><span class=c></span><span class=k>\pgfdeclarelayer</span><span class=nb>{</span>marx<span class=nb>}</span>
+<span class=k>\pgfsetlayers</span><span class=nb>{</span>main,marx<span class=nb>}</span>
+<span class=c>% 标记坐标点的宏定义。交换下面两个定义关闭。
+</span><span class=c></span><span class=k>\providecommand</span><span class=nb>{</span><span class=k>\cmark</span><span class=nb>}</span>[2][]<span class=nb>{</span><span class=c>%
+</span><span class=c></span>  <span class=k>\begin</span><span class=nb>{</span>pgfonlayer<span class=nb>}{</span>marx<span class=nb>}</span>
+    <span class=k>\node</span> [nmark] at (c#2#1) <span class=nb>{</span>#2<span class=nb>}</span>;
+  <span class=k>\end</span><span class=nb>{</span>pgfonlayer<span class=nb>}{</span>marx<span class=nb>}</span>
+  <span class=nb>}</span>
+<span class=k>\providecommand</span><span class=nb>{</span><span class=k>\cmark</span><span class=nb>}</span>[2][]<span class=nb>{</span><span class=k>\relax</span><span class=nb>}</span>
+<span class=c>% -------------------------------------------------
+</span><span class=c>% 开始绘图
+</span><span class=c></span><span class=k>\begin</span><span class=nb>{</span>figure<span class=nb>}</span>[H]
+  <span class=k>\centering</span>
+  <span class=k>\scalebox</span><span class=nb>{</span>.8<span class=nb>}{</span>  <span class=c>%设置缩放
+</span><span class=c></span><span class=k>\begin</span><span class=nb>{</span>tikzpicture<span class=nb>}</span>[
+    &gt;=triangle 60,              <span class=c>% 箭头的形状
+</span><span class=c></span>    start chain=going below,    <span class=c>% 从上往下的流程
+</span><span class=c></span>    node distance=6mm and 60mm, <span class=c>% 全局间距设置
+</span><span class=c></span>    every join/.style=<span class=nb>{</span>norm<span class=nb>}</span>,   <span class=c>% 连接线的默认设置
+</span><span class=c></span>    ]
+<span class=c>% -------------------------------------------------
+</span><span class=c>% 节点的样式定义
+</span><span class=c>% &lt;on chain&gt; 和 &lt;on grid&gt; 可以减少手动调整节点位置的麻烦
+</span><span class=c></span><span class=k>\tikzset</span><span class=nb>{</span>
+  base/.style=<span class=nb>{</span>draw, on chain, on grid, align=center, minimum height=4ex<span class=nb>}</span>,
+  proc/.style=<span class=nb>{</span>base, rectangle, text width=8em<span class=nb>}</span>,
+  test/.style=<span class=nb>{</span>base, diamond, aspect=2, text width=5em<span class=nb>}</span>,
+  term/.style=<span class=nb>{</span>proc, rounded corners<span class=nb>}</span>,
+  <span class=c>% coord 用来表示连接线的转折点
+</span><span class=c></span>  coord/.style=<span class=nb>{</span>coordinate, on chain, on grid, node distance=6mm and 25mm<span class=nb>}</span>,
+  <span class=c>% nmark 用来表示调试标志
+</span><span class=c></span>  nmark/.style=<span class=nb>{</span>draw, cyan, circle, font=<span class=nb>{</span><span class=k>\sffamily\bfseries</span><span class=nb>}}</span>,
+  <span class=c>% -------------------------------------------------
+</span><span class=c></span>  <span class=c>% 不同的连接线样式
+</span><span class=c></span>  norm/.style=<span class=nb>{</span>-&gt;, draw, lcnorm<span class=nb>}</span>,
+  free/.style=<span class=nb>{</span>-&gt;, draw, lcfree<span class=nb>}</span>,
+  cong/.style=<span class=nb>{</span>-&gt;, draw, lccong<span class=nb>}</span>,
+  it/.style=<span class=nb>{</span>font=<span class=nb>{</span><span class=k>\small\itshape</span><span class=nb>}}</span>
+<span class=nb>}</span>
+<span class=c>% -------------------------------------------------
+</span><span class=c>% 先放节点
+</span><span class=c></span><span class=k>\node</span> [term, densely dotted,fill=lccong!25, it] (p0) <span class=nb>{</span>输入<span class=nb>}</span>;
+<span class=c>% 用 join 表示和上一个节点相连
+</span><span class=c></span><span class=k>\node</span> [proc, join]  <span class=nb>{</span>使用非线性最小二乘法得到 <span class=s>$</span><span class=nb>X_</span><span class=m>0</span><span class=s>$</span><span class=nb>}</span>;
+<span class=k>\node</span> [proc, join]  <span class=nb>{</span>记录 <span class=s>$</span><span class=nb>X</span><span class=o>=</span><span class=nb>X_</span><span class=m>0</span><span class=nb>, f</span><span class=o>=</span><span class=nb>f</span><span class=o>(</span><span class=nb>X_</span><span class=m>0</span><span class=o>)</span><span class=s>$</span><span class=nb>}</span>;
+<span class=k>\node</span> [test, join] (t1) <span class=nb>{</span><span class=s>$</span><span class=nb>T&gt;T_E</span><span class=s>$</span>?<span class=nb>}</span>;
+<span class=k>\node</span> [proc] (p1)   <span class=nb>{</span><span class=s>$</span><span class=nb>step</span><span class=o>=</span><span class=m>0</span><span class=s>$</span><span class=nb>}</span>;
+<span class=k>\node</span> [test, join] (t2) <span class=nb>{</span><span class=s>$</span><span class=nb>step&lt;count</span><span class=s>$</span>?<span class=nb>}</span>;
+<span class=k>\node</span> [proc] (p2)   <span class=nb>{</span>得到新状态<span class=s>$</span><span class=nb>P_N</span><span class=o>=</span><span class=nb>P</span><span class=o>+</span><span class=nb>scale</span><span class=nv>\times</span><span class=nb> rand</span><span class=s>$</span>,计算目标函数差<span class=s>$</span><span class=nv>\Delta</span><span class=nb> f</span><span class=s>$</span><span class=nb>}</span>;
+<span class=k>\node</span> [test, join] (t3) <span class=nb>{</span><span class=s>$</span><span class=nb>F_{Accept}&lt;rand</span><span class=s>$</span>?<span class=nb>}</span>;
+<span class=k>\node</span> [proc] (p3)   <span class=nb>{</span>记录新状态 <span class=s>$</span><span class=nb>X</span><span class=o>=</span><span class=nb>X_N,f</span><span class=o>=</span><span class=nb>f</span><span class=o>(</span><span class=nb>X_N</span><span class=o>)</span><span class=s>$</span><span class=nb>}</span>;
+
+<span class=k>\node</span> [proc, left=of t1] (p4) <span class=nb>{</span><span class=s>$</span><span class=nb>T</span><span class=o>=</span><span class=nb>T</span><span class=nv>\times</span><span class=nb> a,scale</span><span class=o>=</span><span class=nb>scale</span><span class=nv>\times</span><span class=nb> b</span><span class=s>$</span><span class=nb>}</span>;
+<span class=k>\node</span> [term, densely dotted, right=of t1,fill=lcfree!25](p5)  <span class=nb>{</span>输出<span class=nb>}</span>;
+<span class=k>\node</span> [proc, right=of t3](p6) <span class=nb>{</span><span class=s>$</span><span class=nb>step</span><span class=o>++</span><span class=s>$</span><span class=nb>}</span>;
+
+<span class=k>\node</span> [coord, left=of t2] (c1)  <span class=nb>{}</span>;
+<span class=k>\node</span> [coord, right=of t2] (c2)  <span class=nb>{}</span>;
+<span class=k>\node</span> [coord, right=of p3] (c3)  <span class=nb>{}</span>;
+<span class=c>%先画南北方向的连接线，先画线再画两端的标志和箭头
+</span><span class=c></span><span class=k>\path</span> (t1.south) to node [near start, xshift=1em] <span class=nb>{</span><span class=s>$</span><span class=nb>y</span><span class=s>$</span><span class=nb>}</span> (p1);
+  <span class=k>\draw</span> [*-&gt;,lcnorm] (t1.south) -- (p1);
+<span class=k>\path</span> (t2.south) to node [near start, xshift=1em] <span class=nb>{</span><span class=s>$</span><span class=nb>y</span><span class=s>$</span><span class=nb>}</span> (p2);
+  <span class=k>\draw</span> [*-&gt;,lcnorm] (t2.south) -- (p2);
+<span class=k>\path</span> (t3.south) to node [near start, xshift=1em] <span class=nb>{</span><span class=s>$</span><span class=nb>y</span><span class=s>$</span><span class=nb>}</span> (p3);
+  <span class=k>\draw</span> [*-&gt;,lcnorm] (t3.south) -- (p3);
+<span class=c>%接着画东西方向的连接线，方法同上
+</span><span class=c></span><span class=k>\path</span> (t1.east) to node [near start, yshift=1em]  <span class=nb>{</span><span class=s>$</span><span class=nb>n</span><span class=s>$</span><span class=nb>}</span>(p5);
+  <span class=k>\draw</span> [o-&gt;,lcnorm] (t1.east) -- (p5);
+  <span class=k>\draw</span> [-&gt;,lcnorm] (p4.east) -- (t1);
+<span class=k>\path</span> (t3.east) to node [near start, yshift=1em]  <span class=nb>{</span><span class=s>$</span><span class=nb>n</span><span class=s>$</span><span class=nb>}</span>(p6);
+  <span class=k>\draw</span> [o-&gt;,lcnorm] (t3.east) -- (p6);
+<span class=k>\path</span> (t2.west) to node [near start, yshift=1em]  <span class=nb>{</span><span class=s>$</span><span class=nb>n</span><span class=s>$</span><span class=nb>}</span>(c1);
+  <span class=k>\draw</span> [o-&gt;,lcnorm] (t2.west) -- (c1) -| (p4);
+  <span class=k>\draw</span> [-&gt;,lcnorm] (p3.east) -- (c3) -| (p6.south);
+  <span class=k>\draw</span> [&lt;-,lcnorm] (t2.east) -- (c2) -| (p6.north);
+  <span class=k>\end</span><span class=nb>{</span>tikzpicture<span class=nb>}</span>
+<span class=nb>}</span>
+<span class=k>\label</span><span class=nb>{</span>fig:algorithm<span class=nb>}</span>
+<span class=k>\end</span><span class=nb>{</span>figure<span class=nb>}</span>
+</code></pre></td></tr></table></div></div></div><div class=tags></div><div id=gitalk-container></div><link rel=stylesheet href=https://unpkg.com/gitalk/dist/gitalk.css><script src=https://unpkg.com/gitalk/dist/gitalk.min.js></script><script>const gitalk=new Gitalk({clientID:"4ccff83836edce535e3c",clientSecret:"daeca7033b9770d0f062e007477bc4d116499434",repo:"yzlnew.github.io",owner:"yzlnew",admin:["yzlnew"],distractionFreeMode:false,id:location.pathname});(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('gitalk-container').innerHTML='Gitalk comments not available by default when the website is previewed locally.';return;}
+gitalk.render('gitalk-container');})();</script></div></div><div class="footer wrapper"><div class=social-links><ul class=social-media-list><li><a href=mailto:yzlnew@gmail.com title=Mail><i data-feather=mail></i></a></li><li><a href=https://github.com/yzlnew title=Github><i data-feather=github></i></a></li><li><a href=https://t.me/r0brew title=Telegram><i data-feather=message-square></i></a></li><li><a href=/index.xml title=RSS><i data-feather=rss></i></a></li></ul></div><nav class=copyright><div>2016 © Copyright Ye Zhiling</div></nav></div><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-61197619-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><script>feather.replace()</script></body></html>
