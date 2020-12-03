@@ -60,7 +60,9 @@ adb shell dumpsys activity recents | find "Recent #0"
 
 根据官方文档，Deeplink 可以描述如下：
 
-    深层链接是指将用户直接转到应用中的特定内容的网址。在 Android 中，您可以通过添加 intent 过滤器以及从传入的 intent 提取数据来设置深层链接，以便将用户吸引到正确的 Activity。
+{{< notice info >}}
+深层链接是指将用户直接转到应用中的特定内容的网址。在 Android 中，您可以通过添加 intent 过滤器以及从传入的 intent 提取数据来设置深层链接，以便将用户吸引到正确的 Activity。
+{{< /notice >}}
 
 在平时使用过程中，其实我们接触还挺多的，最常见的是「在 App 中打开」之类的按钮，或者各种从一个应用跳转到另一个应用某页面的按钮。简单来说，Deeplink 的 URL 里面带有页面所需要的参数，可以被应用正确处理打开页面的同时传一定的信息进去。
 

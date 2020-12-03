@@ -94,14 +94,13 @@ blog = ":year/:month/:filename"
 [markup]
   [markup.tableOfContents]
     endLevel = 4
-    ordered = false
     startLevel = 3
   [markup.highlight]
     codeFences = true
     guessSyntax = false
     hl_Lines = ""
     lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
+    lineNos = false
+    lineNumbersInTable = false
     noClasses = false
     tabWidth = 4
