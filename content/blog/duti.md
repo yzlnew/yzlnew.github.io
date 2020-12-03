@@ -37,7 +37,9 @@ com.sublimetext.3      public.plain-text  all
 com.sublimetext.3      yml                all
 ```
 
-{% note info %} 如果不清楚某个文件的类型，可以通过`mdls <file>`查看。 如果不清楚某个应用的包名，可以通过`osascript -e 'id of app "AppName"`查看。 {% endnote %}
+{{< notice info >}}
+如果不清楚某个文件的类型，可以通过 <code>mdls</code> 命令查看。 如果不清楚某个应用的包名，可以通过 <code>osascript -e 'id of app "AppName"</code> 查看。
+{{< /notice >}}
 
 ### 载入配置文件
 
