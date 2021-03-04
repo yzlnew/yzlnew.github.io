@@ -243,7 +243,7 @@ ul.flat li {
 
 .container {
     max-width: 800px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .header {
@@ -498,7 +498,7 @@ ul.flat li {
     }
     .header .nav li {
         margin: 0 10px 0 0;
-        font-size: 14px;
+        font-size: 0.875em;
     }
 
     table {
