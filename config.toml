@@ -1,7 +1,7 @@
 baseurl = "https://yzlnew.com/"
 languageCode = "zh-CN"
 hasCJKLanguage = true
-title = "yzlnew"
+title = "yzl 的时空回环"
 theme = "ink"
 paginate = 8
 
