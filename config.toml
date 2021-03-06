@@ -17,7 +17,7 @@ summaryLength = 20
     customCSS = "css/custom.css"  # Custom CSS applied to default styles.
     customDarkCSS = "css/custom_dark.css"  # Custom styles applied to dark mode css.
     avatar = "img/avatar.png"
-    favicon = "img/favicon.ico"
+    favicon = "img/favicon.png"
 
     i18n_flags = true
     lang = "cn"
