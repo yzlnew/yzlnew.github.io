@@ -2,7 +2,7 @@
 date: "2019-01-21T21:53:58+08:00"
 title: "实现在 Vim 的正常和插入模式下中英文输入法的自动切换"
 tags:
-  - Vim
+  - vim
 draft: false
 ---
 

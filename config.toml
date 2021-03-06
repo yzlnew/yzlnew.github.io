@@ -31,27 +31,17 @@ summaryLength = 20
     gitalk_admin           = ['yzlnew']
 
 [[menu.main]]
-name = "Home"
+name = "主页"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Tech"
-url = "/blog"
-weight = 2
-
-[[menu.main]]
-name = "Life"
-url = "/life"
-weight = 3
-
-[[menu.main]]
-name = "About"
+name = "关于我"
 url = "/about"
 weight = 4
 
 [[menu.main]]
-name = "Tags"
+name = "标签"
 url = "/tags"
 weight = 5
 

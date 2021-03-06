@@ -2,8 +2,7 @@
 date: "2019-01-28T16:59:47+08:00"
 title: "我的 Vim 配置"
 tags:
-  - Vim
-  - vimrc
+  - vim
 draft: false
 ---
 

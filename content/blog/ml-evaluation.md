@@ -3,7 +3,7 @@ title: 分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&AUC
 date: 2018-05-14 17:18:11
 katex: true
 tags:
-    - Machine Learning
+    - 机器学习
 ---
 
 在机器学习的模型评估中，选择合适的评价指标很重要。对于回归问题，常常使用一些损失函数，这在各个线上比赛、sklearn 的文档里都能看到。而对于分类或者标注问题，几种常见的指标比较容易混淆，这里简单总结一下。

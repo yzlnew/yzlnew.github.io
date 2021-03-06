@@ -2,7 +2,7 @@
 date: "2020-12-03T20:15:43+08:00"
 title: "从通知实现钱迹 Tasker 自动化记账"
 tags:
-  - Tasker
+  - tasker
 description: 我花过，我记过，我忘了。
 draft: false
 ---

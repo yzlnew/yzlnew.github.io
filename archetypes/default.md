@@ -3,5 +3,7 @@ date: "{{ .Date }}"
 title: "{{ replace .TranslationBaseName '-' ' ' | title }}"
 tags:
   -
-draft: true
+draft: false
+toc: false
+description:
 ---

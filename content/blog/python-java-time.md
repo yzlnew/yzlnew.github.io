@@ -2,8 +2,8 @@
 date: "2020-05-14T21:01:11+08:00"
 title: "Java 和 Python 中的时间"
 tags:
-  - Python
-  - Java
+  - python
+  - java
 ---
 
 在平时的工作中免不了需要和各种时间打交道。这里整理一下 Java 和 Python 中关于时间的概念和用法。

@@ -2,7 +2,7 @@
 title: Python 垃圾回收及 gc 模块
 date: 2018-06-19 15:35:17
 tags:
-    - Python
+    - python
 ---
 
 本文简单描述了 Python 3.6 的垃圾回收机制。

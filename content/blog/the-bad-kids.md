@@ -3,7 +3,9 @@ date: "2020-06-28T10:40:44+08:00"
 title: "隐秘的渴望"
 tags:
   - 剧评
+  - 杂文
 draft: false
+toc: false
 description: 坏小孩的夏天。
 ---
 
