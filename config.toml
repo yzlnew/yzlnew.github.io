@@ -11,12 +11,12 @@ googleAnalytics = "UA-61197619-1"
 summaryLength = 20
 
 [params]
-    subtitle = "👨‍💻"
+    subtitle = "Let me fly to the 🌙"
     featherIconsCDN = true
     mode = "auto" # "dark", "auto", "light"
     customCSS = "css/custom.css"  # Custom CSS applied to default styles.
     customDarkCSS = "css/custom_dark.css"  # Custom styles applied to dark mode css.
-    avatar = "img/penrose.webp"
+    avatar = "img/avatar.png"
     favicon = "img/favicon.ico"
 
     i18n_flags = true
