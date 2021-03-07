@@ -42,11 +42,7 @@ description: 我是一个没有感情的机器人。
 
 之后进入任务编辑的界面，这里就是实现两个 if 逻辑，分别匹配之前输入的文本。
 
-{{< gallery >}}
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/auto_event.jpg" caption="触发事件" >}}
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/auto_task.jpg" caption="任务编辑" >}}
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/auto_nl.jpg" caption="通知回复" >}}
-{{< /gallery >}}{{< load-photoswipe >}}
+{{< figure src="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/auto.jpg" caption="任务流程" >}}
 
 这里需要注意两个地方：
 
@@ -55,7 +51,7 @@ description: 我是一个没有感情的机器人。
 
 这里还有一个问题，微信本身是不支持快捷回复的，这里就需要女娲石来实现这样一个按钮，我的手机 Root，因此能够微信的身份发送通知，之前的所有者程序选择微信，是没有问题的。没有测试过普通模式下的效果，理论上也是可以的，只需要把之前的所有者程序加上女娲石即可。
 
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/ne.jpg" caption="通知回复" width=250px caption-position="bottom" caption-effect="appear" >}}
+{{< figure src="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/ne.jpg" caption="通知回复" width=250px >}}
 
 激活配置之后，现在收到微信消息，就会自动回复消息了。
 
@@ -67,7 +63,7 @@ description: 我是一个没有感情的机器人。
 
 一番搜索之后确定了图灵机器人，因为它提供了 [Web API](https://www.kancloud.cn/turing/www-tuling123-com/718227)。个人用户一天的调用上限是 100 次，和朋友玩玩是完全够了。
 
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/turing.png" caption="JavaScriptlet" caption-position="bottom" caption-effect="appear" >}}
+{{< figure src="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/turing.png" caption="图灵机器人" >}}
 
 建立一个如图的操作，对，tasker 是支持 JavaScript 的，这样就可以很方便的进行 Web Api 的调用。这里遇到了这个任务里面最大的困难。首先对于 JavaScript 不是特别熟悉，其次 tasker 的 js 还有点不太一样的地方。
 
@@ -111,7 +107,7 @@ var data = JSON.stringify(str);
 xhr.send(data);
 ```
 
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/bot_js_marked.png" caption="JavaScriptlet" width=250px caption-position="bottom" caption-effect="appear" >}}
+{{< figure src="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/bot_js_marked.png" caption="JavaScriptlet" width=250px >}}
 
 当然可以完全忽略上一段，直接把这段代码中的 `apiKey` 和 `userId` 更改为你的机器人的 API 密钥以及用户名。如果你有兴趣，我们可以简单描述一下这段代码的细节：
 
@@ -121,6 +117,6 @@ xhr.send(data);
 
 🆗，现在就可以找个小伙伴测试一下你的 🤖 啦，在工作时段打开静音模式，让 🤖 来回复那些消息吧。
 
-{{< figure link="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/bot_talk_marked.png" caption="机器人对话" width=250px caption-position="bottom" caption-effect="appear" >}}
+{{< figure src="https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2020/06/bot_talk_marked.png" caption="机器人对话" width=250px >}}
 
 当然最后一个提醒，如果有群聊通知没有开免打扰、或者在群里被@，还是会回复的，以免再工作群里回复一些莫名其妙的话，可以考虑像热身这一节所讲的，做在通知标题 `%nltitle` 上做一些过滤，制定一个白名单。

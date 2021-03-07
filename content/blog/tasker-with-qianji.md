@@ -7,9 +7,13 @@ description: 我花过，我记过，我忘了。
 draft: false
 ---
 
+{{< notice info >}}
+本文首发于少数派，博客仅作同步。
+{{< /notice >}}
+
 继上次通过 Tasker 和通知实现机器人之后，决定利用 Tasker 做一些更有效率的事情、解决实际使用手机中的一些痛点。
 
-![](https://cdn.sspai.com/2020/07/07/318c33c44af79e0b45e6149ecfbb2f94.png)
+{{< figure src="https://cdn.sspai.com/2020/07/07/318c33c44af79e0b45e6149ecfbb2f94.png" caption="流程图" width=80% >}}
 
 思来想去，我有一个经常重复的操作是每次支付完都会使用钱迹进行记账，具体步骤无非是「回到桌面 > 打开钱迹/钱迹微件 > 输入金额 > 选择分类 > 记账完成」。
 
@@ -23,7 +27,7 @@ draft: false
 
 首先我们从简单的开始，我们希望某个通知产生的时候，能够自动打开钱迹「记账」页面，从而减少打开某个应用内界面的操作。这里一是通知事件作为触发，二是发送 Intent 来打开指定页面的操作。
 
-![](https://cdn.sspai.com/2020/07/07/5eeacad6e96ee751dfea79eaf811a94c.jpg)
+{{< figure src="https://cdn.sspai.com/2020/07/07/5eeacad6e96ee751dfea79eaf811a94c.jpg" caption="任务触发" width=60% >}}
 
 #### 复习通知事件
 
@@ -60,7 +64,7 @@ adb shell dumpsys activity recents | find "Recent #0"
 
 根据官方文档，Deeplink 可以描述如下：
 
-{{< notice info >}}
+{{< notice tip >}}
 深层链接是指将用户直接转到应用中的特定内容的网址。在 Android 中，您可以通过添加 intent 过滤器以及从传入的 intent 提取数据来设置深层链接，以便将用户吸引到正确的 Activity。
 {{< /notice >}}
 
@@ -82,7 +86,8 @@ adb shell dumpsys activity recents | find "Recent #0"
 - 如果匹配到了，即 `If %BALANCE1 Set`，则通过构建 URL 来传入金额打开钱迹的分类选择面板，URL 为 `qianji://publicapi/addbill?&type=0&catechoose=1&money=%BALANCE1`
 - 如果没有匹配到，则打开记账的 Activity，正如前面所述一样发送意图。
 
-![](https://cdn.sspai.com/2020/07/07/7d5cf12f2fdbe6be901a1e0c68975726.jpeg)
+{{< figure src="https://cdn.sspai.com/2020/07/07/7d5cf12f2fdbe6be901a1e0c68975726.jpeg" caption="操作逻辑" >}}
+
 
 ### 效果展示
 
@@ -95,10 +100,6 @@ adb shell dumpsys activity recents | find "Recent #0"
 不少通知里面没有金额，甚至不产生通知（比如淘宝支付之后），那么方法就不起效果了
 钱迹提供的很多丰富的参数没有利用，比如备注，分类也需要自己选择
 关于无通知触发的问题，可以使用 Log Entry 来解决。Log Entry 是去年末 Tasker 更新推出的被称为 Game Changer 的功能，即可以监听 Logcat 来实现触发。具体可见 官方示例，需要使用 ADB 或 Root 授权。
-
-{{< notice info >}}
-本文首发于少数派，博客仅作同步。
-{{< /notice >}}
 
 
 [^1]: http://docs.qianjiapp.com/plugin/auto_Tasker.html

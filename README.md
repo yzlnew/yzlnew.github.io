@@ -2,7 +2,7 @@ This is the source of my blog powered by hugo.
 
 ### Theme
 
-[cocoa](https://github.com/yzlnew/cocoa-hugo-theme)
+[ink](https://github.com/yzlnew/ink)
 
 ### Usage
 
