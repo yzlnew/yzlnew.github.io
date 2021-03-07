@@ -1,5 +1,6 @@
 baseurl = "https://yzlnew.com/"
-languageCode = "zh-CN"
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-cn"
 hasCJKLanguage = true
 title = "黄石的时空回环"
 theme = "ink"
@@ -13,7 +14,7 @@ summaryLength = 20
 [params]
     subtitle = "Let me fly to the 🌙"
     featherIconsCDN = true
-    mode = "auto" # "dark", "auto", "light"
+    mode = "auto"
     customCSS = "css/custom.css"
     customDarkCSS = "css/custom_dark.css"
     avatar = "img/avatar.png"
@@ -69,7 +70,6 @@ url = "/index.xml"
    tag = "tags"
 
 
-defaultContentLanguage = "cn"
 author = "@yzlnew"
 builddrafts = false
 canonifyurls = true
@@ -85,12 +85,13 @@ blog = ":year/:month/:filename"
     endLevel = 4
     startLevel = 3
   [markup.highlight]
+    anchorLineNos = false
     codeFences = true
     guessSyntax = false
     hl_Lines = ""
     lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = false
+    lineNos = true
+    lineNumbersInTable = true
     noClasses = true
     style = "pastie"
     tabWidth = 4

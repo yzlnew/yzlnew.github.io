@@ -87,7 +87,7 @@ System.out.println(LocalDate.now().atStartOfDay(z).toEpochSecond());
 
 需要进行时间的格式化和解析，也很简单：
 
-{{< highlight java "linenos=table" >}}
+```java
 // 格式化
 public static String formatDate(long eventTime) {
     LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), ZoneId.systemDefault());
@@ -101,8 +101,9 @@ public static long parseDate(String timeStr) {
     ZonedDateTime zonedDateTime = ZonedDateTime.of(parsedDateTime,ZoneId.systemDefault());
     return zonedDateTime.toInstant().toEpochMilli();
 }
-{{< / highlight >}}
+```
 
-{{< notice info >}}
+{{< notice tip >}}
 Android Studio 4.0 现在可以支持任意 API level 的 Java 8 Desugaring
 {{< /notice >}}
+
