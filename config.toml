@@ -12,7 +12,7 @@ googleAnalytics = "UA-61197619-1"
 summaryLength = 20
 
 [params]
-    subtitle = "Let me fly to the 🌙"
+    subtitle = "Let me fly to the 🌕️"
     featherIconsCDN = true
     mode = "auto"
     customCSS = "css/custom.css"
