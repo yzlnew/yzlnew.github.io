@@ -9,7 +9,7 @@ tags:
 
 <!--more-->
 
-翻译整理自原文[Garbage collection in Python: things you need to know](https://rushter.com/blog/python-garbage-collector/)
+翻译整理自原文 [Garbage collection in Python: things you need to know](https://rushter.com/blog/python-garbage-collector/)
 
 ### Python 垃圾回收机制
 
@@ -30,7 +30,7 @@ tags:
 - 传参
 - 列表中加入对象
 
-当引用计数为0的时候，CPython 就会自动调用对象的析构函数。当这个对象里有其他对象的引用，他们的引用计数也会减少。
+当引用计数为 0 的时候，CPython 就会自动调用对象的析构函数。当这个对象里有其他对象的引用，他们的引用计数也会减少。
 
 ### gc 模块
 
@@ -45,7 +45,7 @@ gc 模块用来处理循环引用。
 ### 常用的 gc 函数
 
 ```python
-    gc.disable()        # 禁用自动垃圾回收.
+    gc.disable()        # 禁用自动垃圾回收
     gc.collect()        # 执行一次完整的垃圾回收
     gc.set_threshold()  # 设置垃圾回收的阈值
     gc.set_debug()      # 设置垃圾回收的调试标记

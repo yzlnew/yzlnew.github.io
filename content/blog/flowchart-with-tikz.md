@@ -51,7 +51,7 @@ tags:
 % 开始绘图
 \begin{figure}[H]
   \centering
-  \scalebox{.8}{  %设置缩放
+  \scalebox{.8}{  % 设置缩放
 \begin{tikzpicture}[
     >=triangle 60,              % 箭头的形状
     start chain=going below,    % 从上往下的流程
@@ -86,25 +86,25 @@ tags:
 \node [test, join] (t1) {$T>T_E$?};
 \node [proc] (p1)   {$step=0$};
 \node [test, join] (t2) {$step<count$?};
-\node [proc] (p2)   {得到新状态$P_N=P+scale\times rand$,计算目标函数差$\Delta f$};
+\node [proc] (p2)   {得到新状态 $P_N=P+scale\times rand$, 计算目标函数差 $\Delta f$};
 \node [test, join] (t3) {$F_{Accept}<rand$?};
 \node [proc] (p3)   {记录新状态 $X=X_N,f=f(X_N)$};
 
 \node [proc, left=of t1] (p4) {$T=T\times a,scale=scale\times b$};
-\node [term, densely dotted, right=of t1,fill=lcfree!25](p5)  {输出};
-\node [proc, right=of t3](p6) {$step++$};
+[node [term, densely dotted, right=of t1,fill=lcfree!25](p5)  {输出};
+[node [proc, right=of t3](p6) {$step++$};
 
 \node [coord, left=of t2] (c1)  {};
 \node [coord, right=of t2] (c2)  {};
 \node [coord, right=of p3] (c3)  {};
-%先画南北方向的连接线，先画线再画两端的标志和箭头
+% 先画南北方向的连接线，先画线再画两端的标志和箭头
 \path (t1.south) to node [near start, xshift=1em] {$y$} (p1);
   \draw [*->,lcnorm] (t1.south) -- (p1);
 \path (t2.south) to node [near start, xshift=1em] {$y$} (p2);
   \draw [*->,lcnorm] (t2.south) -- (p2);
 \path (t3.south) to node [near start, xshift=1em] {$y$} (p3);
   \draw [*->,lcnorm] (t3.south) -- (p3);
-%接着画东西方向的连接线，方法同上
+% 接着画东西方向的连接线，方法同上
 \path (t1.east) to node [near start, yshift=1em]  {$n$}(p5);
   \draw [o->,lcnorm] (t1.east) -- (p5);
   \draw [->,lcnorm] (p4.east) -- (t1);

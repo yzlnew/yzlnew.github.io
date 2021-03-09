@@ -43,7 +43,7 @@ d1 = date.today() # 今天的日期 2020-05-14
 d2 = date.fromisoformat('2020-05-12') # 从 YYYY-MM-DD 构造日期
 print((d2-d1).days)
 # -> 2
-dt = datetime(d1.year,d1.month,d1.day) # 今天 0 点的日期时间，因为其他默认为0
+dt = datetime(d1.year,d1.month,d1.day) # 今天 0 点的日期时间，因为其他默认为 0
 ```
 
 以上都是简单型的数据类型，如果需要时区信息，则要构造相应的 `tzinfo`。

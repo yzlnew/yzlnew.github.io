@@ -27,6 +27,6 @@ pandoc test.md -o test.pdf --latex-engine=xelatex -V CJKmainfont:SourceHanSerifC
 
 * pandoc 实际上是用了一个默认的 LaTeX 模版，这个模版可以通过`pandoc -D latex`看到。
 * `-V`或者`-M`参数都可以改变这个模版的参数值，具体可以通过 [pandoc](https://pandoc.org/MANUAL.html) 文档查到。
-* 可以向[这个答案](https://tex.stackexchange.com/questions/341809/pandoc-does-not-recognize-chinese-characters})一样写成模版，如果不常改变字体设置的话。
-* [这个链接](http://www.bagualu.net/wordpress/archives/5396)很有用。
-* 成果还是不怎么好看，所以我开始质问自己为什么不直接用LaTeX，🙄️。
+* 可以向[这个答案](https://tex.stackexchange.com/questions/341809/pandoc-does-not-recognize-chinese-characters}) 一样写成模版，如果不常改变字体设置的话。
+* [这个链接](http://www.bagualu.net/wordpress/archives/5396) 很有用。
+* 成果还是不怎么好看，所以我开始质问自己为什么不直接用 LaTeX，🙄️。

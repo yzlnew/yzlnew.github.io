@@ -13,8 +13,8 @@ lastmod: 2021-03-09 13:18:00
 
 ### 说明
 
-* 配置文件里还有两个我觉得比较好看的主题。一个是`Liang Hai`的[`Apathy`](https://zhuanlan.zhihu.com/p/19599206)，另一个是`hotoo`的[`Pithy`](https://github.com/hotoo/rime)。不难发现我就是照着后者改的，😄。
-* 想要自定义颜色，直接上[MD官网](https://material.google.com/style/color.html)上找吧。值得注意的是，这里的颜色都是BGR排列的（不知道为什么）。
+* 配置文件里还有两个我觉得比较好看的主题。一个是 `Liang Hai` 的 [`Apathy`](https://zhuanlan.zhihu.com/p/19599206)，另一个是`hotoo`的 [`Pithy`](https://github.com/hotoo/rime)。不难发现我就是照着后者改的，😄。
+* 想要自定义颜色，直接上 [MD 官网](https://material.google.com/style/color.html) 上找吧。值得注意的是，这里的颜色都是 BGR 排列的（不知道为什么）。
 
 ### 更改配置文件
 

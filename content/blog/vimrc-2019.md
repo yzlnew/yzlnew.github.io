@@ -32,7 +32,7 @@ draft: false
 ~~在 gVim 下显示正常。~~
 
 
-~~同样在WSL下正常（终端是 Terminus）。~~
+~~同样在 WSL 下正常（终端是 Terminus）。~~
 
 
 ### 安装说明
