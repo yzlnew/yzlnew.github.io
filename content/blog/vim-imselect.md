@@ -1,6 +1,7 @@
 ---
 date: "2019-01-21T21:53:58+08:00"
 title: "实现在 Vim 的正常和插入模式下中英文输入法的自动切换"
+lastmod: 2021-03-10
 tags:
   - vim
 draft: false
@@ -11,24 +12,47 @@ draft: false
 
 <!--more-->
 
-{{< notice info >}}
-需求：在正常模式下，切换到英文；在插入模式下，切换到上一次的输入法。
-{{< /notice >}}
+需求可以描述为，在**正常模式**下，切换到英文；在**插入模式**下，切换到上一次的输入法。
 
-直接上到目前为止（2019-01）的最佳实践，不写调研的过程了。( **更新** ：现在不是了）
+直接上到目前为止（2021-03）的最佳实践，不写调研的过程了。
 
-### Terminal Vim on Mac
+### 结论
+
+| 环境           | 方案                                                                      |
+|----------------|---------------------------------------------------------------------------|
+| gVim/MacVim    | 自带，完美                                                                |
+| Windows + nvim | [`yzlnew/smartim`](https://github.com/yzlnew/smartim)                     |
+| macOS          | [`xcodebuild/fcitx-vim-osx`](https://github.com/xcodebuild/fcitx-vim-osx) |
+| Linux          | [`daipeihust/im-select`](https://github.com/daipeihust/im-select)         |
+| 全平台         | [`brglng/vim-im-select`](https://github.com/brglng/vim-im-select)         |
+
+### Windows
+
+如果是使用 gVim 就不用操心这个事。Windows 上面应该主要也是用这个。
+
+如果使用 Neovim 的话，可以装我这个 [`yzlnew/smartim`](https://github.com/yzlnew/smartim) fork。
+目前不能用于 Windows 下的 TUI 的 Vim。其实稍微改改也能兼容 macOS。
+
+### macOS
+
+第一个选择设置起来略复杂，后续考虑整合一下 `smartim` 使其支持 macOS。
 
 1. 安装
    [fcitx-remote-for-osx](https://github.com/CodeFalling/fcitx-remote-for-osx)
    。提供一个 `fcitx-remote` 可以通过命令行切换输入法的指令。
 2. 安装 [fcitx-vim-osx](https://github.com/CodeFalling/fcitx-vim-osx) 这个 Vim 插件。
 
-{{< notice info >}}
+{{< notice warning >}}
 注意由于插件中用到 `InsertLeave` 动作，不支持 `CTRL-C` 退出插入模式。
+另外会导致 `vimwiki` 每换行都切换输入法，几乎不可用。
 {{< /notice >}}
 
-### VScode with Vim mode
+`brglng/vim-im-select` 这个我还没测试过。
+
+也可以使用
+[`coc-imselect`](https://github.com/neoclide/coc-imselect)。
+
+### Bonus: VScodeVim
 
 VScode 的 Vim 模式虽然实际效果一般，但是给了比较好的输入法切换的解决方法。
 
@@ -46,7 +70,3 @@ VScode 的 Vim 模式虽然实际效果一般，但是给了比较好的输入�
 
 ### 更新
 
-在 `MacOS` 用以上方法会导致 `vimwiki` 每换行都切换输入法，几乎不可用。
-
-如果仅仅在 `MacOS` 使用，建议使用
-[`coc-imselect`](https://github.com/neoclide/coc-imselect)。
