@@ -8,6 +8,7 @@ tags:
 draft: false
 toc: true
 description:
+katex: true
 ---
 
 最近在看 Python3 Cookbook，还挺有趣的。

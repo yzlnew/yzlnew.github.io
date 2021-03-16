@@ -12,10 +12,10 @@ tags:
 
 ### 二分类的预测情况
 
-|| 预测为正类 | 预测为负类
------------| ------------ | -------------
-实际为正类 | True Positive | False Negative
-实际为负类 | False Positive | True Negative
+|            | 预测为正类     | 预测为负类     |
+|------------|----------------|----------------|
+| 实际为正类 | True Positive  | False Negative |
+| 实际为负类 | False Positive | True Negative  |
 
 记忆很简单，前面表示预测是正确（True）的还是错误（False）的，后面表示预测的是正类（Positive）还是负类（Negative），跟英文两组词的原意一致。
 
