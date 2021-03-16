@@ -1,5 +1,6 @@
 ---
 date: "2020-03-25T20:53:26+08:00"
+lastmod: 2021-03-16
 title: "键盘之路"
 description: "一个键盘⌨侠的诞生。"
 tags:
@@ -14,11 +15,9 @@ tags:
 
 为什么一开始产生了买键盘的念头，我已经记不太清了。可能是「什么值得买」上多了，然后就种了草。作为一个没有多少收入的穷学生，预算一开始是比较低的。但是，作为一个想要一步到底的工具党，最后还是想要攒钱买把好的。于是乎，就买了一把 Filco 87 忍者侧刻二代（红轴）。
 
-![filco taobao](https://i.loli.net/2020/04/26/liZzFq7NKDxkUmg.png)
-
 这把键盘给我的感觉还是非常好的。侧刻的字体非常有韵味，红轴的也不是很吵。不过现在回想起来量产键盘还是太普通了，没内味。
 
-![filco](https://i.loli.net/2020/04/26/fmaHN5b2eL96Uty.png)
+![filco](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/filco.jpeg)
 
 中间走过一段弯路，看了下淘宝历史订单，在一周之后我又下单了一个 Poker 茶轴，那稀烂的做工和手感，虽然不到 Filco 的一半，但是还是立马退掉了。再后来，买过两把酷冷烈焰枪正刻红轴，也是 Filco 的一半价格。但是除了键帽之外的做工可以说和 Filco 不相上下。说实话 Filco 的品牌溢价还是有点高，如果现在要我选一把量产的话，绝对不会选择它了。
 
@@ -26,7 +25,7 @@ tags:
 
 下图是酷冷搭配 JTK 红白可乐的样子。有机会再聊聊各种键帽。
 
-![coolmaster with jtk keycaps](https://i.loli.net/2020/04/26/POhLkKYe3rA2gM4.png)
+![coolmaster with jtk keycaps](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/cool_master.jpeg)
 
 ### HHKB
 
@@ -34,7 +33,7 @@ tags:
 
 另外一个被捧上神坛的就是 HHKB 了，往小了说是专为 `vim` 和 `emacs` 设计的，往大了说是程序员必备神器，说是机械键盘烧到头了就是静电容。懵懂的我又被洗脑了，用了超过 2000 的价格买了 HHKB Pro BT。
 
-![HHKB](https://i.loli.net/2020/04/26/yobQpCiu7JPScHX.png)
+![HHKB](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/hhkb.jpeg)
 
 除了掉进了消费主义的陷阱之外呢，购买的原因还有 HHKB 的便携性和复古感吧。当然它的缺点也是有很多的：
 
@@ -58,18 +57,24 @@ tags:
 
 这个键盘叫 `m60-a`，特点就是比较简约、背面有一大块 PVD 的镜面铜，当然打字的时候是完全看不到的，只能用来闪瞎对面同学的👀。
 
-![m60-a](https://i.loli.net/2020/04/26/CY2gi7m6IZjV4uQ.png)
+![m60-a](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/m60.jpeg)
 
 键帽是 GMK Laser，键帽也是团了小半年。轴体是神秘的 Holy Panda，大概成本是 10 块钱一颗（我靠，回顾了一下我的脑袋是不是抽风了）。
 
-![m60-a alt](https://i.loli.net/2020/04/26/bzu1lBtP7scX3Ay.png)
+![m60-a alt](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/m60-a.jpeg)
 
 不过我对这个键盘还是相当满意的，现在主要在家里码字用，非常强和特殊的段落感。因此也就渐渐地把之前买的一些键帽和键盘出掉或送掉了，留下了几把 HHKB Layout 的键盘。当然也包括下面这把。
 
 来自 KBDFans 的 Tofu HHKB，配上 GMK Oblivion。买的瑕疵外壳，所以价格很便宜，不算轴体的话也就 600 块，可比原版 HHKB 便宜多了。
 
-![Tofu](https://i.loli.net/2020/04/27/aH8p2qVFlveB4cJ.png)
+![Tofu](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/tofu.jpeg)
 
 ### 后续
 
 最近随着之前团的东西渐渐到货，也打算退烧了。最后打算买个 Rama 的 KARA，160 刀的塑料外壳 HHKB，可以说相当超值的（看过他们的包装，能体会到设计的用心）。之后就继续开心的码字吧~
+
+### 更新
+
+趁着某次抢购，买到了心仪已久的 Polaris，是一个 gasket 结构的 60 键盘。顺便把之前的 Tofu 和一些键帽出了（保值率相当高），filco 送人了。
+
+![polaric](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/polaris.jpeg)
