@@ -13,9 +13,7 @@ rm -rf /
 
 然后还手贱按了回车。
 
-当我看到一大堆 `Permission denied` 反应了 3 秒终于意识到有点不太对，赶紧 `ctrl+c` 。表情如下
-
-![ahh](https://ws2.sinaimg.cn/large/006tNc79ly1fyx3fveot0j306j05za9w.jpg)
+当我看到一大堆 `Permission denied` 反应了 3 秒终于意识到有点不太对，赶紧 `ctrl+c` 。
 
 ### 执行之后的情况分析
 

@@ -23,12 +23,11 @@ summaryLength = 20
     i18n_flags = true
     lang = "cn"
 
-    gitalk                 = true
-    gitalk_clientID        = "4ccff83836edce535e3c"
-    gitalk_clientSecret    = "daeca7033b9770d0f062e007477bc4d116499434"
-    gitalk_repo            = "yzlnew.github.io"
-    gitalk_owner           = "yzlnew"
-    gitalk_admin           = ['yzlnew']
+[params.utter]
+enable = true
+repo = "yzlnew/yzlnew.github.io"
+issueTerm = "title"
+theme = "github-light"
 
 [[menu.main]]
 name = "主页"
