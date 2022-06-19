@@ -18,7 +18,7 @@ description:
 
 还记得在宠物医院满屋子乱窜的场景，心想小猫咪好皮实啊。一下子蹦到我短裤上，用尖尖的爪子钩住把我吓了一跳。检查下来除了右眼眼睑有点内翻，其他没啥问题就拿回家关在了小房间。
 
-![第一面](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2022cat-firstlook.jpg)
+![第一面](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2022/cat-firstlook.jpg)
 
 养猫对我来说肯定算是意外，以前家里养过一条小土狗，从小学一直到大学，随着我的长大渐渐淡出了我的生活，最后埋在了院子的角落里。
 
