@@ -1,180 +1,182 @@
-<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>利用 TikZ 宏包在 LaTeX 中绘制流程图 - 黄石的时空回环</title><link rel=icon type=image/png href=/img/favicon.png><meta name=viewport content="width=device-width,initial-scale=1"><meta itemprop=name content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta itemprop=description content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><meta itemprop=datePublished content="2016-06-22T09:37:35+00:00"><meta itemprop=dateModified content="2016-06-22T09:37:35+00:00"><meta itemprop=wordCount content="760"><meta itemprop=keywords content="latex,utils,"><meta property="og:title" content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta property="og:description" content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><meta property="og:type" content="article"><meta property="og:url" content="https://yzlnew.com/2016/06/flowchart-with-tikz/"><meta property="article:published_time" content="2016-06-22T09:37:35+00:00"><meta property="article:modified_time" content="2016-06-22T09:37:35+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta name=twitter:description content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel=stylesheet type=text/css><link rel=stylesheet type=text/css media=screen href=https://yzlnew.com/css/main.css><link rel=stylesheet type=text/css href=https://yzlnew.com/css/custom.css><link id=dark-scheme rel=stylesheet type=text/css href=https://yzlnew.com/css/dark.css><link id=dark-scheme rel=stylesheet type=text/css href=https://yzlnew.com/css/custom_dark.css><script src=https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js></script><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><script src=https://yzlnew.com/js/main.js></script></head><body><div class="container wrapper"><div class=header><div class=avatar><a href=https://yzlnew.com/><img src=/img/avatar.png alt=黄石的时空回环></a></div><h1 class=site-title><a href=https://yzlnew.com/>黄石的时空回环</a></h1><div class=site-description><p>Let me fly to the 🌕️</p></div><nav class=nav><ul class=flat><li><a href=/>主页</a></li><li><a href=/about>关于我</a></li><li><a href=/tags>标签</a></li></ul></nav></div><div class=sidebar><h4>文章目录</h4><nav id=TableOfContents><ul><li><a href=#来源>来源</a></li><li><a href=#所需宏包>所需宏包</a></li><li><a href=#最终效果和代码>最终效果和代码</a></li></ul></nav></div><div class=post><article><div class=post-header><div class=matter><h1 class=title>利用 TikZ 宏包在 LaTeX 中绘制流程图</h1><div class=meta><span class=date>2016-06-22</span>
-<span class="busuanzi page" id=busuanzi_container_page_pv><div class=tags><ul class=flat><li><a href=/tags/latex>latex</a></li><li><a href=/tags/utils>utils</a></li></ul></div></div></div></div></article><div class=markdown><p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p><h3 id=来源>来源</h3><p><a href=http://www.texample.net/>TeXample</a> 上给出了两种流程图的画法：</p><ul><li><a href=http://www.texample.net/tikz/examples/flexible-flow-chart/>Easy-maintenance flowchart</a></li><li><a href=http://www.texample.net/tikz/examples/simple-flow-chart/>Simple flow chart</a></li></ul><p>第一种比较好看，也比较容易维护，当然是用它了。</p><h3 id=所需宏包>所需宏包</h3><p>在导言区加入以下代码：</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tex data-lang=tex><span style=color:#080;font-weight:700>\usepackage</span><span style=color:#038>{</span>tikz<span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\usetikzlibrary</span><span style=color:#038>{</span>shapes,arrows,chains<span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\usepackage</span><span style=color:#038>{</span>xcolor<span style=color:#038>}</span>
-</code></pre></td></tr></table></div></div><h3 id=最终效果和代码>最终效果和代码</h3><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">64
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">65
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">66
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">67
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">68
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">69
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">70
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">71
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">72
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">73
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">74
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">75
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">76
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">77
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">78
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">79
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">80
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">81
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">82
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">83
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">84
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">85
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">86
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tex data-lang=tex><span style=color:#888>% 设置颜色代号
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\colorlet</span><span style=color:#038>{</span>lcfree<span style=color:#038>}{</span>green<span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\colorlet</span><span style=color:#038>{</span>lcnorm<span style=color:#038>}{</span>blue<span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\colorlet</span><span style=color:#038>{</span>lccong<span style=color:#038>}{</span>red<span style=color:#038>}</span>
-<span style=color:#888>% -------------------------------------------------
-</span><span style=color:#888>% 设置调试标志层
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\pgfdeclarelayer</span><span style=color:#038>{</span>marx<span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\pgfsetlayers</span><span style=color:#038>{</span>main,marx<span style=color:#038>}</span>
-<span style=color:#888>% 标记坐标点的宏定义。交换下面两个定义关闭。
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\providecommand</span><span style=color:#038>{</span><span style=color:#080;font-weight:700>\cmark</span><span style=color:#038>}</span>[2][]<span style=color:#038>{</span><span style=color:#888>%
-</span><span style=color:#888></span>  <span style=color:#080;font-weight:700>\begin</span><span style=color:#038>{</span>pgfonlayer<span style=color:#038>}{</span>marx<span style=color:#038>}</span>
-    <span style=color:#080;font-weight:700>\node</span> [nmark] at (c#2#1) <span style=color:#038>{</span>#2<span style=color:#038>}</span>;
-  <span style=color:#080;font-weight:700>\end</span><span style=color:#038>{</span>pgfonlayer<span style=color:#038>}{</span>marx<span style=color:#038>}</span>
-  <span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\providecommand</span><span style=color:#038>{</span><span style=color:#080;font-weight:700>\cmark</span><span style=color:#038>}</span>[2][]<span style=color:#038>{</span><span style=color:#080;font-weight:700>\relax</span><span style=color:#038>}</span>
-<span style=color:#888>% -------------------------------------------------
-</span><span style=color:#888>% 开始绘图
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\begin</span><span style=color:#038>{</span>figure<span style=color:#038>}</span>[H]
-  <span style=color:#080;font-weight:700>\centering</span>
-  <span style=color:#080;font-weight:700>\scalebox</span><span style=color:#038>{</span>.8<span style=color:#038>}{</span>  <span style=color:#888>% 设置缩放
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\begin</span><span style=color:#038>{</span>tikzpicture<span style=color:#038>}</span>[
-    &gt;=triangle 60,              <span style=color:#888>% 箭头的形状
-</span><span style=color:#888></span>    start chain=going below,    <span style=color:#888>% 从上往下的流程
-</span><span style=color:#888></span>    node distance=6mm and 60mm, <span style=color:#888>% 全局间距设置
-</span><span style=color:#888></span>    every join/.style=<span style=color:#038>{</span>norm<span style=color:#038>}</span>,   <span style=color:#888>% 连接线的默认设置
-</span><span style=color:#888></span>    ]
-<span style=color:#888>% -------------------------------------------------
-</span><span style=color:#888>% 节点的样式定义
-</span><span style=color:#888>% &lt;on chain&gt; 和 &lt;on grid&gt; 可以减少手动调整节点位置的麻烦
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\tikzset</span><span style=color:#038>{</span>
-  base/.style=<span style=color:#038>{</span>draw, on chain, on grid, align=center, minimum height=4ex<span style=color:#038>}</span>,
-  proc/.style=<span style=color:#038>{</span>base, rectangle, text width=8em<span style=color:#038>}</span>,
-  test/.style=<span style=color:#038>{</span>base, diamond, aspect=2, text width=5em<span style=color:#038>}</span>,
-  term/.style=<span style=color:#038>{</span>proc, rounded corners<span style=color:#038>}</span>,
-  <span style=color:#888>% coord 用来表示连接线的转折点
-</span><span style=color:#888></span>  coord/.style=<span style=color:#038>{</span>coordinate, on chain, on grid, node distance=6mm and 25mm<span style=color:#038>}</span>,
-  <span style=color:#888>% nmark 用来表示调试标志
-</span><span style=color:#888></span>  nmark/.style=<span style=color:#038>{</span>draw, cyan, circle, font=<span style=color:#038>{</span><span style=color:#080;font-weight:700>\sffamily\bfseries</span><span style=color:#038>}}</span>,
-  <span style=color:#888>% -------------------------------------------------
-</span><span style=color:#888></span>  <span style=color:#888>% 不同的连接线样式
-</span><span style=color:#888></span>  norm/.style=<span style=color:#038>{</span>-&gt;, draw, lcnorm<span style=color:#038>}</span>,
-  free/.style=<span style=color:#038>{</span>-&gt;, draw, lcfree<span style=color:#038>}</span>,
-  cong/.style=<span style=color:#038>{</span>-&gt;, draw, lccong<span style=color:#038>}</span>,
-  it/.style=<span style=color:#038>{</span>font=<span style=color:#038>{</span><span style=color:#080;font-weight:700>\small\itshape</span><span style=color:#038>}}</span>
-<span style=color:#038>}</span>
-<span style=color:#888>% -------------------------------------------------
-</span><span style=color:#888>% 先放节点
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\node</span> [term, densely dotted,fill=lccong!25, it] (p0) <span style=color:#038>{</span>输入<span style=color:#038>}</span>;
-<span style=color:#888>% 用 join 表示和上一个节点相连
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\node</span> [proc, join]  <span style=color:#038>{</span>使用非线性最小二乘法得到 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>X_</span><span style=color:#00d;font-weight:700>0</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
-<span style=color:#080;font-weight:700>\node</span> [proc, join]  <span style=color:#038>{</span>记录 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>X</span>=<span style=color:#038>X_</span><span style=color:#00d;font-weight:700>0</span><span style=color:#038>, f</span>=<span style=color:#038>f</span>(<span style=color:#038>X_</span><span style=color:#00d;font-weight:700>0</span>)<span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
-<span style=color:#080;font-weight:700>\node</span> [test, join] (t1) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>T&gt;T_E</span><span style=color:#d20;background-color:#fff0f0>$</span>?<span style=color:#038>}</span>;
-<span style=color:#080;font-weight:700>\node</span> [proc] (p1)   <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>step</span>=<span style=color:#00d;font-weight:700>0</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
-<span style=color:#080;font-weight:700>\node</span> [test, join] (t2) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>step&lt;count</span><span style=color:#d20;background-color:#fff0f0>$</span>?<span style=color:#038>}</span>;
-<span style=color:#080;font-weight:700>\node</span> [proc] (p2)   <span style=color:#038>{</span>得到新状态 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>P_N</span>=<span style=color:#038>P</span>+<span style=color:#038>scale</span><span style=color:#369>\times</span><span style=color:#038> rand</span><span style=color:#d20;background-color:#fff0f0>$</span>, 计算目标函数差 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#369>\Delta</span><span style=color:#038> f</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
-<span style=color:#080;font-weight:700>\node</span> [test, join] (t3) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>F_{Accept}&lt;rand</span><span style=color:#d20;background-color:#fff0f0>$</span>?<span style=color:#038>}</span>;
-<span style=color:#080;font-weight:700>\node</span> [proc] (p3)   <span style=color:#038>{</span>记录新状态 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>X</span>=<span style=color:#038>X_N,f</span>=<span style=color:#038>f</span>(<span style=color:#038>X_N</span>)<span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
-
-<span style=color:#080;font-weight:700>\node</span> [proc, left=of t1] (p4) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>T</span>=<span style=color:#038>T</span><span style=color:#369>\times</span><span style=color:#038> a,scale</span>=<span style=color:#038>scale</span><span style=color:#369>\times</span><span style=color:#038> b</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
-[node [term, densely dotted, right=of t1,fill=lcfree!25](p5)  <span style=color:#038>{</span>输出<span style=color:#038>}</span>;
-[node [proc, right=of t3](p6) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>step</span>++<span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
-
-<span style=color:#080;font-weight:700>\node</span> [coord, left=of t2] (c1)  <span style=color:#038>{}</span>;
-<span style=color:#080;font-weight:700>\node</span> [coord, right=of t2] (c2)  <span style=color:#038>{}</span>;
-<span style=color:#080;font-weight:700>\node</span> [coord, right=of p3] (c3)  <span style=color:#038>{}</span>;
-<span style=color:#888>% 先画南北方向的连接线，先画线再画两端的标志和箭头
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\path</span> (t1.south) to node [near start, xshift=1em] <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>y</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span> (p1);
-  <span style=color:#080;font-weight:700>\draw</span> [*-&gt;,lcnorm] (t1.south) -- (p1);
-<span style=color:#080;font-weight:700>\path</span> (t2.south) to node [near start, xshift=1em] <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>y</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span> (p2);
-  <span style=color:#080;font-weight:700>\draw</span> [*-&gt;,lcnorm] (t2.south) -- (p2);
-<span style=color:#080;font-weight:700>\path</span> (t3.south) to node [near start, xshift=1em] <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>y</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span> (p3);
-  <span style=color:#080;font-weight:700>\draw</span> [*-&gt;,lcnorm] (t3.south) -- (p3);
-<span style=color:#888>% 接着画东西方向的连接线，方法同上
-</span><span style=color:#888></span><span style=color:#080;font-weight:700>\path</span> (t1.east) to node [near start, yshift=1em]  <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>n</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>(p5);
-  <span style=color:#080;font-weight:700>\draw</span> [o-&gt;,lcnorm] (t1.east) -- (p5);
-  <span style=color:#080;font-weight:700>\draw</span> [-&gt;,lcnorm] (p4.east) -- (t1);
-<span style=color:#080;font-weight:700>\path</span> (t3.east) to node [near start, yshift=1em]  <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>n</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>(p6);
-  <span style=color:#080;font-weight:700>\draw</span> [o-&gt;,lcnorm] (t3.east) -- (p6);
-<span style=color:#080;font-weight:700>\path</span> (t2.west) to node [near start, yshift=1em]  <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>n</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>(c1);
-  <span style=color:#080;font-weight:700>\draw</span> [o-&gt;,lcnorm] (t2.west) -- (c1) -| (p4);
-  <span style=color:#080;font-weight:700>\draw</span> [-&gt;,lcnorm] (p3.east) -- (c3) -| (p6.south);
-  <span style=color:#080;font-weight:700>\draw</span> [&lt;-,lcnorm] (t2.east) -- (c2) -| (p6.north);
-  <span style=color:#080;font-weight:700>\end</span><span style=color:#038>{</span>tikzpicture<span style=color:#038>}</span>
-<span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\label</span><span style=color:#038>{</span>fig:algorithm<span style=color:#038>}</span>
-<span style=color:#080;font-weight:700>\end</span><span style=color:#038>{</span>figure<span style=color:#038>}</span>
-</code></pre></td></tr></table></div></div></div><div class=page-visit># 本文一共被访问了 <span id=busuanzi_value_page_pv></span>&nbsp;次。</span></div><div id=utter-container></div><script src=https://utteranc.es/client.js repo=yzlnew/yzlnew.github.io issue-term=title theme=github-light crossorigin=anonymous async></script></div></div><div class="footer wrapper"><div class=social-links><ul class=social-media-list><li><a href=mailto:yzlnew@gmail.com title=Mail><i data-feather=mail></i></a></li><li><a href=https://github.com/yzlnew title=Github><i data-feather=github></i></a></li><li><a href=https://t.me/r0brew title=Telegram><i data-feather=message-square></i></a></li><li><a href=/index.xml title=RSS><i data-feather=rss></i></a></li></ul></div><nav class=copyright><div>2016 © Copyright Ye Zhiling</div></nav><div class=site-visit><span id=busuanzi_container_site_pv><i data-feather=compass></i><span id=busuanzi_value_site_pv></span></span><span id=busuanzi_container_site_uv><i data-feather=users></i><span id=busuanzi_value_site_uv></span></span></div></div><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-61197619-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><script>feather.replace()</script></body></html>
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>利用 TikZ 宏包在 LaTeX 中绘制流程图 - 黄石的时空回环</title><link rel=icon type=image/png href=/img/favicon.png><meta name=viewport content="width=device-width,initial-scale=1">
+<meta itemprop=name content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta itemprop=description content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><meta itemprop=datePublished content="2016-06-22T09:37:35+00:00"><meta itemprop=dateModified content="2016-06-22T09:37:35+00:00"><meta itemprop=wordCount content="764"><meta itemprop=keywords content="Latex,Utils"><meta property="og:url" content="https://yzlnew.com/2016/06/flowchart-with-tikz/"><meta property="og:site_name" content="黄石的时空回环"><meta property="og:title" content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta property="og:description" content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><meta property="og:locale" content="zh_cn"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2016-06-22T09:37:35+00:00"><meta property="article:modified_time" content="2016-06-22T09:37:35+00:00"><meta property="article:tag" content="Latex"><meta property="article:tag" content="Utils"><meta name=twitter:card content="summary"><meta name=twitter:title content="利用 TikZ 宏包在 LaTeX 中绘制流程图"><meta name=twitter:description content="本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。"><link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel=stylesheet type=text/css><link rel=stylesheet type=text/css media=screen href=https://yzlnew.com/css/main.css><link rel=stylesheet type=text/css href=https://yzlnew.com/css/custom.css><link id=dark-scheme rel=stylesheet type=text/css href=https://yzlnew.com/css/dark.css><link id=dark-scheme rel=stylesheet type=text/css href=https://yzlnew.com/css/custom_dark.css><script src=https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js></script><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><script src=https://yzlnew.com/js/main.js></script></head><body><div class="container wrapper"><div class=header><div class=avatar><a href=https://yzlnew.com/><img src=/img/avatar.png alt=黄石的时空回环></a></div><h1 class=site-title><a href=https://yzlnew.com/>黄石的时空回环</a></h1><div class=site-description><p>Let me fly to the 🌕️</p></div><nav class=nav><ul class=flat><li><a href=/>主页</a></li><li><a href=/about>关于我</a></li><li><a href=/tags>标签</a></li></ul></nav></div><div class=sidebar><h4>文章目录</h4><nav id=TableOfContents><ul><li><a href=#来源>来源</a></li><li><a href=#所需宏包>所需宏包</a></li><li><a href=#最终效果和代码>最终效果和代码</a></li></ul></nav></div><div class=post><article><div class=post-header><div class=matter><h1 class=title>利用 TikZ 宏包在 LaTeX 中绘制流程图</h1><div class=meta><span class=date>2016-06-22</span>
+<span class="busuanzi page" id=busuanzi_container_page_pv><div class=tags><ul class=flat><li><a href=/tags/latex>latex</a></li><li><a href=/tags/utils>utils</a></li></ul></div></div></div></div></article><div class=markdown><p>本来打算把在毕设过程中零零碎碎学到或者用到的东西记录下来，没想到还是太懒，到最后就忘记要写什么了。由于在毕设论文中用到了流程图，就在网上找了找用 LaTeX 画流程图的方法，这里简单分享下。</p><h3 id=来源>来源</h3><p><a href=http://www.texample.net/>TeXample</a> 上给出了两种流程图的画法：</p><ul><li><a href=http://www.texample.net/tikz/examples/flexible-flow-chart/>Easy-maintenance flowchart</a></li><li><a href=http://www.texample.net/tikz/examples/simple-flow-chart/>Simple flow chart</a></li></ul><p>第一种比较好看，也比较容易维护，当然是用它了。</p><h3 id=所需宏包>所需宏包</h3><p>在导言区加入以下代码：</p><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tex data-lang=tex><span style=display:flex><span><span style=color:#080;font-weight:700>\usepackage</span><span style=color:#038>{</span>tikz<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\usetikzlibrary</span><span style=color:#038>{</span>shapes,arrows,chains<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\usepackage</span><span style=color:#038>{</span>xcolor<span style=color:#038>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=最终效果和代码>最终效果和代码</h3><div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">86
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tex data-lang=tex><span style=display:flex><span><span style=color:#888>% 设置颜色代号
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\colorlet</span><span style=color:#038>{</span>lcfree<span style=color:#038>}{</span>green<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\colorlet</span><span style=color:#038>{</span>lcnorm<span style=color:#038>}{</span>blue<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\colorlet</span><span style=color:#038>{</span>lccong<span style=color:#038>}{</span>red<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#888>% -------------------------------------------------
+</span></span></span><span style=display:flex><span><span style=color:#888>% 设置调试标志层
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\pgfdeclarelayer</span><span style=color:#038>{</span>marx<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\pgfsetlayers</span><span style=color:#038>{</span>main,marx<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#888>% 标记坐标点的宏定义。交换下面两个定义关闭。
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\providecommand</span><span style=color:#038>{</span><span style=color:#080;font-weight:700>\cmark</span><span style=color:#038>}</span>[2][]<span style=color:#038>{</span><span style=color:#888>%
+</span></span></span><span style=display:flex><span><span style=color:#888></span>  <span style=color:#080;font-weight:700>\begin</span><span style=color:#038>{</span>pgfonlayer<span style=color:#038>}{</span>marx<span style=color:#038>}</span>
+</span></span><span style=display:flex><span>    <span style=color:#080;font-weight:700>\node</span> [nmark] at (c#2#1) <span style=color:#038>{</span>#2<span style=color:#038>}</span>;
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\end</span><span style=color:#038>{</span>pgfonlayer<span style=color:#038>}{</span>marx<span style=color:#038>}</span>
+</span></span><span style=display:flex><span>  <span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\providecommand</span><span style=color:#038>{</span><span style=color:#080;font-weight:700>\cmark</span><span style=color:#038>}</span>[2][]<span style=color:#038>{</span><span style=color:#080;font-weight:700>\relax</span><span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#888>% -------------------------------------------------
+</span></span></span><span style=display:flex><span><span style=color:#888>% 开始绘图
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\begin</span><span style=color:#038>{</span>figure<span style=color:#038>}</span>[H]
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\centering</span>
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\scalebox</span><span style=color:#038>{</span>.8<span style=color:#038>}{</span>  <span style=color:#888>% 设置缩放
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\begin</span><span style=color:#038>{</span>tikzpicture<span style=color:#038>}</span>[
+</span></span><span style=display:flex><span>    &gt;=triangle 60,              <span style=color:#888>% 箭头的形状
+</span></span></span><span style=display:flex><span><span style=color:#888></span>    start chain=going below,    <span style=color:#888>% 从上往下的流程
+</span></span></span><span style=display:flex><span><span style=color:#888></span>    node distance=6mm and 60mm, <span style=color:#888>% 全局间距设置
+</span></span></span><span style=display:flex><span><span style=color:#888></span>    every join/.style=<span style=color:#038>{</span>norm<span style=color:#038>}</span>,   <span style=color:#888>% 连接线的默认设置
+</span></span></span><span style=display:flex><span><span style=color:#888></span>    ]
+</span></span><span style=display:flex><span><span style=color:#888>% -------------------------------------------------
+</span></span></span><span style=display:flex><span><span style=color:#888>% 节点的样式定义
+</span></span></span><span style=display:flex><span><span style=color:#888>% &lt;on chain&gt; 和 &lt;on grid&gt; 可以减少手动调整节点位置的麻烦
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\tikzset</span><span style=color:#038>{</span>
+</span></span><span style=display:flex><span>  base/.style=<span style=color:#038>{</span>draw, on chain, on grid, align=center, minimum height=4ex<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  proc/.style=<span style=color:#038>{</span>base, rectangle, text width=8em<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  test/.style=<span style=color:#038>{</span>base, diamond, aspect=2, text width=5em<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  term/.style=<span style=color:#038>{</span>proc, rounded corners<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  <span style=color:#888>% coord 用来表示连接线的转折点
+</span></span></span><span style=display:flex><span><span style=color:#888></span>  coord/.style=<span style=color:#038>{</span>coordinate, on chain, on grid, node distance=6mm and 25mm<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  <span style=color:#888>% nmark 用来表示调试标志
+</span></span></span><span style=display:flex><span><span style=color:#888></span>  nmark/.style=<span style=color:#038>{</span>draw, cyan, circle, font=<span style=color:#038>{</span><span style=color:#080;font-weight:700>\sffamily\bfseries</span><span style=color:#038>}}</span>,
+</span></span><span style=display:flex><span>  <span style=color:#888>% -------------------------------------------------
+</span></span></span><span style=display:flex><span><span style=color:#888></span>  <span style=color:#888>% 不同的连接线样式
+</span></span></span><span style=display:flex><span><span style=color:#888></span>  norm/.style=<span style=color:#038>{</span>-&gt;, draw, lcnorm<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  free/.style=<span style=color:#038>{</span>-&gt;, draw, lcfree<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  cong/.style=<span style=color:#038>{</span>-&gt;, draw, lccong<span style=color:#038>}</span>,
+</span></span><span style=display:flex><span>  it/.style=<span style=color:#038>{</span>font=<span style=color:#038>{</span><span style=color:#080;font-weight:700>\small\itshape</span><span style=color:#038>}}</span>
+</span></span><span style=display:flex><span><span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#888>% -------------------------------------------------
+</span></span></span><span style=display:flex><span><span style=color:#888>% 先放节点
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\node</span> [term, densely dotted,fill=lccong!25, it] (p0) <span style=color:#038>{</span>输入<span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#888>% 用 join 表示和上一个节点相连
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\node</span> [proc, join]  <span style=color:#038>{</span>使用非线性最小二乘法得到 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>X_</span><span style=color:#00d;font-weight:700>0</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [proc, join]  <span style=color:#038>{</span>记录 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>X</span>=<span style=color:#038>X_</span><span style=color:#00d;font-weight:700>0</span><span style=color:#038>, f</span>=<span style=color:#038>f</span>(<span style=color:#038>X_</span><span style=color:#00d;font-weight:700>0</span>)<span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [test, join] (t1) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>T&gt;T_E</span><span style=color:#d20;background-color:#fff0f0>$</span>?<span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [proc] (p1)   <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>step</span>=<span style=color:#00d;font-weight:700>0</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [test, join] (t2) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>step&lt;count</span><span style=color:#d20;background-color:#fff0f0>$</span>?<span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [proc] (p2)   <span style=color:#038>{</span>得到新状态 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>P_N</span>=<span style=color:#038>P</span>+<span style=color:#038>scale</span><span style=color:#369>\times</span><span style=color:#038> rand</span><span style=color:#d20;background-color:#fff0f0>$</span>, 计算目标函数差 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#369>\Delta</span><span style=color:#038> f</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [test, join] (t3) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>F_{Accept}&lt;rand</span><span style=color:#d20;background-color:#fff0f0>$</span>?<span style=color:#038>}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [proc] (p3)   <span style=color:#038>{</span>记录新状态 <span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>X</span>=<span style=color:#038>X_N,f</span>=<span style=color:#038>f</span>(<span style=color:#038>X_N</span>)<span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [proc, left=of t1] (p4) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>T</span>=<span style=color:#038>T</span><span style=color:#369>\times</span><span style=color:#038> a,scale</span>=<span style=color:#038>scale</span><span style=color:#369>\times</span><span style=color:#038> b</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
+</span></span><span style=display:flex><span>[node [term, densely dotted, right=of t1,fill=lcfree!25](p5)  <span style=color:#038>{</span>输出<span style=color:#038>}</span>;
+</span></span><span style=display:flex><span>[node [proc, right=of t3](p6) <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>step</span>++<span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [coord, left=of t2] (c1)  <span style=color:#038>{}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [coord, right=of t2] (c2)  <span style=color:#038>{}</span>;
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\node</span> [coord, right=of p3] (c3)  <span style=color:#038>{}</span>;
+</span></span><span style=display:flex><span><span style=color:#888>% 先画南北方向的连接线，先画线再画两端的标志和箭头
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\path</span> (t1.south) to node [near start, xshift=1em] <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>y</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span> (p1);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [*-&gt;,lcnorm] (t1.south) -- (p1);
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\path</span> (t2.south) to node [near start, xshift=1em] <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>y</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span> (p2);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [*-&gt;,lcnorm] (t2.south) -- (p2);
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\path</span> (t3.south) to node [near start, xshift=1em] <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>y</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span> (p3);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [*-&gt;,lcnorm] (t3.south) -- (p3);
+</span></span><span style=display:flex><span><span style=color:#888>% 接着画东西方向的连接线，方法同上
+</span></span></span><span style=display:flex><span><span style=color:#888></span><span style=color:#080;font-weight:700>\path</span> (t1.east) to node [near start, yshift=1em]  <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>n</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>(p5);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [o-&gt;,lcnorm] (t1.east) -- (p5);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [-&gt;,lcnorm] (p4.east) -- (t1);
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\path</span> (t3.east) to node [near start, yshift=1em]  <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>n</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>(p6);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [o-&gt;,lcnorm] (t3.east) -- (p6);
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\path</span> (t2.west) to node [near start, yshift=1em]  <span style=color:#038>{</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>n</span><span style=color:#d20;background-color:#fff0f0>$</span><span style=color:#038>}</span>(c1);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [o-&gt;,lcnorm] (t2.west) -- (c1) -| (p4);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [-&gt;,lcnorm] (p3.east) -- (c3) -| (p6.south);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\draw</span> [&lt;-,lcnorm] (t2.east) -- (c2) -| (p6.north);
+</span></span><span style=display:flex><span>  <span style=color:#080;font-weight:700>\end</span><span style=color:#038>{</span>tikzpicture<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\label</span><span style=color:#038>{</span>fig:algorithm<span style=color:#038>}</span>
+</span></span><span style=display:flex><span><span style=color:#080;font-weight:700>\end</span><span style=color:#038>{</span>figure<span style=color:#038>}</span>
+</span></span></code></pre></td></tr></table></div></div></div><div class=page-visit># 本文一共被访问了 <span id=busuanzi_value_page_pv></span>&nbsp;次。</span></div><div id=utter-container></div><script src=https://utteranc.es/client.js repo=yzlnew/yzlnew.github.io issue-term=title theme=github-light crossorigin=anonymous async></script></div></div><div class="footer wrapper"><div class=social-links><ul class=social-media-list><li><a href=mailto:yzlnew@gmail.com title=Mail><i data-feather=mail></i></a></li><li><a href=https://github.com/yzlnew title=Github><i data-feather=github></i></a></li><li><a href=https://t.me/r0brew title=Telegram><i data-feather=message-square></i></a></li><li><a href=/index.xml title=RSS><i data-feather=rss></i></a></li></ul></div><nav class=copyright><div>2016 © Copyright Ye Zhiling</div></nav><div class=site-visit><span id=busuanzi_container_site_pv><i data-feather=compass></i><span id=busuanzi_value_site_pv></span>
+</span><span id=busuanzi_container_site_uv><i data-feather=users></i><span id=busuanzi_value_site_uv></span></span></div></div><script>feather.replace()</script></body></html>
