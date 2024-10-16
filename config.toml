@@ -7,7 +7,7 @@ theme = "ink"
 pagination.pagerSize = 8
 
 copyright = "© Copyright Ye Zhiling"
-googleAnalytics = "UA-61197619-1"
+# googleAnalytics = "UA-61197619-1"
 
 summaryLength = 20
 
@@ -94,3 +94,7 @@ blog = ":year/:month/:filename"
     noClasses = true
     style = "pastie"
     tabWidth = 4
+
+[services]
+  [services.rss]
+    limit = 20
