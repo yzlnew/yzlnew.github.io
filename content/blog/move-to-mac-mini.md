@@ -1,16 +1,17 @@
 ---
 date: 2024-11-10
-tags: 
+tags:
+  - 家庭网络
 title: 迁移到 Mac Mini
 slug: 23:33
 share: true
-series: 系列
+series: 
 lang: cn
 keywords: 
 description: 一些迁移必备的同步工具和软件。
 lastmod: 
 dir: blog
-toc: "false"
+toc: false
 ---
 
 首发入了丐版 m4 Mac mini，一方面是手里的古早 ITX 主机基本用来打游戏，在 Windows 平台下总是没办法集中精力打字，公司配的 MacBook 业余用起来偷感很重，另一方面这个价格确实太香，I just need more compute power!
