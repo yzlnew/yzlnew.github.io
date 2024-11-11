@@ -14,7 +14,7 @@ dir: blog
 
 首发入了丐版 m4 Mac mini，一方面是手里的古早 ITX 主机基本用来打游戏，在 Windows 平台下总是没办法集中精力打字，公司配的 MacBook 业余用起来偷感很重，另一方面这个价格确实太香，I just need more compute power!
 
-![看上去还挺像那么一回事](%E6%96%87%E4%BB%B6/d5b0105cdd0cf13282d3e9251b09b4f6_MD5.jpg)
+![看上去还挺像那么一回事](https://cdn.jsdelivr.net/gh/yzlnew/ImageBed/gh-pic/2024-11-12T01:25:04.jpg)
 
 不过从工作电脑同步配置和软件还是有点麻烦的，因此也就精简了以下，只安装必要的软件。
 
@@ -24,7 +24,7 @@ dir: blog
 - zprezto：zsh 基本按照 zprezto 提供的插件，因此迁移比较方便，主题为 p10k。
 - Neovim：不多说，但是好久没折腾了，平时还是 VSCode 为主了。
 
-![ead5e4cdecec81a11be189bc8ec0fe19_MD5.png](%E6%96%87%E4%BB%B6/ead5e4cdecec81a11be189bc8ec0fe19_MD5.png)
+![](https://cdn.jsdelivr.net/gh/yzlnew/ImageBed/gh-pic/2024-11-12T01:27:57.png)
 
 其他一些必备软件如上，荣誉提名：
 
