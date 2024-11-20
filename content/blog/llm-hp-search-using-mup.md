@@ -69,33 +69,38 @@ katex: true
 
 首先我们回顾一下大数定律和中心极限定理：
 
-> [!NOTE]
-> **大数定律 (LLN)**  
->
-> 如果 $x_1, \dots, x_n, \dots$ 是随机变量 $X$ 的独立同分布样本，那么  
->
-> $$ \frac{1}{n} \sum_{i=1}^n x_i \to \mathbb{E}[X], \quad \text{当 } n \to \infty. $$
->
-> **中心极限定理 (CLT)**  
->
-> 在相同的情况下，  
->
-> $$\frac{1}{\sqrt{n}} \sum_{i=1}^n \left ( x_i - \mathbb{E}[X] \right) \to \mathcal{N}(0, \sigma (X)), \quad \text{当 } n \to \infty, $$
->
-> 其中 $\sigma (X)$ 是随机变量 $X$ 的标准差。
+{{< notice tip >}}
+**大数定律 (LLN)**  
 
-直觉上，我们可以认为
+如果 $x_1, \dots, x_n, \dots$ 是随机变量 $X$ 的独立同分布样本，那么  
 
-> 当 n 很大时，$\sum_{i=1}^nx_i$ 的典型大小为 $\begin{cases}\Theta(n)&\mathbb{E}[X]\neq0 &\mathrm{LLN}\\\Theta(\sqrt{n})&\mathrm{otherwise} &\mathrm{CLT}&\end{cases}$
+$$ \frac{1}{n} \sum_{i=1}^n x_i \to \mathbb{E}[X], \quad \mathrm{当 } n \to \infty. $$
+
+**中心极限定理 (CLT)**  
+
+在相同的情况下，  
+
+$$\frac{1}{\sqrt{n}} \sum_{i=1}^n \left ( x_i - \mathbb{E}[X] \right) \to \mathcal{N}(0, \sigma (X)), \quad \mathrm{当 } n \to \infty, $$
+
+其中 $\sigma (X)$ 是随机变量 $X$ 的标准差。
+{{< /notice >}}
+
+直觉上，我们可以认为：
+
+当 n 很大时，$\sum_{i=1}^nx_i$ 的典型大小为
+
+1. 当 $\mathbb{E}[X]\neq0$ 时，根据 LLN 为 $\Theta(n)$
+2. 否则根据 CLT 为 $\Theta(\sqrt{n})$
 
 更严格的证明请参考 Tensor Programs 系列文章。这里我们让 ChatGPT 生成一段数值实验代码，取 1000 次的结果平均，可以看到确实符合这样的规律。
 
 <img src="https://cdn.jsdelivr.net/gh/yzlnew/ImageBed/gh-pic/2024-11-20T21:54:53.png"/>
 
-> [!info]
-> 同样拿这个问题测试了一下 Claude Sonnet 3.5, 流程也是论文截图——翻译成中文——用数值实验验证，直接一次能够画出来，甚至不用提示加上理论线，但是 OpenAI 的图总是要更美观一点。
-> ![](https://cdn.jsdelivr.net/gh/yzlnew/ImageBed/gh-pic/2024-11-20T21:57:26.png)
-> 而 Google Gemini 完全没理解实验诉求。
+{{< notice info >}}
+同样拿这个问题测试了一下 Claude Sonnet 3.5, 流程也是论文截图——翻译成中文——用数值实验验证，直接一次能够画出来，甚至不用提示加上理论线，但是 OpenAI 的图总是要更美观一点。
+![](https://cdn.jsdelivr.net/gh/yzlnew/ImageBed/gh-pic/2024-11-20T21:57:26.png)
+而 Google Gemini 完全没理解实验诉求。
+{{< /notice >}}
 
 而在神经网络中，无论前向还是反向基本都在执行 $\mathbf{Av}$ 的计算，其中 $\mathbf{A}$ 是 $n\times n$ （或 $1\times n$ ）的权重，$\mathbf{v}$ 是该层输入的激活向量。如果它们的每个元素大小是 $\Theta(1)$，那么 $\mathbf{Av}$ 每个元素（$\sum_{j=1}^{n}a_{ij}v_{j}$）的大小有两种可能：
 
@@ -108,7 +113,7 @@ katex: true
 
 ![](https://cdn.jsdelivr.net/gh/yzlnew/ImageBed/gh-pic/2024-11-20T21:59:38.png)
 
-假设向量 $\mathbf{x}$ 的元素来自正态分布 $N(0, \sigma_x^2)$，并用矩阵 $\mathbf{W}$ 乘以其中的元素，矩阵 $\mathbf{W}$ 的元素来自 $N(0, \sigma_W^2)$。如果所有激活值和权重是独立的，那么结果向量 $\mathbf{y}$ 的元素将来自：$N(0, d_{\text{in}} \cdot \sigma_x^2 \cdot \sigma_W^2)$（对于较大的 $d_{\text{in}}$）。如果我们选择：$\sigma_W = \frac{1}{\sqrt{d_{\text{in}}}}$，则：$\mathbf{y} \sim N(0, \sigma_x^2)$。这样 $\mathbf{y}$ 的尺度与层的宽度无关。
+假设向量 $\mathbf{x}$ 的元素来自正态分布 $N(0, \sigma_x^2)$，并用矩阵 $\mathbf{W}$ 乘以其中的元素，矩阵 $\mathbf{W}$ 的元素来自 $N(0, \sigma_W^2)$。如果所有激活值和权重是独立的，那么结果向量 $\mathbf{y}$ 的元素将来自：$N(0, d_{\mathrm{in}} \cdot \sigma_x^2 \cdot \sigma_W^2)$（对于较大的 $d_{\mathrm{in}}$）。如果我们选择：$\sigma_W = \frac{1}{\sqrt{d_{\mathrm{in}}}}$，则：$\mathbf{y} \sim N(0, \sigma_x^2)$。这样 $\mathbf{y}$ 的尺度与层的宽度无关。
 
 以同样的方式去分析**反向传播**: $\nabla_{\mathbf{x}} \mathcal{L} = (\nabla_{\mathbf{y}} \mathcal{L})(\mathbf{W})^\top$ 和**权重更新对激活的影响**: $\Delta \mathbf{y} = \mathbf{x} \Delta \mathbf{W}$（实际上是计算下次前向的激活的尺度）完整的初始化方差和学习率设定，使得网络能够按照前面所期望的方式训练。
 
@@ -116,23 +121,23 @@ katex: true
 
 |         | 输入权重和所有偏置            | 输出权重                   | 隐藏权重                 |
 | ------- | -------------------- | ---------------------- | -------------------- |
-| 初始方差    | $1 / \text{fan\_in}$ | $1 / \text{fan\_in}^2$ | $1 / \text{fan\_in}$ |
-| SGD LR  | $\text{fan\_out}$    | $1 / \text{fan\_in}$   | $1$                  |
-| Adam LR | $1$                  | $1 / \text{fan\_in}$   | $1 / \text{fan\_in}$ |
+| 初始方差    | $1 / \mathrm{fan\\_in}$ | $1 / \mathrm{fan\\_in}^2$ | $1 / \mathrm{fan\\_in}$ |
+| SGD LR  | $\mathrm{fan\\_out}$    | $1 / \mathrm{fan\\_in}$   | $1$                  |
+| Adam LR | $1$                  | $1 / \mathrm{fan\\_in}$   | $1 / \mathrm{fan\\_in}$ |
 
 另外注意到，对于参数矩阵 $\mathbf{W}$，初始化为 $\mathcal{N}(0,B^2)$，以 C 的学习率训练并且输出乘上一个乘子 A，对任意 $\theta > 0$，训练过程和下面是完全等价的：
 
-- 当优化器为 SGD 时： $$ A \leftarrow A\theta, \\ B \leftarrow B/\theta, \\ C \leftarrow C/\theta^2 $$
-- Adam 优化器当优化器为 Adam 时： $$ A \leftarrow A\theta, \\ B \leftarrow B/\theta, \\ C \leftarrow C/\theta $$
+- 当优化器为 SGD 时： $$ A \leftarrow A\theta, B \leftarrow B/\theta, C \leftarrow C/\theta^2 $$
+- Adam 优化器当优化器为 Adam 时： $$ A \leftarrow A\theta, B \leftarrow B/\theta,  C \leftarrow C/\theta $$
 
-上面的表中令 $\theta=1/\text{fan\_in}$，可得到一个更容易实现并且支持输入输出权重共享的版本 2：
+上面的表中令 $\theta=1/\mathrm{fan\\_in}$，可得到一个更容易实现并且支持输入输出权重共享的版本 2：
 
 |         | 输入权重和所有偏置          | 输出权重               | 隐藏权重               |
 | ------- | ------------------ | ------------------ | ------------------ |
-| 初始方差    | $1/\text{fan\_in}$ | $1$                | $1/\text{fan\_in}$ |
-| 乘子      | $1$                | $1/\text{fan\_in}$ | $1$                |
-| SGD 学习率  | $\text{fan\_out}$  | $\text{fan\_in}$   | $1$                |
-| Adam 学习率 | $1$                | $1$                | $1/\text{fan\_in}$ |
+| 初始方差    | $1/\mathrm{fan\\_in}$ | $1$                | $1/\mathrm{fan\\_in}$ |
+| 乘子      | $1$                | $1/\mathrm{fan\\_in}$ | $1$                |
+| SGD 学习率  | $\mathrm{fan\\_out}$  | $\mathrm{fan\\_in}$   | $1$                |
+| Adam 学习率 | $1$                | $1$                | $1/\mathrm{fan\\_in}$ |
 
 那么我们就可以在一个缩小宽度的小模型上模拟模拟目标模型上的行为，那么在小模型上搜索最优超参，就能够直接迁移到大模型的训练中。
 

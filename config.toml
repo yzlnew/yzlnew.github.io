@@ -93,7 +93,14 @@ blog = ":year/:month/:filename"
     lineNumbersInTable = true
     noClasses = true
     style = "pastie"
-    tabWidth = 4
+    tabWidth = 2
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
 
 [services]
   [services.rss]
