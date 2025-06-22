@@ -7,7 +7,6 @@ title: LLM 超参搜索指南
 slug: 10:58
 share: true
 series:
-lang: cn
 keywords:
 description: 使用 mup 进行大模型超参搜索
 lastmod:

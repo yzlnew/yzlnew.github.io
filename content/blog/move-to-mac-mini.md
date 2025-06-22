@@ -6,7 +6,6 @@ title: 迁移到 Mac Mini
 slug: 23:33
 share: true
 series: 
-lang: cn
 keywords: 
 description: 一些迁移必备的同步工具和软件。
 lastmod: 
