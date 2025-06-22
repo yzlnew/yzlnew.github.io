@@ -19,6 +19,7 @@ summaryLength = 20
     customDarkCSS = "css/custom_dark.css"
     avatar = "img/avatar.png"
     favicon = "img/favicon.png"
+    startYear = 2016
 
     i18n_flags = true
     lang = "cn"
