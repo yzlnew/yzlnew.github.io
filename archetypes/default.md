@@ -5,6 +5,7 @@ title: {{ replace .TranslationBaseName '-' ' ' | title }}
 tags:
   -
 draft: false
+katex: false
 toc: false
 description:
 ---
