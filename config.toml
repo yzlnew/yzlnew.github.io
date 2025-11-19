@@ -102,6 +102,8 @@ blog = ":year/:month/:contentbasename"
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)']]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [services]
   [services.rss]

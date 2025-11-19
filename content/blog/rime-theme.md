@@ -67,4 +67,4 @@ patch:
 
 ![](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2021/02/rime-theme.png)
 
-{{< gist yzlnew 22ec96067f020c6ae976bf385ac3fa04 >}}
+{{< mygist yzlnew 22ec96067f020c6ae976bf385ac3fa04 >}}
