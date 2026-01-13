@@ -78,7 +78,7 @@ layoutdir = "layouts"
 publishdir = "public"
 
 [permalinks]
-blog = ":year/:month/:contentbasename"
+blog = "/:year/:month/:slug"
 
 [markup]
   [markup.tableOfContents]

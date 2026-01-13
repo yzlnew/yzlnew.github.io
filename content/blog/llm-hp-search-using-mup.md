@@ -4,7 +4,7 @@ tags:
   - LLM
   - mup
 title: LLM 超参搜索指南
-slug: 10:58
+
 share: true
 series:
 keywords:
