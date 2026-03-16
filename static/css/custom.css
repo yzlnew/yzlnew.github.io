@@ -26,6 +26,11 @@
   font-style: italic;
 }
 
+blockquote {
+  font-size: 0.9em;
+  font-style: normal;
+}
+
 /* .gt-container a { */
 /*     color: #ffce05 !important; */
 /* } */
