@@ -50,4 +50,10 @@ function applyScheme(scheme, container, toggles) {
     toggle.classList.toggle("is-active", isActive);
     toggle.setAttribute("aria-pressed", isActive ? "true" : "false");
   });
+
+  document.dispatchEvent(
+    new CustomEvent("site-scheme-change", {
+      detail: { scheme: scheme }
+    })
+  );
 }
