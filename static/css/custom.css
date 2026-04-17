@@ -60,13 +60,21 @@ blockquote {
 
 .header { position: relative; }
 
-.lang-switcher {
+.header-controls {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 0.78em;
-  letter-spacing: 0.04em;
-  font-family: 'JetBrainsMono', ui-monospace, monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  font-size: 0.85em;
+  font-family: var(--font-sans);
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .lang-switcher .lang-link {
@@ -74,12 +82,10 @@ blockquote {
   text-decoration: none !important;
   border-bottom: none !important;
   transition: color 0.15s ease;
-}
-
-.lang-switcher .lang-link + .lang-link {
-  margin-left: 0.4em;
-  padding-left: 0.5em;
-  border-left: 1px solid #ddd;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  line-height: 1;
 }
 
 .lang-switcher .lang-link:hover {
@@ -91,9 +97,36 @@ blockquote {
   color: #111;
 }
 
+.lang-switcher .lang-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.scheme-toggle {
+  display: inline-flex;
+  align-items: center;
+  color: #999;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: color 0.15s ease;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.scheme-toggle:hover {
+  color: #111;
+  border-bottom: none !important;
+}
+
+.scheme-toggle svg {
+  width: 1em;
+  height: 1em;
+}
+
 @media (max-width: 600px) {
-  .lang-switcher {
-    font-size: 0.72em;
+  .header-controls {
+    font-size: 0.78em;
   }
 }
 

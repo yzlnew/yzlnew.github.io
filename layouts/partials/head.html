@@ -1,21 +1,28 @@
 <div class="header">
-	{{ if gt (len site.Sites) 1 }}
-	{{ $currentPage := . }}
-	<div class="lang-switcher">
-		{{ range site.Sites }}
-			{{ $isCurrent := eq .Language.Lang $currentPage.Language.Lang }}
-			{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" .Language.Lang) 0 }}
-			{{ $href := .Home.RelPermalink }}
-			{{ with $translation }}{{ $href = .RelPermalink }}{{ end }}
-			<a href="{{ $href }}"
-			   class="lang-link{{ if $isCurrent }} is-active{{ end }}"
-			   title="{{ .Language.LanguageName }}"
-			   {{ if $isCurrent }}aria-current="page"{{ end }}>
-				{{ .Language.Lang | upper }}
-			</a>
+	<div class="header-controls">
+		{{ if gt (len site.Sites) 1 }}
+		{{ $currentPage := . }}
+		<div class="lang-switcher">
+			{{ range site.Sites }}
+				{{ $isCurrent := eq .Language.Lang $currentPage.Language.Lang }}
+				{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" .Language.Lang) 0 }}
+				{{ $href := .Home.RelPermalink }}
+				{{ with $translation }}{{ $href = .RelPermalink }}{{ end }}
+				{{ $label := .Language.Lang | upper }}
+				{{ if eq .Language.Lang "zh" }}{{ $label = "中" }}{{ end }}
+				{{ if eq .Language.Lang "en" }}{{ $label = "En" }}{{ end }}
+				<a href="{{ $href }}"
+				   class="lang-link{{ if $isCurrent }} is-active{{ end }}"
+				   title="{{ .Language.LanguageName }}"
+				   {{ if $isCurrent }}aria-current="page"{{ end }}>
+					<svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+					<span class="lang-label">{{ $label }}</span>
+				</a>
+			{{ end }}
+		</div>
 		{{ end }}
+		<a href="#" id="scheme-toggle" class="scheme-toggle" aria-label="Toggle color scheme" title="Toggle color scheme"></a>
 	</div>
-	{{ end }}
 
 	{{ if .Site.Params.Avatar }}
 		<div class="avatar">

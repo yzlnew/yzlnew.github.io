@@ -14,6 +14,8 @@
 /* } */
 
 .lang-switcher .lang-link { color: #888; }
-.lang-switcher .lang-link + .lang-link { border-left-color: #444; }
 .lang-switcher .lang-link:hover { color: #f0f0f0; }
 .lang-switcher .lang-link.is-active { color: #f0f0f0; }
+
+.scheme-toggle { color: #888; }
+.scheme-toggle:hover { color: #f0f0f0; }
