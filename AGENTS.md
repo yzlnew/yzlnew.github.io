@@ -66,3 +66,13 @@ Usage: `{{< mygist id="gist_id" file="filename" >}}` (Standard Hugo gist or cust
 ## Code Blocks
 
 Standard Markdown code blocks are used.
+
+## Multilingual Content
+
+The site supports Chinese (`zh-cn`, default) and English (`en`) via Hugo's [multilingual mode](https://gohugo.io/content-management/multilingual/).
+
+- **Default language (Chinese):** files with no language suffix, e.g. `content/blog/foo.md`, render at the root (`/2026/03/foo/`).
+- **English translations:** add a sibling file with the `.en.md` suffix, e.g. `content/blog/foo.en.md`, which renders under `/en/` (e.g. `/en/2026/03/foo/`).
+- Both files should share the same `date` and `slug` so Hugo pairs them as translations and the language switcher links between them.
+- Per-language site title, subtitle, and menu are configured under `[languages.zh-cn]` and `[languages.en]` in `config.toml`.
+- UI strings live in `i18n/zh-cn.yaml` and `i18n/en.yaml`; reference them in templates with `{{ i18n "key" }}`.

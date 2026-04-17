@@ -1,0 +1,40 @@
+<div class="header">
+	{{ if .Site.Params.Avatar }}
+		<div class="avatar">
+			<a href="{{ .Site.BaseURL }}">
+				<img src="/{{ .Site.Params.Avatar | safeURL }}" alt="{{ .Site.Title }}" />
+			</a>
+		</div>
+	{{ end }}
+	<h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+	<div class="site-description">
+		{{- if isset .Site.Params "subtitle" -}}
+		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
+		{{- end -}}
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			{{ range .Site.Menus.main }}
+			<li>
+				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+			</li>
+			{{ end }}
+			{{ if gt (len site.Sites) 1 }}
+			{{ $currentPage := . }}
+			{{ range site.Sites }}
+				{{ if ne .Language.Lang $currentPage.Language.Lang }}
+					{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" .Language.Lang) 0 }}
+					<li class="lang-switcher">
+						{{ if $translation }}
+						<a href="{{ $translation.RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
+						{{ else }}
+						<a href="{{ .Home.RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
+						{{ end }}
+					</li>
+				{{ end }}
+			{{ end }}
+			{{ end }}
+		</ul>
+	</nav>
+</div>

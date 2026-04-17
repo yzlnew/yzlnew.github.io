@@ -1,0 +1,12 @@
+- id: warning
+  translation: "Warning"
+- id: note
+  translation: "Note"
+- id: info
+  translation: "Info"
+- id: tip
+  translation: "Tip"
+- id: recent_modified
+  translation: "Last modified"
+- id: no_translation
+  translation: "This post has no English translation yet"

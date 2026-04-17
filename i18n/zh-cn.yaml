@@ -1,0 +1,12 @@
+- id: warning
+  translation: "警告"
+- id: note
+  translation: "注释"
+- id: info
+  translation: "信息"
+- id: tip
+  translation: "提示"
+- id: recent_modified
+  translation: "最近修改"
+- id: no_translation
+  translation: "该文章暂无中文译文"

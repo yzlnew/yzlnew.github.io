@@ -1,8 +1,7 @@
 baseurl = "https://yzlnew.com/"
 defaultContentLanguage = "zh-cn"
-languageCode = "zh-cn"
+defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
-title = "黄石的时空回环"
 theme = "ink"
 pagination.pagerSize = 8
 
@@ -12,7 +11,6 @@ copyright = "© Copyright Ye Zhiling"
 summaryLength = 20
 
 [params]
-    subtitle = "Let me fly to the 🌕️"
     featherIconsCDN = true
     mode = "auto"
     customCSS = "css/custom.css"
@@ -22,28 +20,12 @@ summaryLength = 20
     startYear = 2016
 
     i18n_flags = true
-    lang = "cn"
 
 [params.utter]
 enable = true
 repo = "yzlnew/yzlnew.github.io"
 issueTerm = "title"
 theme = "github-light"
-
-[[menu.main]]
-name = "主页"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "关于我"
-url = "/about"
-weight = 2
-
-[[menu.main]]
-name = "标签"
-url = "/tags"
-weight = 3
 
 [[params.social]]
 name = "Mail"
@@ -65,6 +47,48 @@ name = "RSS"
 icon = "rss"
 url = "/index.xml"
 
+[languages]
+  [languages.zh-cn]
+    languageCode = "zh-cn"
+    languageName = "中文"
+    title = "黄石的时空回环"
+    weight = 1
+    [languages.zh-cn.params]
+      subtitle = "Let me fly to the 🌕️"
+      lang = "cn"
+    [[languages.zh-cn.menu.main]]
+      name = "主页"
+      url = "/"
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      name = "关于我"
+      url = "/about"
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      name = "标签"
+      url = "/tags"
+      weight = 3
+
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    title = "Time Loop of Huangshi"
+    weight = 2
+    [languages.en.params]
+      subtitle = "Let me fly to the 🌕️"
+      lang = "en"
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/en/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/en/about/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Tags"
+      url = "/en/tags/"
+      weight = 3
 
 [taxonomies]
    tag = "tags"
