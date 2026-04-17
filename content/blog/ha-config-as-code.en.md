@@ -39,7 +39,7 @@ I mostly use Opus 4.6, but with the knowledge already checked into the repo, oth
 
 On the hardware side, I basically bought a smart version of anything that could be made smart, checking ahead of time that each device would integrate cleanly with HA. I may write a separate post about purchasing decisions and hands-on impressions; this post skips those details.
 
-![device_counts](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/device_category_counts_md3.png)
+![device_counts](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/device_category_counts_md3_en.png)
 
 #### Let there be light
 
