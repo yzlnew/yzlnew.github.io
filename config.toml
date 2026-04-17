@@ -13,8 +13,6 @@ summaryLength = 20
 [params]
     featherIconsCDN = true
     mode = "auto"
-    customCSS = "css/custom.css"
-    customDarkCSS = "css/custom_dark.css"
     avatar = "img/avatar.png"
     favicon = "img/favicon.png"
     startYear = 2016
@@ -26,6 +24,7 @@ enable = true
 repo = "yzlnew/yzlnew.github.io"
 issueTerm = "title"
 theme = "github-light"
+darkTheme = "github-dark"
 
 [[params.social]]
 name = "Mail"
