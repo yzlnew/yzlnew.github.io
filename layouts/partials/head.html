@@ -2,26 +2,28 @@
 	<div class="header-controls">
 		{{ if gt (len site.Sites) 1 }}
 		{{ $currentPage := . }}
-		<div class="lang-switcher">
-			{{ range site.Sites }}
-				{{ $isCurrent := eq .Language.Lang $currentPage.Language.Lang }}
-				{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" .Language.Lang) 0 }}
-				{{ $href := .Home.RelPermalink }}
+		<div class="control-group lang-switcher" aria-label="Language switcher">
+			{{ range $index, $site := site.Sites }}
+				{{ if gt $index 0 }}<span class="control-divider" aria-hidden="true">/</span>{{ end }}
+				{{ $isCurrent := eq $site.Language.Lang $currentPage.Language.Lang }}
+				{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" $site.Language.Lang) 0 }}
+				{{ $href := $site.Home.RelPermalink }}
 				{{ with $translation }}{{ $href = .RelPermalink }}{{ end }}
-				{{ $label := .Language.Lang | upper }}
-				{{ if eq .Language.Lang "zh" }}{{ $label = "中" }}{{ end }}
-				{{ if eq .Language.Lang "en" }}{{ $label = "En" }}{{ end }}
+				{{ $label := $site.Language.Lang | upper }}
+				{{ if or (eq $site.Language.Lang "zh") (eq $site.Language.Lang "zh-cn") }}{{ $label = "中" }}{{ end }}
+				{{ if eq $site.Language.Lang "en" }}{{ $label = "EN" }}{{ end }}
 				<a href="{{ $href }}"
-				   class="lang-link{{ if $isCurrent }} is-active{{ end }}"
-				   title="{{ .Language.LanguageName }}"
-				   {{ if $isCurrent }}aria-current="page"{{ end }}>
-					<svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-					<span class="lang-label">{{ $label }}</span>
-				</a>
+				   class="control-link lang-link{{ if $isCurrent }} is-active{{ end }}"
+				   title="{{ $site.Language.LanguageName }}"
+				   {{ if $isCurrent }}aria-current="page"{{ end }}>{{ $label }}</a>
 			{{ end }}
 		</div>
 		{{ end }}
-		<a href="#" id="scheme-toggle" class="scheme-toggle" aria-label="Toggle color scheme" title="Toggle color scheme"></a>
+		<div class="control-group theme-switcher" role="group" aria-label="Color scheme switcher">
+			<button type="button" class="control-link scheme-link" data-scheme="light" aria-pressed="false">Light</button>
+			<span class="control-divider" aria-hidden="true">/</span>
+			<button type="button" class="control-link scheme-link" data-scheme="dark" aria-pressed="false">Dark</button>
+		</div>
 	</div>
 
 	{{ if .Site.Params.Avatar }}
