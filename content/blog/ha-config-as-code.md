@@ -1,6 +1,7 @@
 ---
 date: 2026-03-16
 title: 打造我的「智能家」——使用 Claude Code 轻松使用 Home Assistant
+slug: ha-config-as-code
 tags:
   - Home Assistant
   - Claude Code
