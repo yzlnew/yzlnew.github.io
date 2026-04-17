@@ -10,3 +10,9 @@
   translation: "Last modified"
 - id: no_translation
   translation: "This post has no English translation yet"
+- id: table_of_contents
+  translation: "Contents"
+- id: prev_page
+  translation: "Previous"
+- id: next_page
+  translation: "Next"
