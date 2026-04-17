@@ -21,7 +21,7 @@ But in the **Agentic era, none of that is a problem anymore**.
 
 When I moved into the new place, I **bootstrapped a complete Home Assistant configuration from scratch using Claude Code** — scenes, automations, bulk configuration, dashboard polish — and ended up with the "smart home" I'd always pictured, with very little manual intervention.
 
-## Core idea and usage
+### Core idea and usage
 
 **Drive the entire deployment flow with Python scripts hitting the HA API.** If you're curious about the details, Claude Code wrote up its own documentation in the repo.
 
@@ -31,17 +31,17 @@ The whole project is open source at https://github.com/yzlnew/ha-config-as-code 
 
 > Connect to my HA instance, list all devices and entities, and give me a device inventory to confirm. My HA address is http://x.x.x.x:8123 and the token is xxx.
 
-## Models and skills
+### Models and skills
 
 I mostly use Opus 4.6, but with the knowledge already checked into the repo, other models should work reasonably well too. The repo also includes two skills: `home-assistant-manager` (HA API maintenance fundamentals — though since `hass-cli` has been unmaintained for years and no longer works, it's been removed) and `interface-design` (UX/interaction guidelines).
 
-## Configuration philosophy
+### Configuration philosophy
 
 On the hardware side, I basically bought a smart version of anything that could be made smart, checking ahead of time that each device would integrate cleanly with HA. I may write a separate post about purchasing decisions and hands-on impressions; this post skips those details.
 
 ![device_counts](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/device_category_counts_md3.png)
 
-### Let there be light
+#### Let there be light
 
 With no main ceiling lights, I ended up with 60+ lighting devices — mostly spotlights and LED strips. I went with Matter and Mijia (Xiaomi) platform fixtures. If I were choosing today, I'd **recommend Mijia mesh 2.0 lights** — pairing and configuration are much simpler. Matter lights require setting up IPv6 on your LAN and going through Apple Home's controller to reach HA. Mijia lights, on the other hand, can be batch-onboarded in the Mijia app (no one-by-one QR scan into Apple Home) and then brought into HA through the official Xiaomi integration. Plus Mijia bulbs are typically **about half the price** of white-label Matter equivalents.
 
@@ -56,7 +56,7 @@ I also disabled the built-in adaptive (circadian) lighting in both Apple Home an
 
 Finally, I bulk-set the power-on state to **restore last state** rather than "on" (`setup_power_on_state.py`).
 
-### Scenes
+#### Scenes
 
 Beyond per-zone adaptive lighting, scenes are the other thing I reach for constantly. I configured three:
 
@@ -68,11 +68,11 @@ You can design additional scenes the same way — talk to Claude Code and it'll 
 
 > Look through my recent logs. Are there scenes or automations you'd recommend adding?
 
-### Switch bindings
+#### Switch bindings
 
 For switches I went all-in on **Xiaomi smart switches** — reliable, work with or without a neutral wire, and reasonably priced. Paired with smart bulbs, you want them all in **wireless mode** (`setup_wireless_switches.py`). Since they're all the same brand, Claude Code has an easy time filtering the device list and combining it with room info for binding. I had it design a **unified binding scheme** — e.g. a single left-click toggles that room's lights, and so on. To make it easy to remember (and easy on guests), I also had it generate a **printable HTML user manual**.
 
-## Automation and control
+### Automation and control
 
 Automation is really the **heart of a smart home**. Before agentic tools, designing and configuring automations took forever — you had to tiptoe through YAML tests or grind through the UI. Now I get to act like an actual boss: I state a requirement, and Claude Code **produces reliable automations and even suggests new ones based on my device list and usage patterns**.
 
@@ -94,7 +94,7 @@ For voice control, I mainly use HomePods, so I bridged every non-Matter device i
 
 > I want XiaoAI to control every device. Set up an automation that captures the voice-recognition text from the XiaoAI speaker, matches it to a device action, and make sure to suppress the speaker's own canned voice reply.
 
-## Dashboard and polish
+### Dashboard and polish
 
 Part of the fun — and the pain — of HA used to be the frontend: you want a beautiful dashboard but the frontend work drags you down. These days, model frontend skills are surprisingly solid, and their sense of style is often ahead of the curve. After some iteration, I built the whole dashboard in **Material Design 3** style. The iteration was less linear than it might look — I used **Gemini 3 Pro** to generate the overall style, **Opus 4.6** to refine the layout, **Codex 3.5** to keep polishing, and basically whichever model had quota left stepped in, all converging on what I wanted.
 
@@ -106,24 +106,24 @@ The most-used controls live on the home screen, so they're right there on the Xi
 
 Working across these models really drove home that Opus 4.6 is a different beast — better comprehension and better layout instincts, which cuts down on rework. Tool-wise, my experience ranks as **Claude Code >= Codex >>> Gemini Cli**.
 
-## Other fun features
+### Other fun features
 
-### Daily Pokémon
+#### Daily Pokémon
 
 To give the dashboard some personality, I added a daily Pokémon card — it fetches a random Pokémon from PokeAPI once a day. The Pokémon's image is also wired up as the `Material You Base Color Source Image Path/URL`, so Material You picks the day's theme palette from it automatically.
 
-### E-ink display
+#### E-ink display
 
 I hooked up an e-ink display via ESPHome to surface HA data. The fun bit is a panel showing Claude Code usage — the machine running Claude Code pushes usage info to HA through the API (`push_claude_usage.sh`), and the e-ink display renders it. The e-ink kit is a bit pricey, but it's a great piece for demos and learning. The case is a vendor-provided 3D print.
 
 ![eink](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/eink.png)
 
-### User manual
+#### User manual
 
 So that family and guests can figure out the wireless switch bindings, I also had it generate a printable web page.
 
 ![manual](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/docs-manual-combined.png)
 
-## Reflections: between full automation and full control
+### Reflections: between full automation and full control
 
 From late last year to now, agents led by OpenClaw have swept the world — there's even been a genuinely funny wave of "please come install OpenClaw for me" demand. Online you'll find plenty of examples of using LLMs to drive smart homes and integrate with HA. But day-to-day life is mostly repetitive patterns; the hard part for most people, pre–Claude Code, was discovering and implementing the right automations. Having Claude Code generate reusable automation scripts has made the smart-home experience genuinely fun again for me. No docs to read, no inefficient node-graph dragging — **what you think is what you get**. In 2026 I'll no longer be recommending things like Mijia Geek mode, n8n, or Node-RED. With its powerful, rich, open API tooling, Home Assistant is bound to be the **first choice for the smart home in this Agentic era**.
