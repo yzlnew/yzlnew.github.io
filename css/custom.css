@@ -31,6 +31,14 @@ blockquote {
   font-style: normal;
 }
 
+.nav .lang-switcher a {
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+.nav .lang-switcher a:hover {
+  opacity: 1;
+}
+
 /* .gt-container a { */
 /*     color: #ffce05 !important; */
 /* } */
