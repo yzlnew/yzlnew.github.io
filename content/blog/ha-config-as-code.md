@@ -11,6 +11,8 @@ toc: true
 description: 从 0 用 Claude Code 搓了一整套 Home Assistant 配置，包括场景、自动化、批量配置、前端界面美化
 ---
 
+![ha_architecture](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/ha_architecture.png)
+
 作为一个 Home Assistant 的长期用户，我一直有个梦想就是在新家实现尽可能所有设备的智能化。之前其实分享过[部分方案](https://sspai.com/post/79141)，不得不说 HA 的是有一定上手门槛的，另外长期使用存在一些难题：
 
 1. 使用 YAML 配置维护容易变得**非常冗长**，写配置/维护服务的十分消耗时间和精力（尽管有点乐此不疲）；使用 UI 维护非常低效和不体面

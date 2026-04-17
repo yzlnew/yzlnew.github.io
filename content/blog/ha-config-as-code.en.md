@@ -11,6 +11,8 @@ toc: true
 description: Bootstrapping a full Home Assistant setup from scratch with Claude Code — scenes, automations, bulk config, and a polished dashboard.
 ---
 
+![ha_architecture](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/ha_architecture_en.png)
+
 As a long-time Home Assistant user, I've always dreamed of making every possible device in my new home "smart." I've [shared parts of my setup before](https://sspai.com/post/79141), but the truth is HA has a real learning curve, and long-term maintenance brings its own headaches:
 
 1. YAML-based configuration gets **extremely verbose**. Writing and maintaining it eats up a lot of time and energy (even if I secretly enjoy it). Doing it through the UI, meanwhile, is inefficient and graceless.
