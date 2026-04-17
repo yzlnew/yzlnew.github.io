@@ -13,13 +13,7 @@
 /*     background-color: #363636 !important; */
 /* } */
 
-.lang-switcher {
-  background: rgba(255, 255, 255, 0.06);
-}
-.lang-switcher .lang-link { color: #9aa0a6; }
+.lang-switcher .lang-link { color: #888; }
+.lang-switcher .lang-link + .lang-link { border-left-color: #444; }
 .lang-switcher .lang-link:hover { color: #f0f0f0; }
-.lang-switcher .lang-link.is-active {
-  background: #2a2a2a;
-  color: #f0f0f0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
+.lang-switcher .lang-link.is-active { color: #f0f0f0; }
