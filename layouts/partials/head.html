@@ -1,4 +1,22 @@
 <div class="header">
+	{{ if gt (len site.Sites) 1 }}
+	{{ $currentPage := . }}
+	<div class="lang-switcher">
+		{{ range site.Sites }}
+			{{ $isCurrent := eq .Language.Lang $currentPage.Language.Lang }}
+			{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" .Language.Lang) 0 }}
+			{{ $href := .Home.RelPermalink }}
+			{{ with $translation }}{{ $href = .RelPermalink }}{{ end }}
+			<a href="{{ $href }}"
+			   class="lang-link{{ if $isCurrent }} is-active{{ end }}"
+			   title="{{ .Language.LanguageName }}"
+			   {{ if $isCurrent }}aria-current="page"{{ end }}>
+				{{ .Language.Lang | upper }}
+			</a>
+		{{ end }}
+	</div>
+	{{ end }}
+
 	{{ if .Site.Params.Avatar }}
 		<div class="avatar">
 			<a href="{{ .Site.BaseURL }}">
@@ -19,21 +37,6 @@
 			<li>
 				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
 			</li>
-			{{ end }}
-			{{ if gt (len site.Sites) 1 }}
-			{{ $currentPage := . }}
-			{{ range site.Sites }}
-				{{ if ne .Language.Lang $currentPage.Language.Lang }}
-					{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" .Language.Lang) 0 }}
-					<li class="lang-switcher">
-						{{ if $translation }}
-						<a href="{{ $translation.RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
-						{{ else }}
-						<a href="{{ .Home.RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
-						{{ end }}
-					</li>
-				{{ end }}
-			{{ end }}
 			{{ end }}
 		</ul>
 	</nav>
