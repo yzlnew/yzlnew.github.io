@@ -13,8 +13,10 @@ summaryLength = 20
 [params]
     featherIconsCDN = true
     mode = "auto"
-    avatar = "img/avatar.png"
-    favicon = "img/favicon.png"
+    # The theme prepends "/", so a leading slash here produces a valid
+    # protocol-relative ImageBed URL ("//raw.githubusercontent.com/...").
+    avatar = "/raw.githubusercontent.com/yzlnew/ImageBed/master/site/avatar.png"
+    favicon = "/raw.githubusercontent.com/yzlnew/ImageBed/master/site/favicon.png"
     startYear = 2016
 
     i18n_flags = true

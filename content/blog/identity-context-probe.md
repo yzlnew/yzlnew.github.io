@@ -33,7 +33,7 @@ description: 你是 Claude，那我是谁？
 - `Claude`，尤其是 Claude Code 在最近一年逐渐在代码生成领域取得主流，而且它有一个特别的行为就是喜欢在 commit message 中注入自己的名称。
 - `DeepSeek` 和 `Qwen` 在中文社区中讨论度逐渐随着模型能力升高。
 
-![模型和产品发布历史](/img/blog/2026/identity-context-probe/01_release_history.png)
+![模型和产品发布历史](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/identity-context-probe/01_release_history.png)
 
 这里刚刚好 Qwen 系列模型开源在几个关键时间点中间，可以用 Base 模型不同语境下的生成概率来直接分析这个语料对模型的影响。SFT/RL 模型做了一定程度的身份认知修正，每家重视程度不同，用 Base 模型是比较直接的方法。当然最直接的就是分析语料了，但是我们拿不到。
 
@@ -93,7 +93,7 @@ description: 你是 Claude，那我是谁？
 
 我还跑了一个辅助采样实验：每个 prompt 采样 100 次，用别名表统计生成文本里是否出现这些身份词。采样更接近真实使用时「模型会说什么」，但它也更噪，所以主结论还是看 logprob，采样只作为辅助观察。
 
-![Prompt 构造示例](/img/blog/2026/identity-context-probe/02_prompt_construction.png)
+![Prompt 构造示例](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/identity-context-probe/02_prompt_construction.png)
 
 ### 请求数量
 
@@ -125,7 +125,7 @@ prompt 配置一共 21 条：
 
 首先看不同的语境下相对中性 prompt 的概率，可以明显看到差别。**代码语境下觉得自己是 Claude 的相对概率提升了**，尤其是 Qwen3.5 的时间点正好在 Claude Code 大规模「攻击」Github 之后。特别出现在 Qwen3.5 的小模型上。比如在一个代码代理 prompt 里，Qwen3.5-0.8B 的候选分布中，`Claude` 可以被拉到 55.8%，高于 `ChatGPT`、`Qwen` 和 `DeepSeek`。
 
-![不同场景身份变化](/img/blog/2026/identity-context-probe/03_context_deltas.png)
+![不同场景身份变化](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/identity-context-probe/03_context_deltas.png)
 
 闲聊场景对 `ChatGPT` 也有主导趋势，但不是所有模型都稳定。比如 Qwen3-1.7B 在某个闲聊 prompt 下，`ChatGPT` 的 prompt 内候选概率可以到 97.0%。
 
@@ -137,8 +137,8 @@ prompt 配置一共 21 条：
 2. Qwen3-4B 开始明显转向 `Qwen`，但闲聊场景里 `ChatGPT` 仍然很强
 3. Qwen3.5-4B 在三类场景里都高度偏向 `Qwen`，代码场景约 91.2%，中文社区约 97.1%，闲聊约 98.7%
 
-![三代模型横向对比](/img/blog/2026/identity-context-probe/04_generation_comparison.png)
+![三代模型横向对比](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/identity-context-probe/04_generation_comparison.png)
 
 这里一个合理的推测是预训练中从 Qwen3 开始，混了相当多的 SFT 数据做 **mid-training**，所以其实会对这个简单的实验会有点干扰。
 
-![完整身份热力图](/img/blog/2026/identity-context-probe/05_identity_heatmap.png)
+![完整身份热力图](https://raw.githubusercontent.com/yzlnew/ImageBed/master/blog/2026/identity-context-probe/05_identity_heatmap.png)
