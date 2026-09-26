@@ -97,3 +97,15 @@ Utterances 保留现有仓库、issue-term 与主题配置，按需进入视口�
 后续字号微调：四项导航从 24px 缩小为 18px，下划线调整为 1px、偏移 6px，保持 40px 的点击区域。小字号下 320px 英文导航无需特殊压缩间距。构建、站点检查、渲染检查及 16 项浏览器测试通过；已查看桌面及手机预览。
 
 [18px 桌面预览](screenshots/pixel-small/home-light-1440.png)、[手机预览](screenshots/pixel-small/home-light-375.png)、[320px 英文预览](screenshots/pixel-small/home-en-320.png)。
+
+### 2026-09-26：提示、柱状图与旧文章控件覆盖
+
+提示块改为上下 1px 分隔线与留白，移除加粗侧边和彩色底；折叠内容采用相同分隔线和加减号，保留原生键盘交互。首页题图移除“每一次回环，都是新的起点。”及英文对应文案。
+
+柱状图按 `infra-skills/openai-dotcom-viz/references/design-spec.md` 调整为四角 4px 圆角、1.5px 同色系深描边、暖橙深浅配对（`#cc6f47 / #ffedde`）、圆形图例、柱顶数值、斜向分类标签和无网格坐标轴。默认配置在图表入口统一应用，行内 JSON 与文件图表均生效；保留作者显式配色、圆角和标签设置，以及筛选、缩放和主题切换状态。继续使用本站字体和现有 ECharts 交互渲染。
+
+逐篇检查 41 篇已发布博客：16 个提示块、43 段围栏代码、5 篇公式文章（146 处公式）、65 张图片、7 张表格及 1 个 Gist。补齐《频繁模式挖掘》中 1 段旧式缩进代码的复制与换行控件，原文保持不变；没有文章使用折叠、标签页或可交互图表语法。完整清单见 [published-components.md](published-components.md)。
+
+构建、站点与渲染检查通过，浏览器测试 17 项通过；新增实际柱形四角、描边、配色及显式配置优先级检查，扩展真实旧文章代码复制检查。41 篇文章在 1440px 与 375px 下均返回 200，无脚本错误、公式错误或整页横向溢出。
+
+截图：[提示与折叠](screenshots/components/notices-light.png)、[浅色柱状图](screenshots/components/bars-light.png)、[深色柱状图](screenshots/components/bars-dark.png)、[手机柱状图](screenshots/components/bars-mobile.png)、[首页](screenshots/components/home-mobile.png)。

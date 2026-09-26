@@ -29,6 +29,11 @@ $x_{a_b} + y_{c_d}$ and \(\mathbb{E}_{a_b}[X]\).
 `);
   await writeFile(join(content, 'blog/resource/sample.json'), '{"xAxis":{},"yAxis":{},"series":[{"type":"scatter","data":[[1,2]]}]}');
   await page('invalid.md', 'url: /__fixtures/invalid/', '### Invalid configuration\n\n```echarts\n{ broken JSON }\n```');
+  await page('bars.md', 'url: /__fixtures/bars/', `### Authored bar styles
+\`\`\`echarts
+{"color":["#123456","#789abc"],"xAxis":{"type":"category","data":["A","B"]},"yAxis":{},"series":[{"type":"bar","itemStyle":{"borderRadius":0,"borderWidth":3,"borderColor":"#102030"},"label":{"show":false},"data":[2,3]},{"type":"bar","data":[4,5]}]}
+\`\`\`
+`);
   await page('mermaid.md', 'url: /__fixtures/mermaid/', '### Strict diagram\n\n```mermaid\n%%{init: {"securityLevel":"loose"}}%%\nflowchart LR\n A[Start] --> B[End]\n click A "javascript:window.fixtureExecuted=true"\n```');
   const config = join(temp, 'disable-comments.toml');
   await writeFile(config, '[params.utter]\nenable = false\n');

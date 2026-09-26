@@ -65,6 +65,11 @@ def greet(name):
 Plain text remains readable, too.
 ```
 
+旧文的四空格缩进代码也支持复制和换行：
+
+    legacy_example = "Indented Markdown keeps its original text."
+    print(legacy_example)
+
 ### 公式
 
 行内公式: \(a_{n+1} = a_n + 1\). 旧文兼容写法: $E = mc^2$.
@@ -98,16 +103,78 @@ f(x) &= \int_0^x t^2\,dt \\
 
 ```echarts {title="阅读与写作" description="阅读从周一的 30 分钟上升到周六的 75 分钟。点击图例筛选，拖动滑块缩放。"}
 {
-  "tooltip": {"trigger": "axis"},
-  "color": ["#b87916", "#f6ba45"],
-  "legend": {"top": 0, "left": 40, "icon": "circle", "data": ["Reading", "Writing"]},
-  "grid": {"left": 45, "right": 20, "bottom": 72},
-  "xAxis": {"type": "category", "axisLine": {"show": false}, "axisTick": {"show": false}, "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]},
-  "yAxis": {"type": "value", "name": "Minutes", "splitLine": {"show": false}, "axisLine": {"show": true}, "axisTick": {"show": true}},
-  "dataZoom": [{"type": "slider", "start": 0, "end": 100}],
+  "tooltip": {
+    "trigger": "axis"
+  },
+  "legend": {
+    "top": 0,
+    "left": 64,
+    "data": [
+      "Reading",
+      "Writing"
+    ]
+  },
+  "grid": {
+    "left": 64,
+    "right": 20,
+    "top": 52,
+    "bottom": 112
+  },
+  "xAxis": {
+    "type": "category",
+    "data": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Minutes",
+    "nameLocation": "middle",
+    "nameGap": 44,
+    "nameRotate": 90
+  },
+  "dataZoom": [
+    {
+      "type": "slider",
+      "start": 0,
+      "end": 100,
+      "height": 18,
+      "bottom": 8
+    }
+  ],
   "series": [
-    {"name": "Reading", "type": "line", "smooth": true, "data": [30, 45, 35, 60, 40, 75, 65]},
-    {"name": "Writing", "type": "bar", "itemStyle": {"borderRadius": [4, 4, 0, 0], "borderColor": "#b87916", "borderWidth": 1}, "data": [15, 20, 30, 25, 35, 50, 40]}
+    {
+      "name": "Reading",
+      "type": "bar",
+      "data": [
+        30,
+        45,
+        35,
+        60,
+        40,
+        75,
+        65
+      ]
+    },
+    {
+      "name": "Writing",
+      "type": "bar",
+      "data": [
+        15,
+        20,
+        30,
+        25,
+        35,
+        50,
+        40
+      ]
+    }
   ]
 }
 ```

@@ -35,6 +35,7 @@ Loop 使用近黑与白、细线框、等宽标注，以及橙黄色强调。参
 - 导航：**Ark Pixel Font 12px Proportional / 简体中文**，以 18px 展示中英文导航。固定为官方 `2026.09.25` 版本，完整 WOFF2 字体（约 539 KiB）、来源说明与 OFL 许可证位于 `themes/loop/static/fonts/ark-pixel-2026.09.25/`；只用于四项导航，正文保持原排版。
 - `npm run assets` 将字体 CSS 合并到 Hugo 样式资源，并复制其引用的 WOFF2 字符分片到 `themes/loop/static/fonts/generated/`。保留 `unicode-range` 按需下载，文件路径包含包版本。生成 CSS 与字体目录均忽略，由 `npm ci` 和构建脚本重建。
 - 配色及字体变量集中在 `themes/loop/assets/css/loop.css`；图表读取同一组变量。ECharts 保留文章指定的系列颜色；Mermaid 保持严格模式。
+- 柱状图默认使用 OpenAI dotcom 规范的完整圆角矩形（四角 4px）、1.5px 同色系深描边、圆形图例、柱顶数值与无网格坐标轴。默认暖橙深浅配对为 `#cc6f47 / #ffedde`；显式 `color`、`itemStyle` 和 `label` 配置优先。
 - `{{< loop-study >}}` 可嵌入首页同款回环图形，标签随页面语言变化。双语样式指南包含示例。
 - 头像、页头与 favicon 共用 `themes/loop/assets/images/loop-avatar.svg`，构建时发布为 `/loop-avatar.svg`。页内标识随主题切换颜色，小尺寸精简网格；独立 SVG 随系统配色切换。调整环面几何后可运行 `node scripts/draw-loop-avatar.mjs` 重新生成矢量源文件。
 
@@ -73,6 +74,8 @@ def greet(name):
 ````
 
 保留 Hugo 的行号与高亮参数。复制按钮读取原始代码，排除行号；换行按钮用于长行。代码字体为本地 JetBrains Mono，附带 OFL 许可。
+
+旧文章的四空格缩进代码和原始 `<pre>` 也会添加复制、换行按钮；关闭脚本时保留可读源码。
 
 ### 图表与流程图
 
@@ -119,6 +122,8 @@ flowchart LR
 ```
 
 标签页支持方向键、Home / End 和 Tab；关闭脚本后按顺序显示所有内容。
+
+提示块采用上下细分隔线与留白，折叠内容使用原生 `<details>` 和加减号，不使用加粗侧边或大面积彩色底。已发布文章的控件覆盖记录见 [published-components.md](docs/published-components.md)。
 
 ### 图片与已有写法
 

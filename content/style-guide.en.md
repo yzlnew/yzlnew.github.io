@@ -65,6 +65,11 @@ def greet(name):
 Plain text remains readable, too.
 ```
 
+Legacy code indented with four spaces also supports copy and line wrapping:
+
+    legacy_example = "Indented Markdown keeps its original text."
+    print(legacy_example)
+
 ### Equations
 
 Inline notation: \(a_{n+1} = a_n + 1\). Legacy notation: $E = mc^2$.
@@ -98,16 +103,78 @@ f(x) &= \int_0^x t^2\,dt \\
 
 ```echarts {title="Reading and writing" description="Reading rises from 30 minutes on Monday to 75 on Saturday. Toggle a legend or drag the zoom slider."}
 {
-  "tooltip": {"trigger": "axis"},
-  "color": ["#b87916", "#f6ba45"],
-  "legend": {"top": 0, "left": 40, "icon": "circle", "data": ["Reading", "Writing"]},
-  "grid": {"left": 45, "right": 20, "bottom": 72},
-  "xAxis": {"type": "category", "axisLine": {"show": false}, "axisTick": {"show": false}, "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]},
-  "yAxis": {"type": "value", "name": "Minutes", "splitLine": {"show": false}, "axisLine": {"show": true}, "axisTick": {"show": true}},
-  "dataZoom": [{"type": "slider", "start": 0, "end": 100}],
+  "tooltip": {
+    "trigger": "axis"
+  },
+  "legend": {
+    "top": 0,
+    "left": 64,
+    "data": [
+      "Reading",
+      "Writing"
+    ]
+  },
+  "grid": {
+    "left": 64,
+    "right": 20,
+    "top": 52,
+    "bottom": 112
+  },
+  "xAxis": {
+    "type": "category",
+    "data": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Minutes",
+    "nameLocation": "middle",
+    "nameGap": 44,
+    "nameRotate": 90
+  },
+  "dataZoom": [
+    {
+      "type": "slider",
+      "start": 0,
+      "end": 100,
+      "height": 18,
+      "bottom": 8
+    }
+  ],
   "series": [
-    {"name": "Reading", "type": "line", "smooth": true, "data": [30, 45, 35, 60, 40, 75, 65]},
-    {"name": "Writing", "type": "bar", "itemStyle": {"borderRadius": [4, 4, 0, 0], "borderColor": "#b87916", "borderWidth": 1}, "data": [15, 20, 30, 25, 35, 50, 40]}
+    {
+      "name": "Reading",
+      "type": "bar",
+      "data": [
+        30,
+        45,
+        35,
+        60,
+        40,
+        75,
+        65
+      ]
+    },
+    {
+      "name": "Writing",
+      "type": "bar",
+      "data": [
+        15,
+        20,
+        30,
+        25,
+        35,
+        50,
+        40
+      ]
+    }
   ]
 }
 ```

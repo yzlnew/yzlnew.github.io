@@ -61,6 +61,13 @@ test('code copy omits line numbers; wrap, heading links, and image focus work', 
   await page.getByRole('tab').first().focus();
   await page.keyboard.press('ArrowRight');
   await expect(page.getByRole('tab').nth(1)).toHaveAttribute('aria-selected', 'true');
+  await page.goto('/2021/03/频繁模式挖掘/');
+  const legacy = page.locator('.code-block').first();
+  await legacy.locator('[data-copy]').click();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('给定一个数据库 D，其中有 T1 ...TN 的交易记录\n找出所有至少出现了占比超过 s 的模式 P\n');
+  await legacy.locator('[data-wrap]').click();
+  await expect(legacy).toHaveClass(/wrap/);
+  await expect(legacy.locator('[data-copy]')).toHaveCount(1);
 });
 
 test('theme supports keyboard selection, persistence, system changes and cross-tab sync', async ({ page }) => {

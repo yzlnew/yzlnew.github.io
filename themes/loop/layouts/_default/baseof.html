@@ -23,6 +23,7 @@
   <main id="main" class="shell" tabindex="-1">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
   {{ partial "dialogs.html" . }}
+  {{ if .IsPage }}<template id="plain-code-toolbar">{{ partial "code-toolbar.html" "text" }}</template>{{ end }}
   <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
   {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
   <script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

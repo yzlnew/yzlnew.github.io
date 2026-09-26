@@ -135,6 +135,20 @@ async function copy(text) {
   field.remove(); previous?.focus({ preventScroll: true });
   if (!success) throw Error('Clipboard unavailable');
 }
+// Hugo's code render hook covers fenced blocks; old indented Markdown and raw
+// <pre><code> blocks need the same controls without reparsing their contents.
+const plainCodeToolbar = document.querySelector('#plain-code-toolbar');
+if (plainCodeToolbar) document.querySelectorAll('.prose pre').forEach(pre => {
+  if (pre.closest('.code-block, .chart-block, .gist-embed')) return;
+  const block = document.createElement('div');
+  block.className = 'code-block';
+  block.dataset.source = pre.textContent;
+  const highlight = document.createElement('div');
+  highlight.className = 'highlight';
+  pre.before(block);
+  block.append(plainCodeToolbar.content.cloneNode(true), highlight);
+  highlight.append(pre);
+});
 document.querySelectorAll('.code-block').forEach(block => {
   const button = block.querySelector('[data-copy]');
   button.addEventListener('click', async () => {

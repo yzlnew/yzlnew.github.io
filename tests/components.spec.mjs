@@ -43,6 +43,39 @@ test('invalid JSON retains visible configuration and an error message', async ({
   await expect(page.locator('.chart-source code')).toContainText('broken JSON');
 });
 
+test('bar charts render rounded rectangles for inline and file sources and preserve authored styles', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  async function charts() {
+    return page.evaluate(async () => {
+      const entry = await (await fetch('/vendor/charts/charts.js')).text();
+      const path = entry.match(/import\("(\.\/echarts[^"\n]+)"\)/)[1];
+      const echarts = await import(new URL(path, `${location.origin}/vendor/charts/charts.js`));
+      return [...document.querySelectorAll('[data-chart=echarts] .chart-canvas')].map(canvas => {
+        const instance = echarts.getInstanceByDom(canvas);
+        return { colors: instance.getOption().color, series: instance.getModel().getSeries().filter(series => series.subType === 'bar').map(series => {
+          const el = series.getData().getItemGraphicEl(0);
+          return { radius: el.shape.r, fill: el.style.fill, stroke: el.style.stroke, borderWidth: el.style.lineWidth, label: series.option.label.show };
+        }) };
+      });
+    });
+  }
+  await page.goto('/style-guide/');
+  await expect(page.locator('[data-ready=true]')).toHaveCount(5);
+  for (const chart of (await charts()).slice(0, 2)) {
+    expect(chart.series).toEqual([
+      { radius: 4, fill: '#cc6f47', stroke: '#804126', borderWidth: 1.5, label: true },
+      { radius: 4, fill: '#ffedde', stroke: '#cc6f47', borderWidth: 1.5, label: true },
+    ]);
+  }
+  await page.goto('/__fixtures/bars/');
+  await expect(page.locator('[data-ready=true]')).toHaveCount(1);
+  const [authored] = await charts();
+  expect(authored.colors).toEqual(['#123456', '#789abc']);
+  expect(authored.series[0]).toEqual({ radius: 0, fill: '#123456', stroke: '#102030', borderWidth: 3, label: false });
+  expect(authored.series[1].fill).toBe('#789abc');
+  expect(authored.series[1].radius).toBe(4);
+});
+
 test('Mermaid cannot lower strict mode or create executable links', async ({ page }) => {
   const requests = [];
   page.on('request', request => requests.push(request.url()));

@@ -314,7 +314,6 @@ p {
   color: var(--muted);
   font: 10px/1.6 var(--font-mono);
 }
-.header-caption span:last-child { font-family: var(--font-sans); font-size: 11px; }
 .site-header--compact .loop-stage { padding-bottom: 8px; }
 .site-header--compact .loop-stage > .loop-mesh { width: 264px; }
 .site-header--compact .header-caption { display: none; }
@@ -705,7 +704,7 @@ kbd {
   margin-bottom: .5em;
 }
 .prose blockquote {
-  border-left: 3px solid var(--accent);
+  border-left: 1px solid var(--line);
   padding: 6px 0 6px 24px;
   margin: 30px 0;
   color: var(--muted);
@@ -970,11 +969,8 @@ kbd {
   font-size: 1.05em;
 }
 .notice {
-  padding: 20px 24px;
-  background: var(--soft);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--line);
-  border-radius: 8px;
+  padding: 20px 0;
+  border-block: 1px solid var(--line);
   margin: 30px 0;
   font-size: 16px;
 }
@@ -984,28 +980,33 @@ kbd {
   color: var(--muted);
   margin-bottom: 10px;
 }
-.notice-tip,
-.notice-warning {
-  border-left-color: var(--link);
-  background: var(--accent-soft);
-}
+.notice-warning .notice-label { color: var(--link); }
 .notice > :last-child {
   margin-bottom: 0;
 }
 .disclosure {
   margin: 28px 0;
-  border: 1px solid var(--line);
-  border-radius: 4px;
+  border-block: 1px solid var(--line);
 }
 .disclosure summary {
   cursor: pointer;
-  padding: 14px 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  list-style: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
 }
+.disclosure summary::-webkit-details-marker { display: none; }
+.disclosure summary::after { content: "+"; font: 18px/1 var(--font-mono); color: var(--muted); }
+.disclosure[open] > summary::after { content: "−"; }
+.disclosure summary:hover { color: var(--link); }
 .disclosure > div {
-  padding: 8px 20px;
+  padding: 0 0 20px;
 }
+.disclosure > div > :last-child { margin-bottom: 0; }
 .tabs {
   margin: 28px 0;
   border: 1px solid var(--line);
@@ -1325,7 +1326,6 @@ mark {
   .loop-stage > .loop-mesh { width: 330px; }
   .loop-navigation { gap: 12px; }
   .header-caption { font-size: 9px; justify-content: center; }
-  .header-caption span:last-child { display: none; }
   .site-header--compact .loop-stage > .loop-mesh { width: 220px; }
   .home-list-label { margin-top: 32px; }
   .post-card {
@@ -1402,7 +1402,7 @@ mark {
     padding: 16px;
   }
   .notice {
-    padding: 18px;
+    padding: 18px 0;
     font-size: 16px;
   }
   .prose table {
