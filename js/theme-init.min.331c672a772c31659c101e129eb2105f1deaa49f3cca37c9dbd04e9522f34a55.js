@@ -1,0 +1,1 @@
+(()=>{let e="system";try{e=localStorage.getItem("loop-theme")||localStorage.getItem("scheme")||"system"}catch{}["system","light","dark"].includes(e)||(e="system");const t=document.documentElement;t.dataset.mode=e,t.dataset.theme=e==="system"?matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":e,t.classList.add("js")})()
