@@ -2,7 +2,7 @@ baseurl = "https://yzlnew.com/"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
-theme = "ink"
+theme = "loop"
 pagination.pagerSize = 8
 
 copyright = "© Copyright Ye Zhiling"
@@ -11,15 +11,12 @@ copyright = "© Copyright Ye Zhiling"
 summaryLength = 20
 
 [params]
-    featherIconsCDN = true
     mode = "auto"
-    # The theme prepends "/", so a leading slash here produces a valid
-    # protocol-relative ImageBed URL ("//raw.githubusercontent.com/...").
-    avatar = "/raw.githubusercontent.com/yzlnew/ImageBed/master/site/avatar.png"
-    favicon = "/raw.githubusercontent.com/yzlnew/ImageBed/master/site/favicon.png"
+    avatar = "/loop-avatar.svg"
+    favicon = "/loop-avatar.svg"
     startYear = 2016
 
-    i18n_flags = true
+    mainSections = ["blog"]
 
 [params.utter]
 enable = true
@@ -57,6 +54,7 @@ url = "/index.xml"
     [languages.zh-cn.params]
       subtitle = "Let me fly to the 🌕️"
       lang = "cn"
+      bio = "黄石，居于杭州。记录技术、生活，以及沿途的想法。"
     [[languages.zh-cn.menu.main]]
       name = "主页"
       url = "/"
@@ -78,6 +76,7 @@ url = "/index.xml"
     [languages.en.params]
       subtitle = "Let me fly to the 🌕️"
       lang = "en"
+      bio = "Huangshi, based in Hangzhou. Notes on technology, life, and thoughts along the way."
     [[languages.en.menu.main]]
       name = "Home"
       url = "/en/"
@@ -108,7 +107,7 @@ blog = "/:year/:month/:slug"
 [markup]
   [markup.tableOfContents]
     endLevel = 4
-    startLevel = 3
+    startLevel = 2
   [markup.highlight]
     anchorLineNos = false
     codeFences = true
@@ -117,7 +116,7 @@ blog = "/:year/:month/:slug"
     lineNoStart = 1
     lineNos = true
     lineNumbersInTable = true
-    noClasses = true
+    noClasses = false
     style = "pastie"
     tabWidth = 2
   [markup.goldmark]
@@ -126,10 +125,29 @@ blog = "/:year/:month/:slug"
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
+          inline = [['\(', '\)'], ['$', '$']]
     [markup.goldmark.renderer]
       unsafe = true
 
 [services]
   [services.rss]
     limit = 20
+
+[outputs]
+home = ["HTML", "RSS", "Search"]
+
+[outputFormats.Search]
+mediaType = "application/json"
+baseName = "search"
+isPlainText = true
+notAlternative = true
+
+[[languages.zh-cn.menu.main]]
+name = "归档"
+url = "/archives/"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "Archive"
+url = "/en/archives/"
+weight = 4

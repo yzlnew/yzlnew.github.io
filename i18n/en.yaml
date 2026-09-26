@@ -1,0 +1,125 @@
+skip:
+  other: "Skip to content"
+language:
+  other: "Language"
+theme:
+  other: "Color theme"
+system:
+  other: "System"
+light:
+  other: "Light"
+dark:
+  other: "Dark"
+navigation:
+  other: "Main navigation"
+search:
+  other: "Search"
+social:
+  other: "Social links"
+styleGuide:
+  other: "Style guide"
+close:
+  other: "Close"
+searchPlaceholder:
+  other: "Search titles, tags, or content…"
+searchInitial:
+  other: "Type a keyword to begin."
+loading:
+  other: "Loading…"
+searchEmpty:
+  other: "No matching posts. Try another keyword."
+searchError:
+  other: "Search could not load. Close and reopen to retry."
+results:
+  other: "matching posts"
+searchHelp:
+  other: "↑ ↓ Select · Enter Open · Esc Close"
+imagePreview:
+  other: "Image preview"
+pagination:
+  other: "Pagination"
+previousPage:
+  other: "Previous"
+nextPage:
+  other: "Next"
+latest:
+  other: "Recent notes"
+posts:
+  one: "post"
+  other: "posts"
+browse:
+  other: "Browse the collection"
+allNotes:
+  other: "Through the years"
+notes:
+  other: "FROM THE NOTEBOOK"
+minutes:
+  other: "min read"
+updated:
+  other: "Updated"
+toc:
+  other: "On this page"
+postNavigation:
+  other: "Adjacent posts"
+older:
+  other: "Older post"
+newer:
+  other: "Newer post"
+comments:
+  other: "Comments"
+commentsJS:
+  other: "Enable JavaScript to load comments."
+backTop:
+  other: "Back to top"
+notFound:
+  other: "A little outside the loop."
+notFoundText:
+  other: "This page could not be found. Return home to keep reading."
+home:
+  other: "Back home"
+copyAnchor:
+  other: "Copy heading link"
+copied:
+  other: "Copied"
+wrap:
+  other: "Wrap"
+copy:
+  other: "Copy"
+copyError:
+  other: "Copy failed; select the code manually"
+chart:
+  other: "Data chart"
+diagram:
+  other: "Diagram"
+chartDescription:
+  other: "Use the legend to filter series; source includes the full data."
+diagramDescription:
+  other: "Read the source text for the relationships shown in this diagram."
+chartError:
+  other: "Chart unavailable. The source is still available below."
+chartPending:
+  other: "Enable JavaScript for the interactive chart. Source is available below."
+source:
+  other: "View source"
+table:
+  other: "Data table; scroll horizontally"
+info:
+  other: "Note"
+tip:
+  other: "Tip"
+warning:
+  other: "Attention"
+tabs:
+  other: "Content tabs"
+viewGist:
+  other: "View code on GitHub Gist"
+zoomImage:
+  other: "Enlarge image"
+tagsTitle:
+  other: "Tags"
+loopFigure:
+  other: "FIG. 01 / THE LOOP"
+loopBrand:
+  other: "THE LOOP"
+loopCaption:
+  other: "Every return is a new starting point."

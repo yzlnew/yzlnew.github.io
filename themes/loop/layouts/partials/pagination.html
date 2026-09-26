@@ -1,0 +1,1 @@
+{{ if gt .TotalPages 1 }}<nav class="pagination" aria-label="{{ i18n "pagination" }}">{{ with .Prev }}<a rel="prev" href="{{ .URL }}">← {{ i18n "previousPage" }}</a>{{ end }}<span>{{ .PageNumber }} / {{ .TotalPages }}</span>{{ with .Next }}<a rel="next" href="{{ .URL }}">{{ i18n "nextPage" }} →</a>{{ end }}</nav>{{ end }}

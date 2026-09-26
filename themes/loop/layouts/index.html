@@ -1,0 +1,5 @@
+{{ define "main" }}
+{{ $posts := where (where (where .Site.RegularPages "Section" "blog") "Params.hidden" "ne" true) "Draft" false }}
+<div class="list-label home-list-label" id="recent-notes"><h1><span class="section-index" aria-hidden="true">01 /</span>{{ i18n "latest" }}</h1><span>{{ len $posts }} {{ i18n "posts" (len $posts) }}</span></div>
+{{ $pager := .Paginate $posts.ByLastmod.Reverse }}{{ partial "posts.html" $pager.Pages }}{{ partial "pagination.html" $pager }}
+{{ end }}

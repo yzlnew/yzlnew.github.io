@@ -1,0 +1,124 @@
+skip:
+  other: "跳转到正文"
+language:
+  other: "语言"
+theme:
+  other: "配色模式"
+system:
+  other: "跟随系统"
+light:
+  other: "浅色"
+dark:
+  other: "深色"
+navigation:
+  other: "主导航"
+search:
+  other: "搜索"
+social:
+  other: "社交链接"
+styleGuide:
+  other: "样式指南"
+close:
+  other: "关闭"
+searchPlaceholder:
+  other: "搜索标题、标签或正文…"
+searchInitial:
+  other: "输入关键词，开始寻找。"
+loading:
+  other: "正在加载…"
+searchEmpty:
+  other: "没有找到匹配的文章，试试其他关键词。"
+searchError:
+  other: "搜索加载失败，请关闭后重新打开。"
+results:
+  other: "篇匹配文章"
+searchHelp:
+  other: "↑ ↓ 选择结果 · Enter 打开 · Esc 关闭"
+imagePreview:
+  other: "图片预览"
+pagination:
+  other: "分页"
+previousPage:
+  other: "上一页"
+nextPage:
+  other: "下一页"
+latest:
+  other: "最近的记录"
+posts:
+  other: "篇文章"
+browse:
+  other: "按主题阅读"
+allNotes:
+  other: "时间留下的痕迹"
+notes:
+  other: "记录 / NOTES"
+minutes:
+  other: "分钟阅读"
+updated:
+  other: "更新于"
+toc:
+  other: "本文目录"
+postNavigation:
+  other: "相邻文章"
+older:
+  other: "上一篇"
+newer:
+  other: "下一篇"
+comments:
+  other: "评论"
+commentsJS:
+  other: "启用 JavaScript 后可加载评论。"
+backTop:
+  other: "回到顶部"
+notFound:
+  other: "这一次，走出了回环。"
+notFoundText:
+  other: "这里没有找到页面，回到首页继续阅读吧。"
+home:
+  other: "返回首页"
+copyAnchor:
+  other: "复制标题链接"
+copied:
+  other: "已复制"
+wrap:
+  other: "换行"
+copy:
+  other: "复制"
+copyError:
+  other: "复制失败，请手动选择代码"
+chart:
+  other: "数据图表"
+diagram:
+  other: "流程图"
+chartDescription:
+  other: "可使用图例筛选数据；源配置包含完整数值。"
+diagramDescription:
+  other: "图示中的关系也可在源文本中阅读。"
+chartError:
+  other: "图表加载失败，仍可查看下方源配置。"
+chartPending:
+  other: "启用 JavaScript 后显示交互图表，源配置见下方。"
+source:
+  other: "查看源配置"
+table:
+  other: "数据表格，可横向滚动"
+info:
+  other: "说明"
+tip:
+  other: "提示"
+warning:
+  other: "注意"
+tabs:
+  other: "内容选项卡"
+viewGist:
+  other: "在 GitHub Gist 查看代码"
+zoomImage:
+  other: "放大图片"
+tagsTitle:
+  other: "标签"
+loopFigure:
+  other: "FIG. 01 / THE LOOP"
+loopBrand:
+  other: "THE LOOP"
+loopCaption:
+  other: "每一次回环，都是新的起点。"

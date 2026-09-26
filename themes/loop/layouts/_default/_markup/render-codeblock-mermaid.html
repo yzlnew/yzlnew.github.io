@@ -1,0 +1,1 @@
+{{ partial "chart.html" (dict "kind" "mermaid" "source" .Inner "title" (.Attributes.title | default (i18n "diagram")) "description" (.Attributes.description | default (i18n "diagramDescription")) "height" "auto") }}

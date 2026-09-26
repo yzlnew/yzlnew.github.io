@@ -1,0 +1,6 @@
+{{- /* Exclude controls and line numbers from summaries/search. */ -}}
+{{- $text := . | replaceRE `(?s)<header class="code-toolbar">.*?</header>` " " -}}
+{{- $text = $text | replaceRE `(?s)<a class="heading-anchor"[^>]*>.*?</a>` " " -}}
+{{- $text = $text | replaceRE `(?s)<span class="(?:lnt|ln)(?: [^"]*)?"[^>]*>.*?</span>` " " -}}
+{{- $text = $text | replaceRE `</(?:p|div|h[1-6]|tr|li|pre)>` " " | plainify | htmlUnescape -}}
+{{- return ($text | replaceRE `\s+` " " | strings.TrimSpace) -}}

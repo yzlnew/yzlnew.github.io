@@ -1,0 +1,5 @@
+{{- $index := slice -}}
+{{- range where (where (where .Site.RegularPages "Section" "blog") "Params.hidden" "ne" true) "Draft" false -}}
+{{- $index = $index | append (dict "title" .Title "url" .RelPermalink "tags" (.Params.tags | default slice) "date" (.Date.Format "2006-01-02") "content" (partial "plain-content.html" .Content)) -}}
+{{- end -}}
+{{- $index | jsonify -}}

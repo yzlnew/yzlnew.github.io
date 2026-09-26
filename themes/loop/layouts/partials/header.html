@@ -1,0 +1,17 @@
+<header class="site-header shell{{ if not .IsHome }} site-header--compact{{ end }}">
+  <div class="loop-header">
+    <div class="masthead">
+      <a class="wordmark" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }}"><span class="loop-mark" aria-hidden="true">{{ partial "loop-symbol.html" . }}</span><span class="wordmark-label">{{ i18n "loopBrand" }}</span></a>
+      <div class="header-tools">
+        <nav class="languages" aria-label="{{ i18n "language" }}">{{ $current := . }}{{ range hugo.Sites }}{{ $site := . }}{{ $href := .Home.RelPermalink }}{{ range $current.AllTranslations }}{{ if eq .Language.Lang $site.Language.Lang }}{{ $href = .RelPermalink }}{{ end }}{{ end }}<a href="{{ $href }}" lang="{{ .Language.Lang }}" aria-label="{{ .Language.Label | default .Language.Lang }}" {{ if eq .Language.Lang $current.Language.Lang }}aria-current="page"{{ end }}>{{ if eq .Language.Lang "en" }}{{ partial "control-icon.html" "en" }}{{ else }}{{ partial "control-icon.html" "zh" }}{{ end }}</a>{{ end }}</nav>
+        <fieldset class="theme-switch js-only"><legend class="sr-only">{{ i18n "theme" }}</legend>{{ range slice "light" "dark" "system" }}<label class="theme-option" title="{{ i18n . }}"><input type="radio" name="theme" value="{{ . }}" aria-label="{{ i18n . }}"{{ if eq . "system" }} checked{{ end }}><span>{{ partial "control-icon.html" . }}</span></label>{{ end }}</fieldset>
+        <button class="search-open js-only" type="button" aria-haspopup="dialog" aria-label="{{ i18n "search" }}" title="{{ i18n "search" }} ( / )">{{ partial "control-icon.html" "search" }}</button>
+      </div>
+    </div>
+    <div class="loop-stage">
+      {{ partial "loop-mesh.svg" . }}
+      {{ partial "main-navigation.html" . }}
+    </div>
+    <div class="header-caption"><span>{{ i18n "loopFigure" }}</span><span>{{ i18n "loopCaption" }}</span></div>
+  </div>
+</header>

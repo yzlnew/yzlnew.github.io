@@ -1,0 +1,1 @@
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}<a class="heading-anchor" href="#{{ .Anchor | safeURL }}" aria-label="{{ i18n "copyAnchor" }}: {{ .PlainText }}" data-copied="{{ i18n "copied" }}">#</a></h{{ .Level }}>

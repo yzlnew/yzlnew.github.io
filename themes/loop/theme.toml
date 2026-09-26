@@ -1,0 +1,6 @@
+name = "Loop"
+license = "MIT"
+description = "An editorial theme for Time Loop of Huangshi"
+min_version = "0.161.1"
+[author]
+name = "Ye Zhiling"

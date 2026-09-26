@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ $content := .Content }}
+{{ $toc := and (ne .Params.toc false) (gt (len .Fragments.Headings) 0) }}
+<div class="reading-layout{{ if $toc }} has-toc{{ end }}">
+<article class="article">
+  <header class="article-header"><p class="eyebrow">{{ if eq .Section "blog" }}{{ i18n "notes" }}{{ else }}{{ .Site.Title }}{{ end }}</p><h1>{{ .Title }}</h1>{{ if eq .Section "blog" }}<div class="article-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time><span>·</span><span>{{ .ReadingTime }} {{ i18n "minutes" }}</span>{{ if gt .Lastmod .Date }}<span>{{ i18n "updated" }} {{ .Lastmod.Format "2006.01.02" }}</span>{{ end }}</div>{{ partial "tags.html" . }}{{ end }}</header>
+  {{ if $toc }}<details class="mobile-toc"><summary>{{ i18n "toc" }}</summary>{{ .TableOfContents | replaceRE `id="TableOfContents"` `id="MobileTableOfContents"` | safeHTML }}</details>{{ end }}
+  <div class="prose" data-math="{{ .Params.katex | default false }}">{{ $content }}</div>
+  {{ if eq .Section "blog" }}{{ $posts := where (where (where .Site.RegularPages "Section" "blog") "Params.hidden" "ne" true) "Draft" false }}<nav class="post-nav" aria-label="{{ i18n "postNavigation" }}">{{ with $posts.Prev . }}<a rel="prev" href="{{ .RelPermalink }}"><span>← {{ i18n "older" }}</span><strong>{{ .Title }}</strong></a>{{ end }}{{ with $posts.Next . }}<a rel="next" href="{{ .RelPermalink }}"><span>{{ i18n "newer" }} →</span><strong>{{ .Title }}</strong></a>{{ end }}</nav>{{ end }}
+  {{ if and .Site.Params.utter.enable (ne .Params.comments false) }}<section class="comments" aria-label="{{ i18n "comments" }}"><div id="utter-container" data-repo="{{ .Site.Params.utter.repo }}" data-issue-term="{{ .Site.Params.utter.issueTerm }}" data-theme-light="{{ .Site.Params.utter.theme }}" data-theme-dark="{{ .Site.Params.utter.darkTheme }}"></div><noscript>{{ i18n "commentsJS" }}</noscript></section>{{ end }}
+</article>
+{{ if $toc }}<aside class="desktop-toc" aria-label="{{ i18n "toc" }}"><div class="toc-sticky"><p class="eyebrow">{{ i18n "toc" }}</p>{{ .TableOfContents }}<a class="back-top" href="#main">↑ {{ i18n "backTop" }}</a></div></aside>{{ end }}
+</div><div class="reading-progress js-only" aria-hidden="true"></div>
+{{ end }}
