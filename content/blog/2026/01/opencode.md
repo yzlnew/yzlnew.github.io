@@ -5,7 +5,7 @@ tags:
   - Tools
   - Agent
 toc: true
-draft: false
+draft: true
 ---
 
 [Opencode](https://opencode.ai/) 是一个强大的开源代码工具。
