@@ -1,7 +1,7 @@
 {
   "content": [
     {
-      "path": "content/blog/epaper-dashboard.md",
+      "path": "content/blog/2026/07/epaper-dashboard.md",
       "slug": "epaper-dashboard",
       "title": "用 AI 从零制作电子墨水屏 Dashboard",
       "date": "2026-07-30T00:00:00Z",
@@ -13,7 +13,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/identity-context-probe.md",
+      "path": "content/blog/2026/05/identity-context-probe.md",
       "slug": "identity-context-probe",
       "title": "LLM「我是谁」之谜",
       "date": "2026-05-29T00:00:00Z",
@@ -25,7 +25,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/pay-for-the-possibility-of-completion.md",
+      "path": "content/blog/2026/04/pay-for-the-possibility-of-completion.md",
       "slug": "pay-for-the-possibility-of-completion",
       "title": "为「完成」的可能性付费 | Pay for the Possibility of Completion",
       "date": "2026-04-28T00:00:00Z",
@@ -37,7 +37,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/ha-config-as-code.en.md",
+      "path": "content/blog/2026/03/ha-config-as-code.en.md",
       "slug": "ha-config-as-code",
       "title": "Building My Smart Home: Home Assistant Made Easy with Claude Code",
       "date": "2026-03-16T00:00:00Z",
@@ -49,7 +49,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/ha-config-as-code.md",
+      "path": "content/blog/2026/03/ha-config-as-code.md",
       "slug": "ha-config-as-code",
       "title": "打造我的「智能家」——使用 Claude Code 轻松使用 Home Assistant",
       "date": "2026-03-16T00:00:00Z",
@@ -61,7 +61,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/opencode.md",
+      "path": "content/blog/2026/01/opencode.md",
       "slug": "",
       "title": "Opencode 安装与配置",
       "date": "2026-01-13T00:00:00Z",
@@ -73,7 +73,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/llm-hp-search-using-mup.md",
+      "path": "content/blog/2024/11/llm-hp-search-using-mup.md",
       "slug": "",
       "title": "LLM 超参搜索指南",
       "date": "2024-11-12T00:00:00Z",
@@ -85,7 +85,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/move-to-mac-mini.md",
+      "path": "content/blog/2024/11/move-to-mac-mini.md",
       "slug": "",
       "title": "迁移到 Mac Mini",
       "date": "2024-11-10T00:00:00Z",
@@ -97,7 +97,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/cat-one-year.md",
+      "path": "content/blog/2022/06/cat-one-year.md",
       "slug": "",
       "title": "小猫咪的一年",
       "date": "2022-06-19T00:00:00Z",
@@ -109,7 +109,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/n5095-aio.md",
+      "path": "content/blog/2022/06/n5095-aio.md",
       "slug": "",
       "title": "N5095 All in One 折腾记",
       "date": "2022-06-10T00:00:00Z",
@@ -121,7 +121,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/FLoC.md",
+      "path": "content/blog/2021/05/FLoC.md",
       "slug": "",
       "title": "FLoC",
       "date": "2021-05-16T00:00:00Z",
@@ -133,7 +133,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/frequent-itemset-mining.md",
+      "path": "content/blog/2021/03/frequent-itemset-mining.md",
       "slug": "",
       "title": "频繁模式挖掘",
       "date": "2021-03-23T00:00:00Z",
@@ -145,7 +145,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/heapq-topk.md",
+      "path": "content/blog/2021/03/heapq-topk.md",
       "slug": "",
       "title": "从 heapq 到 TopK",
       "date": "2021-03-16T00:00:00Z",
@@ -157,7 +157,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/vim-increasing-numbers.md",
+      "path": "content/blog/2021/03/vim-increasing-numbers.md",
       "slug": "",
       "title": "在 Vim 中输入递增的数字",
       "date": "2021-03-16T00:00:00Z",
@@ -169,7 +169,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/thinking-2020.md",
+      "path": "content/blog/2021/02/thinking-2020.md",
       "slug": "",
       "title": "发现、解决、习惯，思维方式改造生活",
       "date": "2021-02-26T21:18:58+08:00",
@@ -181,7 +181,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/back-to-writing.md",
+      "path": "content/blog/2021/02/back-to-writing.md",
       "slug": "",
       "title": "是不是应该重新开始写作了？",
       "date": "2021-02-01T00:00:00Z",
@@ -193,7 +193,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/tasker-with-qianji.md",
+      "path": "content/blog/2020/12/tasker-with-qianji.md",
       "slug": "",
       "title": "从通知实现钱迹 Tasker 自动化记账",
       "date": "2020-12-03T20:15:43+08:00",
@@ -205,7 +205,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/adventure-of-teeth.md",
+      "path": "content/blog/2020/11/adventure-of-teeth.md",
       "slug": "",
       "title": "牙的冒险",
       "date": "2020-11-25T22:32:42+08:00",
@@ -217,7 +217,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/the-bad-kids.md",
+      "path": "content/blog/2020/06/the-bad-kids.md",
       "slug": "",
       "title": "隐秘的渴望",
       "date": "2020-06-28T10:40:44+08:00",
@@ -229,7 +229,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/tasker-bot.md",
+      "path": "content/blog/2020/06/tasker-bot.md",
       "slug": "",
       "title": "用 Tasker 把自己的微信变成 🤖",
       "date": "2020-06-12T17:10:46+08:00",
@@ -241,7 +241,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/python-java-time.md",
+      "path": "content/blog/2020/05/python-java-time.md",
       "slug": "",
       "title": "Java 和 Python 中的时间",
       "date": "2020-05-14T21:01:11+08:00",
@@ -253,7 +253,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/new-theme.md",
+      "path": "content/blog/2020/04/new-theme.md",
       "slug": "",
       "title": "涤尘迎新",
       "date": "2020-04-19T23:27:09+08:00",
@@ -265,7 +265,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/mk-road.md",
+      "path": "content/blog/2020/03/mk-road.md",
       "slug": "",
       "title": "键盘之路",
       "date": "2020-03-25T20:53:26+08:00",
@@ -277,7 +277,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/ncov-2019.md",
+      "path": "content/blog/2020/03/ncov-2019.md",
       "slug": "",
       "title": "被偷走的 2020",
       "date": "2020-03-01T13:44:42+08:00",
@@ -289,7 +289,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/cheer20.md",
+      "path": "content/blog/2019/12/cheer20.md",
       "slug": "",
       "title": "Cheer 20",
       "date": "2019-12-15T01:16:50+08:00",
@@ -301,7 +301,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/immortal-bird.md",
+      "path": "content/blog/2019/12/immortal-bird.md",
       "slug": "",
       "title": "不死鸟之死",
       "date": "2019-12-14T01:36:50+08:00",
@@ -313,7 +313,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/hey-jude.md",
+      "path": "content/blog/2019/10/hey-jude.md",
       "slug": "",
       "title": "Hey Jude",
       "date": "2019-10-21T19:44:38+08:00",
@@ -325,7 +325,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/new-start.md",
+      "path": "content/blog/2019/09/new-start.md",
       "slug": "",
       "title": "开始工作的新开始",
       "date": "2019-09-28T11:03:43+08:00",
@@ -337,7 +337,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/when-i-am-27.md",
+      "path": "content/blog/2019/07/when-i-am-27.md",
       "slug": "",
       "title": "当我 27",
       "date": "2019-07-06T22:47:01+08:00",
@@ -349,7 +349,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/end-and-beginning.md",
+      "path": "content/blog/2019/06/end-and-beginning.md",
       "slug": "",
       "title": "终章，新生",
       "date": "2019-06-03T13:24:17+08:00",
@@ -361,7 +361,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/my-stories-1.md",
+      "path": "content/blog/2019/02/my-stories-1.md",
       "slug": "",
       "title": "我的昨天",
       "date": "2019-02-28T15:59:51+08:00",
@@ -373,7 +373,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/vimrc-2019.md",
+      "path": "content/blog/2019/01/vimrc-2019.md",
       "slug": "",
       "title": "我的 Vim 配置",
       "date": "2019-01-28T16:59:47+08:00",
@@ -385,7 +385,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/vim-imselect.md",
+      "path": "content/blog/2019/01/vim-imselect.md",
       "slug": "",
       "title": "实现在 Vim 的正常和插入模式下中英文输入法的自动切换",
       "date": "2019-01-21T21:53:58+08:00",
@@ -397,7 +397,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/after-rm.md",
+      "path": "content/blog/2019/01/after-rm.md",
       "slug": "",
       "title": "记一次 rm -rf 之后",
       "date": "2019-01-06T19:31:49+08:00",
@@ -409,7 +409,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/transport-to-hugo.md",
+      "path": "content/blog/2019/01/transport-to-hugo.md",
       "slug": "",
       "title": "迁移到 Hugo 上！",
       "date": "2019-01-06T14:55:38+08:00",
@@ -445,7 +445,7 @@
       "section": ""
     },
     {
-      "path": "content/blog/python-gc.md",
+      "path": "content/blog/2018/06/python-gc.md",
       "slug": "",
       "title": "Python 垃圾回收及 gc 模块",
       "date": "2018-06-19T15:35:17Z",
@@ -457,7 +457,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/ml-evaluation.md",
+      "path": "content/blog/2018/05/ml-evaluation.md",
       "slug": "",
       "title": "分类器评价指标简析 - Accuracy, Precision, Recall, F1, ROC&AUC",
       "date": "2018-05-14T17:18:11Z",
@@ -469,7 +469,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/meinian.md",
+      "path": "content/blog/2018/05/meinian.md",
       "slug": "",
       "title": "美年健康 AI 大赛初赛小结",
       "date": "2018-05-07T22:01:51Z",
@@ -481,7 +481,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/teamspeak.md",
+      "path": "content/blog/2017/12/teamspeak.md",
       "slug": "",
       "title": "在 VPS 部署 TeamSpeak 语音服务器一键脚本",
       "date": "2017-12-07T19:55:55Z",
@@ -493,7 +493,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/pandoc-chinese.md",
+      "path": "content/blog/2017/10/pandoc-chinese.md",
       "slug": "",
       "title": "用 pandoc 让 Markdown 从 LaTeX 输出 pdf 文档",
       "date": "2017-10-12T17:42:44Z",
@@ -505,7 +505,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/duti.md",
+      "path": "content/blog/2017/09/duti.md",
       "slug": "",
       "title": "用 duti 管理 macOS 下的默认打开程序",
       "date": "2017-09-25T18:52:54Z",
@@ -517,7 +517,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/rime-theme.md",
+      "path": "content/blog/2016/09/rime-theme.md",
       "slug": "",
       "title": "鼠须管 Rime 主题",
       "date": "2016-09-26T18:35:59Z",
@@ -529,7 +529,7 @@
       "section": "blog"
     },
     {
-      "path": "content/blog/flowchart-with-tikz.md",
+      "path": "content/blog/2016/06/flowchart-with-tikz.md",
       "slug": "",
       "title": "利用 TikZ 宏包在 LaTeX 中绘制流程图",
       "date": "2016-06-22T09:37:35Z",

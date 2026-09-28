@@ -44,7 +44,7 @@ Loop 使用近黑与白、细线框、等宽标注，以及橙黄色强调。参
 ### 写一篇文章
 
 ```sh
-hugo new content blog/my-note.md
+hugo new content blog/2026/09/my-note.md
 ```
 
 ```yaml
@@ -60,7 +60,9 @@ comments: true
 ---
 ```
 
-先写摘要，再使用 `<!--more-->`，正文标题从 `###` 开始。保留旧文章日期、slug 和文件名，避免改变现有 URL。翻译文件使用 `my-note.en.md`，与中文版本共享 `date` 和 `slug`。`hidden: true` 会从列表、归档、搜索和 RSS 中排除页面，直接 URL 仍可访问；私密内容不要提交到公开仓库。
+文章按 front matter 的日期存放在 `content/blog/YYYY/MM/`，新建时将命令中的年月替换为文章年月。URL 仍由 `/:year/:month/:slug` 生成，不包含源文件的目录层级；未设置 `slug` 时使用文章标题。
+
+先写摘要，再使用 `<!--more-->`，正文标题从 `###` 开始。保留旧文章日期、slug 和文件名，避免改变现有 URL。翻译文件使用同目录的 `my-note.en.md`，与中文版本共享 `date` 和 `slug`。`hidden: true` 会从列表、归档、搜索和 RSS 中排除页面，直接 URL 仍可访问；私密内容不要提交到公开仓库。
 
 ### 公式与代码
 
