@@ -306,17 +306,7 @@ p {
   text-underline-offset: 6px;
 }
 .loop-navigation a:hover { color: var(--pixel-active); }
-.header-caption {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  color: var(--muted);
-  font: 10px/1.6 var(--font-mono);
-}
-.site-header--compact .loop-stage { padding-bottom: 8px; }
-.site-header--compact .loop-stage > .loop-mesh { width: 264px; }
-.site-header--compact .header-caption { display: none; }
+.site-header--compact .loop-stage { padding: 16px 0 0; }
 kbd {
   font-family: inherit;
   font-size: 11px;
@@ -376,7 +366,6 @@ kbd {
   text-align: center;
   margin: 12px 0 0;
 }
-.section-index { font: 11px var(--font-mono); color: var(--muted); margin-right: 14px; }
 .home-list-label { margin-top: 40px; }
 .list-label {
   display: flex;
@@ -396,7 +385,7 @@ kbd {
 }
 .post-card {
   display: grid;
-  grid-template-columns: 132px minmax(0, 1fr) 32px;
+  grid-template-columns: 132px minmax(0, 1fr);
   gap: 28px;
   border-bottom: 1px solid var(--line);
   padding: 34px 0;
@@ -426,23 +415,6 @@ kbd {
   overflow: hidden;
   margin-bottom: 12px;
   overflow-wrap: anywhere;
-}
-.post-arrow {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  font-size: 17px;
-  color: var(--muted);
-  transition: background-color .18s, transform .18s;
-}
-.post-card:is(:hover, :focus-within) .post-arrow {
-  color: #0d0d0d;
-  background: var(--accent);
-  border-color: var(--accent);
-  transform: translate(2px, -2px);
 }
 .tags {
   display: flex;
@@ -1325,11 +1297,9 @@ mark {
   .loop-stage { padding-top: 12px; padding-bottom: 24px; }
   .loop-stage > .loop-mesh { width: 330px; }
   .loop-navigation { gap: 12px; }
-  .header-caption { font-size: 9px; justify-content: center; }
-  .site-header--compact .loop-stage > .loop-mesh { width: 220px; }
   .home-list-label { margin-top: 32px; }
   .post-card {
-    grid-template-columns: minmax(0, 1fr) 28px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 9px 12px;
     padding: 26px 0;
   }
@@ -1343,7 +1313,6 @@ mark {
   .summary {
     font-size: 14px;
   }
-  .post-arrow { width: 28px; height: 28px; font-size: 15px; }
   .site-footer {
     margin-top: 60px;
     gap: 20px;
@@ -1445,7 +1414,6 @@ mark {
 @media print {
   .header-tools,
   .loop-stage,
-  .header-caption,
   .desktop-toc,
   .mobile-toc,
   .site-footer,

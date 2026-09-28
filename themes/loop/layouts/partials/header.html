@@ -9,9 +9,8 @@
       </div>
     </div>
     <div class="loop-stage">
-      {{ partial "loop-mesh.svg" . }}
+      {{ if .IsHome }}{{ partial "loop-mesh.svg" . }}{{ end }}
       {{ partial "main-navigation.html" . }}
     </div>
-    <div class="header-caption"><span>{{ i18n "loopFigure" }}</span></div>
   </div>
 </header>

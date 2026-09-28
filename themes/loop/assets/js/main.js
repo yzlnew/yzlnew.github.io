@@ -38,7 +38,12 @@ function configureDialog(dialog) {
     const box = dialog.getBoundingClientRect();
     if (event.target === dialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) dialog.close();
   });
-  dialog.addEventListener('close', () => trigger?.focus({ preventScroll: true }));
+  dialog.addEventListener('close', () => {
+    // Native close may already restore focus; do not steal it from the next control.
+    if (!dialog.open && (document.activeElement === document.body || dialog.contains(document.activeElement))) {
+      trigger?.focus({ preventScroll: true });
+    }
+  });
   return source => { trigger = source || document.activeElement; dialog.showModal(); };
 }
 const searchDialog = document.querySelector('#search-dialog');

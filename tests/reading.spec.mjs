@@ -228,3 +228,19 @@ test('without JavaScript, content, figures, tables, code, and sources remain rea
   await expect(page).toHaveURL(/\/archives\/$/);
   await context.close();
 });
+
+test('a deferred dialog close does not steal focus from the next control', async ({ page }) => {
+  await page.goto('/style-guide/');
+  await page.locator('.image-zoom').first().click();
+  await expect(page.locator('#image-dialog')).toBeVisible();
+  await page.evaluate(async () => {
+    const dialog = document.querySelector('#image-dialog');
+    const closed = new Promise(resolve => dialog.addEventListener('close', resolve, { once: true }));
+    dialog.close();
+    document.querySelector('[role="tab"]').focus();
+    await closed;
+  });
+  await expect(page.getByRole('tab').first()).toBeFocused();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.getByRole('tab').nth(1)).toHaveAttribute('aria-selected', 'true');
+});
