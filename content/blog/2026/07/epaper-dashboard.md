@@ -33,7 +33,7 @@ description: 用 Codex 手搓一个复古墨水屏相框。
 
 同样参数的六色成品淘宝要卖 ~900 元，并且是比较依赖商家提供的软件。从一幅画的角度来看，300+ 的价格不算很离谱。最终成品如下：
 
-<image_placeholder>
+![装入柚木相框的六色电子墨水屏成品](/images/blog/2026/epaper-dashboard/framed-display.jpg)
 
 这里用的是一个柚木相框，然后用卡纸留白，看上去更「逼真」一点。相关的固件和介绍都放在 https://github.com/yzlnew/epaper-dashboard 。可以通过 Agent 直接在代码库询问和适配：
 
