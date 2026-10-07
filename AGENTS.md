@@ -93,4 +93,5 @@ The site supports Chinese (`zh-cn`, default) and English (`en`) via Hugo's [mult
 - Folding content: `{{< details title="更多" >}}…{{< /details >}}`. Tabs: `{{< tabs label="视角" >}}{{< tab title="一" >}}…{{< /tab >}}{{< tab title="二" >}}…{{< /tab >}}{{< /tabs >}}`. Tab content is Markdown; no-JS must show every panel.
 - Preserve both `{{< mygist USER ID >}}` and named `{{< mygist id="ID" file="FILE" >}}`, the `figure` shortcode, raw HTML, RSS identity and Utterances enable settings.
 - Respect reduced motion, keyboard navigation/focus restoration, local horizontal scrolling and the system/light/dark preference. Ordinary articles must not fetch chart libraries.
+- Store article images in `yzlnew/ImageBed` and reference their external URLs; do not add article photos to this blog's static assets.
 - Do not replace external content images automatically. Record confirmed broken image URLs as content issues. See README for copyable examples and docs/verification.md for the migration results.
