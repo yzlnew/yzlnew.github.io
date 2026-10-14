@@ -388,27 +388,31 @@ kbd {
   grid-template-columns: 132px minmax(0, 1fr);
   gap: 28px;
   border-bottom: 1px solid var(--line);
-  padding: 34px 0;
+  padding: 28px 0 30px;
 }
 .post-date {
-  font: 12px/2 var(--font-mono);
+  font: 12px/32px var(--font-mono);
   color: var(--muted);
-  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
 }
 .post-card h2 {
-  font-size: 23px;
+  font-size: 22px;
+  line-height: 32px;
   font-weight: 550;
   letter-spacing: -.005em;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 }
 .post-card h2 a {
   text-decoration: none;
+  transition: color .15s;
 }
+.post-card:hover h2 a { color: var(--link); }
 .summary {
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.85;
-  max-width: 760px;
+  line-height: 1.8;
+  max-width: 680px;
+  text-wrap: pretty;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -428,10 +432,12 @@ kbd {
 }
 .tags a {
   display: inline-block;
-  padding: 2px 8px;
-  border: 1px solid var(--line);
+  padding: 1px 8px;
+  border: 1px solid transparent;
   border-radius: 4px;
+  background: var(--soft);
   font-size: 11px;
+  line-height: 1.8;
   text-decoration: none;
 }
 .tags a:hover { background: var(--accent-soft); border-color: var(--accent); }
@@ -476,17 +482,16 @@ kbd {
 .site-footer a {
   text-decoration: none;
 }
-.style-link {
-  flex-basis: 100%;
-  text-align: right;
-}
+.site-footer a:hover { color: var(--link); }
 .page-heading {
-  padding: 65px 0 35px;
+  padding: 60px 0 36px;
 }
+.page-heading .eyebrow { margin-bottom: 12px; }
 .page-heading h1 {
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 20px;
+  line-height: 1.25;
+  margin-bottom: 0;
   letter-spacing: -.015em;
 }
 .tag-cloud {
@@ -495,37 +500,50 @@ kbd {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
 }
 .tag-cloud a {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  align-items: baseline;
+  gap: 10px;
   text-decoration: none;
   border: 1px solid var(--line);
-  padding: 10px 18px;
-  border-radius: 4px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 15px;
+  transition: border-color .15s, background-color .15s;
 }
 .tag-cloud a:hover {
-  border-color: var(--link);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--text);
 }
 .tag-cloud span {
   font: 11px var(--font-mono);
   color: var(--muted);
-}
-.archives {
-  max-width: 940px;
+  font-variant-numeric: tabular-nums;
 }
 .archive-year {
   display: grid;
   grid-template-columns: 132px 1fr;
   gap: 28px;
   border-top: 1px solid var(--line);
-  padding: 30px 0;
+  padding: 24px 0;
 }
+.archive-year:first-child { border-top-color: var(--text); }
 .archive-year h2 {
-  font: 28px var(--font-mono);
-  letter-spacing: -.08em;
+  font-size: 22px;
+  font-weight: 550;
+  line-height: 36px;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.archive-year h2 span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+  font-weight: 400;
 }
 .archive-year ul {
   list-style: none;
@@ -534,17 +552,21 @@ kbd {
 }
 .archive-year li {
   display: flex;
+  align-items: baseline;
   gap: 28px;
-  padding: 8px 0;
+  padding: 6px 0;
+  line-height: 24px;
 }
 .archive-year time {
-  font: 12px/2 var(--font-mono);
+  font: 12px/24px var(--font-mono);
   color: var(--muted);
   flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
 }
 .archive-year a {
   text-decoration: none;
 }
+.archive-year a:hover { color: var(--link); }
 .reading-layout {
   max-width: 760px;
   margin: 60px auto 0;
@@ -626,7 +648,7 @@ kbd {
 }
 .prose {
   font-size: 18px;
-  line-height: 1.95;
+  line-height: 1.85;
   letter-spacing: .01em;
   overflow-wrap: break-word;
 }
@@ -649,6 +671,10 @@ kbd {
 }
 .prose > :first-child {
   margin-top: 0;
+}
+.prose > .notice:first-child {
+  border-top: 0;
+  padding-top: 0;
 }
 .prose a {
   color: var(--link);
@@ -1322,9 +1348,6 @@ mark {
     flex-basis: 100%;
     gap: 22px;
   }
-  .style-link {
-    text-align: left;
-  }
   .page-heading {
     padding: 40px 0 28px;
   }
@@ -1336,9 +1359,12 @@ mark {
     gap: 8px;
   }
   .archive-year h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 4px;
   }
+  .archive-year h2 span { display: inline; }
   .archive-year li {
     gap: 20px;
   }
@@ -1356,8 +1382,8 @@ mark {
     margin-bottom: 18px;
   }
   .prose {
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 17px;
+    line-height: 1.85;
   }
   .prose h2,
   .prose h3 {
@@ -1397,7 +1423,7 @@ mark {
   }
   .tag-cloud a {
     font-size: 14px;
-    padding: 9px 14px;
+    padding: 6px 12px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

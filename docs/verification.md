@@ -109,3 +109,17 @@ Utterances 保留现有仓库、issue-term 与主题配置，按需进入视口�
 构建、站点与渲染检查通过，浏览器测试 17 项通过；新增实际柱形四角、描边、配色及显式配置优先级检查，扩展真实旧文章代码复制检查。41 篇文章在 1440px 与 375px 下均返回 200，无脚本错误、公式错误或整页横向溢出。
 
 截图：[提示与折叠](screenshots/components/notices-light.png)、[浅色柱状图](screenshots/components/bars-light.png)、[深色柱状图](screenshots/components/bars-dark.png)、[手机柱状图](screenshots/components/bars-mobile.png)、[首页](screenshots/components/home-mobile.png)。
+
+### 2026-10-14：列表节奏与页面标题整理
+
+只调整样式和归档、页脚两处模板，首页回环图形、导航、配色和字体不变。
+
+- 首页文章列表：每条上下留白由 34px 收至 28–30px，日期与标题首行对齐，悬停时标题变为链接色；摘要最宽 680px，并使用 `text-wrap: pretty` 避免单字孤行。
+- 标签胶囊去掉描边，改为浅底色。标签页改为圆角胶囊，收紧内边距与间距，悬停使用暖黄浅底。
+- 归档页补充与标签页一致的小标题，年份改用正文字体并显示当年篇数，第一条分隔线加深；手机上年份与篇数同行。
+- 正文行高由 1.95 调整为 1.85，手机正文字号由 18px 调整为 17px。文章开头的提示块不再与标题下方分隔线形成双线。
+- “样式指南”链接移到页脚版权信息之后，不再单独占一行。
+
+`npm run build`、`npm run check:site`、`npm run check:rendering` 通过；`npm test` 18 项全部通过。对比了改动前后的 1440px 与 375px 浅色、深色截图。
+
+截图：[首页](screenshots/polish/home-light-1440-full.png)、[手机首页](screenshots/polish/home-light-375.png)、[归档](screenshots/polish/archives-light-1440.png)、[手机归档](screenshots/polish/archives-light-375.png)、[标签](screenshots/polish/tags-light-1440.png)、[开头提示块](screenshots/polish/math-light-1440.png)。
